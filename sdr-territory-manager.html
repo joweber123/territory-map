@@ -466,6 +466,7 @@
             <div class="summary-note">
                 <strong>Note:</strong> US & Canada are counted by states/provinces only. 
                 DC (District of Columbia) is counted as a state. Antarctica is excluded.
+                Japan, Spain, and Indonesia are excluded (handled by country-specific reps).
             </div>
         </div>
         
@@ -815,6 +816,11 @@
                 return;
             }
             
+            // Skip excluded countries (handled by country-specific reps)
+            if (['JP', 'ES', 'ID'].includes(location.country_code)) {
+                return;
+            }
+            
             if (hubspotRegion === 'Americas') {
                 // Check if this is a US/CA location (has state or province)
                 if (location.state || location.province) {
@@ -1035,6 +1041,11 @@
         allLocations.forEach(location => {
             const assignment = sdrAssignments[location.locationKey] || 'unassigned';
             
+            // Skip excluded countries (handled by country-specific reps)
+            if (['JP', 'ES', 'ID'].includes(location.country_code)) {
+                return;
+            }
+            
             // Check if this is a state/province and categorize by country
             if (location.country_code === 'US' && (location.state || location.province)) {
                 stats[assignment].usStates++;
@@ -1109,6 +1120,10 @@
             // Get unique regions and their counts
             const regionCounts = {};
             allLocations.forEach(location => {
+                // Skip excluded countries (handled by country-specific reps)
+                if (['JP', 'ES', 'ID'].includes(location.country_code)) {
+                    return;
+                }
                 const region = location.region || 'Unknown';
                 regionCounts[region] = (regionCounts[region] || 0) + 1;
             });
@@ -1145,6 +1160,10 @@
             // Get unique sub-regions and their counts
             const subRegionCounts = {};
             allLocations.forEach(location => {
+                // Skip excluded countries (handled by country-specific reps)
+                if (['JP', 'ES', 'ID'].includes(location.country_code)) {
+                    return;
+                }
                 const subRegion = location.sub_region || 'Unknown';
                 subRegionCounts[subRegion] = (subRegionCounts[subRegion] || 0) + 1;
             });
@@ -1648,6 +1667,11 @@
         allLocations.forEach(location => {
             const assignment = sdrAssignments[location.locationKey] || 'unassigned';
             if (assignment === personName) {
+                // Skip excluded countries (handled by country-specific reps)
+                if (['JP', 'ES', 'ID'].includes(location.country_code)) {
+                    return;
+                }
+                
                 // Only include countries (not US/CA states/provinces)
                 if (location.country_code && 
                     location.country_code !== 'US' && 
@@ -1743,6 +1767,13 @@
             locationAssignments.forEach(locationDiv => {
                 const locationKey = locationDiv.dataset.locationKey;
                 const location = allLocations.find(loc => loc.locationKey === locationKey);
+                
+                // Skip excluded countries (handled by country-specific reps)
+                if (['JP', 'ES', 'ID'].includes(location.country_code)) {
+                    locationDiv.style.display = 'none';
+                    return;
+                }
+                
                 const assignment = sdrAssignments[locationKey] || 'unassigned';
                 
                 let shouldShow = true;
