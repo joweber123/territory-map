@@ -1,6 +1,6 @@
-# global-time-zone-scheduler
-A one-off project to quickly see times how Japan's business hours align with other countries' business hours
+# Territory Map
+A one-off project to quickly adjust and assign territories for our team, both visually but also to import those changes into a CRM. 
 
 Check it out live!
 
-https://joweber123.github.io/global-time-zone-scheduler/time-zone-scheduler.html
+https://joweber123.github.io/territory-map/
