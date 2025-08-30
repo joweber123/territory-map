@@ -1,0 +1,6506 @@
+{
+  "Africa/Abidjan": {
+    "locations": [
+      {
+        "country_code": "CI",
+        "country": "Cote d'Ivoire",
+        "region": "Africa",
+        "sub_region": "Sub-Saharan Africa",
+        "intermediate_region": "Western Africa",
+        "display_name": "Côte d'Ivoire/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 0,
+      "timezone": "Africa/Abidjan"
+    }
+  },
+  "Africa/Accra": {
+    "locations": [
+      {
+        "country_code": "GH",
+        "country": "Ghana",
+        "region": "Africa",
+        "sub_region": "Sub-Saharan Africa",
+        "intermediate_region": "Western Africa",
+        "display_name": "Ghana/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 0,
+      "timezone": "Africa/Accra"
+    }
+  },
+  "Africa/Addis_Ababa": {
+    "locations": [
+      {
+        "country_code": "ET",
+        "country": "Ethiopia",
+        "region": "Africa",
+        "sub_region": "Sub-Saharan Africa",
+        "intermediate_region": "Eastern Africa",
+        "display_name": "Ethiopia/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 10800,
+      "timezone": "Africa/Addis_Ababa"
+    }
+  },
+  "Africa/Algiers": {
+    "locations": [
+      {
+        "country_code": "DZ",
+        "country": "Algeria",
+        "region": "Africa",
+        "sub_region": "Northern Africa",
+        "intermediate_region": "Unknown",
+        "display_name": "Algeria/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 3600,
+      "timezone": "Africa/Algiers"
+    }
+  },
+  "Africa/Asmara": {
+    "locations": [
+      {
+        "country_code": "ER",
+        "country": "Eritrea",
+        "region": "Africa",
+        "sub_region": "Sub-Saharan Africa",
+        "intermediate_region": "Eastern Africa",
+        "display_name": "Eritrea/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 10800,
+      "timezone": "Africa/Asmara"
+    }
+  },
+  "Africa/Blantyre": {
+    "locations": [
+      {
+        "country_code": "MW",
+        "country": "Malawi",
+        "region": "Africa",
+        "sub_region": "Sub-Saharan Africa",
+        "intermediate_region": "Eastern Africa",
+        "display_name": "Malawi/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 7200,
+      "timezone": "Africa/Blantyre"
+    }
+  },
+  "Africa/Bujumbura": {
+    "locations": [
+      {
+        "country_code": "BI",
+        "country": "Burundi",
+        "region": "Africa",
+        "sub_region": "Sub-Saharan Africa",
+        "intermediate_region": "Eastern Africa",
+        "display_name": "Burundi/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 7200,
+      "timezone": "Africa/Bujumbura"
+    }
+  },
+  "Africa/Cairo": {
+    "locations": [
+      {
+        "country_code": "EG",
+        "country": "Egypt",
+        "region": "Africa",
+        "sub_region": "Northern Africa",
+        "intermediate_region": "Unknown",
+        "display_name": "Egypt/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": "2025-10-30T21:00:00Z",
+      "dst_name": "EEST",
+      "dst_offset_seconds": 10800,
+      "dst_start": "2025-04-24T22:00:00Z",
+      "has_dst": true,
+      "standard_offset_seconds": 7200,
+      "timezone": "Africa/Cairo"
+    }
+  },
+  "Africa/Casablanca": {
+    "locations": [
+      {
+        "country_code": "MA",
+        "country": "Morocco",
+        "region": "Africa",
+        "sub_region": "Northern Africa",
+        "intermediate_region": "Unknown",
+        "display_name": "Morocco/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": "2026-03-22T02:00:00Z",
+      "dst_name": "+00",
+      "dst_offset_seconds": 0,
+      "dst_start": "2026-02-15T02:00:00Z",
+      "has_dst": true,
+      "standard_offset_seconds": 3600,
+      "timezone": "Africa/Casablanca"
+    }
+  },
+  "Africa/Dar_es_Salaam": {
+    "locations": [
+      {
+        "country_code": "TZ",
+        "country": "Tanzania",
+        "region": "Africa",
+        "sub_region": "Sub-Saharan Africa",
+        "intermediate_region": "Eastern Africa",
+        "display_name": "Tanzania, United Republic of/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 10800,
+      "timezone": "Africa/Dar_es_Salaam"
+    }
+  },
+  "Africa/Djibouti": {
+    "locations": [
+      {
+        "country_code": "DJ",
+        "country": "Djibouti",
+        "region": "Africa",
+        "sub_region": "Sub-Saharan Africa",
+        "intermediate_region": "Eastern Africa",
+        "display_name": "Djibouti/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Africa/Djibouti",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Africa/Gaborone": {
+    "locations": [
+      {
+        "country_code": "BW",
+        "country": "Botswana",
+        "region": "Africa",
+        "sub_region": "Sub-Saharan Africa",
+        "intermediate_region": "Southern Africa",
+        "display_name": "Botswana/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 7200,
+      "timezone": "Africa/Gaborone"
+    }
+  },
+  "Africa/Harare": {
+    "locations": [
+      {
+        "country_code": "ZW",
+        "country": "Zimbabwe",
+        "region": "Africa",
+        "sub_region": "Sub-Saharan Africa",
+        "intermediate_region": "Eastern Africa",
+        "display_name": "Zimbabwe/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 7200,
+      "timezone": "Africa/Harare"
+    }
+  },
+  "Africa/Johannesburg": {
+    "locations": [
+      {
+        "country_code": "ZA",
+        "country": "South Africa",
+        "region": "Africa",
+        "sub_region": "Sub-Saharan Africa",
+        "intermediate_region": "Southern Africa",
+        "display_name": "South Africa/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 7200,
+      "timezone": "Africa/Johannesburg"
+    }
+  },
+  "Africa/Juba": {
+    "locations": [
+      {
+        "country_code": "SS",
+        "country": "South Sudan",
+        "region": "Africa",
+        "sub_region": "Sub-Saharan Africa",
+        "intermediate_region": "Eastern Africa",
+        "display_name": "South Sudan/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 7200,
+      "timezone": "Africa/Juba"
+    }
+  },
+  "Africa/Kampala": {
+    "locations": [
+      {
+        "country_code": "UG",
+        "country": "Uganda",
+        "region": "Africa",
+        "sub_region": "Sub-Saharan Africa",
+        "intermediate_region": "Eastern Africa",
+        "display_name": "Uganda/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 10800,
+      "timezone": "Africa/Kampala"
+    }
+  },
+  "Africa/Khartoum": {
+    "locations": [
+      {
+        "country_code": "SD",
+        "country": "Sudan",
+        "region": "Africa",
+        "sub_region": "Northern Africa",
+        "intermediate_region": "Unknown",
+        "display_name": "Sudan/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 7200,
+      "timezone": "Africa/Khartoum"
+    }
+  },
+  "Africa/Kigali": {
+    "locations": [
+      {
+        "country_code": "RW",
+        "country": "Rwanda",
+        "region": "Africa",
+        "sub_region": "Sub-Saharan Africa",
+        "intermediate_region": "Eastern Africa",
+        "display_name": "Rwanda/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 7200,
+      "timezone": "Africa/Kigali"
+    }
+  },
+  "Africa/Kinshasa": {
+    "locations": [
+      {
+        "country_code": "CD",
+        "country": "Democratic Republic of the Congo",
+        "region": "Africa",
+        "sub_region": "Sub-Saharan Africa",
+        "intermediate_region": "Middle Africa",
+        "display_name": "Congo, Democratic Republic of the/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 3600,
+      "timezone": "Africa/Kinshasa"
+    }
+  },
+  "Africa/Lagos": {
+    "locations": [
+      {
+        "country_code": "NG",
+        "country": "Nigeria",
+        "region": "Africa",
+        "sub_region": "Sub-Saharan Africa",
+        "intermediate_region": "Western Africa",
+        "display_name": "Nigeria/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 3600,
+      "timezone": "Africa/Lagos"
+    }
+  },
+  "Africa/Lusaka": {
+    "locations": [
+      {
+        "country_code": "ZM",
+        "country": "Zambia",
+        "region": "Africa",
+        "sub_region": "Sub-Saharan Africa",
+        "intermediate_region": "Eastern Africa",
+        "display_name": "Zambia/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 7200,
+      "timezone": "Africa/Lusaka"
+    }
+  },
+  "Africa/Maputo": {
+    "locations": [
+      {
+        "country_code": "MZ",
+        "country": "Mozambique",
+        "region": "Africa",
+        "sub_region": "Sub-Saharan Africa",
+        "intermediate_region": "Eastern Africa",
+        "display_name": "Mozambique/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 7200,
+      "timezone": "Africa/Maputo"
+    }
+  },
+  "Africa/Maseru": {
+    "locations": [
+      {
+        "country_code": "LS",
+        "country": "Lesotho",
+        "region": "Africa",
+        "sub_region": "Sub-Saharan Africa",
+        "intermediate_region": "Southern Africa",
+        "display_name": "Lesotho/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 7200,
+      "timezone": "Africa/Maseru"
+    }
+  },
+  "Africa/Mbabane": {
+    "locations": [
+      {
+        "country_code": "SZ",
+        "country": "Swaziland",
+        "region": "Africa",
+        "sub_region": "Sub-Saharan Africa",
+        "intermediate_region": "Southern Africa",
+        "display_name": "Eswatini/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 7200,
+      "timezone": "Africa/Mbabane"
+    }
+  },
+  "Africa/Mogadishu": {
+    "locations": [
+      {
+        "country_code": "SO",
+        "country": "Somalia",
+        "region": "Africa",
+        "sub_region": "Sub-Saharan Africa",
+        "intermediate_region": "Eastern Africa",
+        "display_name": "Somalia/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 10800,
+      "timezone": "Africa/Mogadishu"
+    }
+  },
+  "Africa/Nairobi": {
+    "locations": [
+      {
+        "country_code": "KE",
+        "country": "Kenya",
+        "region": "Africa",
+        "sub_region": "Sub-Saharan Africa",
+        "intermediate_region": "Eastern Africa",
+        "display_name": "Kenya/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 10800,
+      "timezone": "Africa/Nairobi"
+    }
+  },
+  "Africa/Ndjamena": {
+    "locations": [
+      {
+        "country_code": "TD",
+        "country": "Chad",
+        "region": "Africa",
+        "sub_region": "Sub-Saharan Africa",
+        "intermediate_region": "Middle Africa",
+        "display_name": "Chad/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 3600,
+      "timezone": "Africa/Ndjamena"
+    }
+  },
+  "Africa/Niamey": {
+    "locations": [
+      {
+        "country_code": "NE",
+        "country": "Niger",
+        "region": "Africa",
+        "sub_region": "Sub-Saharan Africa",
+        "intermediate_region": "Western Africa",
+        "display_name": "Niger/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 3600,
+      "timezone": "Africa/Niamey"
+    }
+  },
+  "Africa/Tripoli": {
+    "locations": [
+      {
+        "country_code": "LY",
+        "country": "Libya",
+        "region": "Africa",
+        "sub_region": "Northern Africa",
+        "intermediate_region": "Unknown",
+        "display_name": "Libya/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 7200,
+      "timezone": "Africa/Tripoli"
+    }
+  },
+  "Africa/Tunis": {
+    "locations": [
+      {
+        "country_code": "TN",
+        "country": "Tunisia",
+        "region": "Africa",
+        "sub_region": "Northern Africa",
+        "intermediate_region": "Unknown",
+        "display_name": "Tunisia/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 3600,
+      "timezone": "Africa/Tunis"
+    }
+  },
+  "Africa/Windhoek": {
+    "locations": [
+      {
+        "country_code": "NA",
+        "country": "Namibia",
+        "region": "Africa",
+        "sub_region": "Sub-Saharan Africa",
+        "intermediate_region": "Southern Africa",
+        "display_name": "Namibia/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 7200,
+      "timezone": "Africa/Windhoek"
+    }
+  },
+  "America/Asuncion": {
+    "locations": [
+      {
+        "country_code": "PY",
+        "country": "Paraguay",
+        "region": "Americas",
+        "sub_region": "Latin America and the Caribbean",
+        "intermediate_region": "South America",
+        "display_name": "Paraguay/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": "2026-03-22T03:00:00Z",
+      "dst_name": "-03",
+      "dst_offset_seconds": -10800,
+      "dst_start": "2025-10-05T04:00:00Z",
+      "has_dst": true,
+      "standard_offset_seconds": -14400,
+      "timezone": "America/Asuncion"
+    }
+  },
+  "America/Belize": {
+    "locations": [
+      {
+        "country_code": "BZ",
+        "country": "Belize",
+        "region": "Americas",
+        "sub_region": "Latin America and the Caribbean",
+        "intermediate_region": "Central America",
+        "display_name": "Belize/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": -21600,
+      "timezone": "America/Belize"
+    }
+  },
+  "America/Bogota": {
+    "locations": [
+      {
+        "country_code": "CO",
+        "country": "Colombia",
+        "region": "Americas",
+        "sub_region": "Latin America and the Caribbean",
+        "intermediate_region": "South America",
+        "display_name": "Colombia/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": -18000,
+      "timezone": "America/Bogota"
+    }
+  },
+  "America/Buenos_Aires": {
+    "locations": [
+      {
+        "country_code": "AR",
+        "country": "Argentina",
+        "region": "Americas",
+        "sub_region": "Latin America and the Caribbean",
+        "intermediate_region": "South America",
+        "display_name": "Argentina/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": -10800,
+      "timezone": "America/Buenos_Aires"
+    }
+  },
+  "America/Caracas": {
+    "locations": [
+      {
+        "country_code": "VE",
+        "country": "Venezuela",
+        "region": "Americas",
+        "sub_region": "Latin America and the Caribbean",
+        "intermediate_region": "South America",
+        "display_name": "Venezuela (Bolivarian Republic of)/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": -14400,
+      "timezone": "America/Caracas"
+    }
+  },
+  "America/Costa_Rica": {
+    "locations": [
+      {
+        "country_code": "CR",
+        "country": "Costa Rica",
+        "region": "Americas",
+        "sub_region": "Latin America and the Caribbean",
+        "intermediate_region": "Central America",
+        "display_name": "Costa Rica/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": -21600,
+      "timezone": "America/Costa_Rica"
+    }
+  },
+  "America/El_Salvador": {
+    "locations": [
+      {
+        "country_code": "SV",
+        "country": "El Salvador",
+        "region": "Americas",
+        "sub_region": "Latin America and the Caribbean",
+        "intermediate_region": "Central America",
+        "display_name": "El Salvador/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": -21600,
+      "timezone": "America/El_Salvador"
+    }
+  },
+  "America/Guatemala": {
+    "locations": [
+      {
+        "country_code": "GT",
+        "country": "Guatemala",
+        "region": "Americas",
+        "sub_region": "Latin America and the Caribbean",
+        "intermediate_region": "Central America",
+        "display_name": "Guatemala/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": -21600,
+      "timezone": "America/Guatemala"
+    }
+  },
+  "America/Havana": {
+    "locations": [
+      {
+        "country_code": "CU",
+        "country": "Cuba",
+        "region": "Americas",
+        "sub_region": "Latin America and the Caribbean",
+        "intermediate_region": "Caribbean",
+        "display_name": "Cuba/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": "2025-11-02T05:00:00Z",
+      "dst_name": "CDT",
+      "dst_offset_seconds": -14400,
+      "dst_start": "2025-03-09T05:00:00Z",
+      "has_dst": true,
+      "standard_offset_seconds": -18000,
+      "timezone": "America/Havana"
+    }
+  },
+  "America/Jamaica": {
+    "locations": [
+      {
+        "country_code": "JM",
+        "country": "Jamaica",
+        "region": "Americas",
+        "sub_region": "Latin America and the Caribbean",
+        "intermediate_region": "Caribbean",
+        "display_name": "Jamaica/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": -18000,
+      "timezone": "America/Jamaica"
+    }
+  },
+  "America/La_Paz": {
+    "locations": [
+      {
+        "country_code": "BO",
+        "country": "Bolivia",
+        "region": "Americas",
+        "sub_region": "Latin America and the Caribbean",
+        "intermediate_region": "South America",
+        "display_name": "Bolivia (Plurinational State of)/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": -14400,
+      "timezone": "America/La_Paz"
+    }
+  },
+  "America/Lima": {
+    "locations": [
+      {
+        "country_code": "PE",
+        "country": "Peru",
+        "region": "Americas",
+        "sub_region": "Latin America and the Caribbean",
+        "intermediate_region": "South America",
+        "display_name": "Peru/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": -18000,
+      "timezone": "America/Lima"
+    }
+  },
+  "America/Managua": {
+    "locations": [
+      {
+        "country_code": "NI",
+        "country": "Nicaragua",
+        "region": "Americas",
+        "sub_region": "Latin America and the Caribbean",
+        "intermediate_region": "Central America",
+        "display_name": "Nicaragua/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": -21600,
+      "timezone": "America/Managua"
+    }
+  },
+  "America/Mexico_City": {
+    "locations": [
+      {
+        "country_code": "MX",
+        "country": "Mexico",
+        "region": "Americas",
+        "sub_region": "Latin America and the Caribbean",
+        "intermediate_region": "Central America",
+        "display_name": "Mexico/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": -21600,
+      "timezone": "America/Mexico_City"
+    }
+  },
+  "America/Montevideo": {
+    "locations": [
+      {
+        "country_code": "UY",
+        "country": "Uruguay",
+        "region": "Americas",
+        "sub_region": "Latin America and the Caribbean",
+        "intermediate_region": "South America",
+        "display_name": "Uruguay/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": -10800,
+      "timezone": "America/Montevideo"
+    }
+  },
+  "America/Panama": {
+    "locations": [
+      {
+        "country_code": "PA",
+        "country": "Panama",
+        "region": "Americas",
+        "sub_region": "Latin America and the Caribbean",
+        "intermediate_region": "Central America",
+        "display_name": "Panama/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": -18000,
+      "timezone": "America/Panama"
+    }
+  },
+  "America/Santiago": {
+    "locations": [
+      {
+        "country_code": "CL",
+        "country": "Chile",
+        "region": "Americas",
+        "sub_region": "Latin America and the Caribbean",
+        "intermediate_region": "South America",
+        "display_name": "Chile/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": "2026-04-05T03:00:00Z",
+      "dst_name": "-03",
+      "dst_offset_seconds": -10800,
+      "dst_start": "2025-09-07T04:00:00Z",
+      "has_dst": true,
+      "standard_offset_seconds": -14400,
+      "timezone": "America/Santiago"
+    }
+  },
+  "America/Sao_Paulo": {
+    "locations": [
+      {
+        "country_code": "BR",
+        "country": "Brazil",
+        "region": "Americas",
+        "sub_region": "Latin America and the Caribbean",
+        "intermediate_region": "South America",
+        "display_name": "Brazil/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": -10800,
+      "timezone": "America/Sao_Paulo"
+    }
+  },
+  "America/Tegucigalpa": {
+    "locations": [
+      {
+        "country_code": "HN",
+        "country": "Honduras",
+        "region": "Americas",
+        "sub_region": "Latin America and the Caribbean",
+        "intermediate_region": "Central America",
+        "display_name": "Honduras/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": -21600,
+      "timezone": "America/Tegucigalpa"
+    }
+  },
+  "Asia/Aden": {
+    "locations": [
+      {
+        "country_code": "YE",
+        "country": "Yemen",
+        "region": "Asia",
+        "sub_region": "Western Asia",
+        "intermediate_region": "Unknown",
+        "display_name": "Yemen/Asia",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 10800,
+      "timezone": "Asia/Aden"
+    }
+  },
+  "Asia/Almaty": {
+    "locations": [
+      {
+        "country_code": "KZ",
+        "country": "Kazakhstan",
+        "region": "Asia",
+        "sub_region": "Central Asia",
+        "intermediate_region": "Unknown",
+        "display_name": "Kazakhstan/Asia",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 18000,
+      "timezone": "Asia/Almaty"
+    }
+  },
+  "Asia/Amman": {
+    "locations": [
+      {
+        "country_code": "JO",
+        "country": "Jordan",
+        "region": "Asia",
+        "sub_region": "Western Asia",
+        "intermediate_region": "Unknown",
+        "display_name": "Jordan/Asia",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 10800,
+      "timezone": "Asia/Amman"
+    }
+  },
+  "Asia/Ashgabat": {
+    "locations": [
+      {
+        "country_code": "TM",
+        "country": "Turkmenistan",
+        "region": "Asia",
+        "sub_region": "Central Asia",
+        "intermediate_region": "Unknown",
+        "display_name": "Turkmenistan/Asia",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 18000,
+      "timezone": "Asia/Ashgabat"
+    }
+  },
+  "Asia/Baghdad": {
+    "locations": [
+      {
+        "country_code": "IQ",
+        "country": "Iraq",
+        "region": "Asia",
+        "sub_region": "Western Asia",
+        "intermediate_region": "Unknown",
+        "display_name": "Iraq/Asia",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 10800,
+      "timezone": "Asia/Baghdad"
+    }
+  },
+  "Asia/Bahrain": {
+    "locations": [
+      {
+        "country_code": "BH",
+        "country": "Bahrain",
+        "region": "Asia",
+        "sub_region": "Western Asia",
+        "intermediate_region": "Unknown",
+        "display_name": "Bahrain/Asia",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Asia/Bahrain",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Asia/Baku": {
+    "locations": [
+      {
+        "country_code": "AZ",
+        "country": "Azerbaijan",
+        "region": "Asia",
+        "sub_region": "Western Asia",
+        "intermediate_region": "Unknown",
+        "display_name": "Azerbaijan/Asia",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 14400,
+      "timezone": "Asia/Baku"
+    }
+  },
+  "Asia/Bangkok": {
+    "locations": [
+      {
+        "country_code": "TH",
+        "country": "Thailand",
+        "region": "Asia",
+        "sub_region": "South-eastern Asia",
+        "intermediate_region": "Unknown",
+        "display_name": "Thailand/Asia",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 25200,
+      "timezone": "Asia/Bangkok"
+    }
+  },
+  "Asia/Beirut": {
+    "locations": [
+      {
+        "country_code": "LB",
+        "country": "Lebanon",
+        "region": "Asia",
+        "sub_region": "Western Asia",
+        "intermediate_region": "Unknown",
+        "display_name": "Lebanon/Asia",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": "2025-10-25T21:00:00Z",
+      "dst_name": "EEST",
+      "dst_offset_seconds": 10800,
+      "dst_start": "2025-03-29T22:00:00Z",
+      "has_dst": true,
+      "standard_offset_seconds": 7200,
+      "timezone": "Asia/Beirut"
+    }
+  },
+  "Asia/Bishkek": {
+    "locations": [
+      {
+        "country_code": "KG",
+        "country": "Kyrgyzstan",
+        "region": "Asia",
+        "sub_region": "Central Asia",
+        "intermediate_region": "Unknown",
+        "display_name": "Kyrgyzstan/Asia",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 21600,
+      "timezone": "Asia/Bishkek"
+    }
+  },
+  "Asia/Brunei": {
+    "locations": [
+      {
+        "country_code": "BN",
+        "country": "Brunei Darussalam",
+        "region": "Asia",
+        "sub_region": "South-eastern Asia",
+        "intermediate_region": "Unknown",
+        "display_name": "Brunei Darussalam/Asia",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 28800,
+      "timezone": "Asia/Brunei"
+    }
+  },
+  "Asia/Colombo": {
+    "locations": [
+      {
+        "country_code": "LK",
+        "country": "Sri Lanka",
+        "region": "Asia",
+        "sub_region": "Southern Asia",
+        "intermediate_region": "Unknown",
+        "display_name": "Sri Lanka/Asia",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 19800,
+      "timezone": "Asia/Colombo"
+    }
+  },
+  "Asia/Damascus": {
+    "locations": [
+      {
+        "country_code": "SY",
+        "country": "Syrian Arab Republic",
+        "region": "Asia",
+        "sub_region": "Western Asia",
+        "intermediate_region": "Unknown",
+        "display_name": "Syrian Arab Republic/Asia",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 10800,
+      "timezone": "Asia/Damascus"
+    }
+  },
+  "Asia/Dhaka": {
+    "locations": [
+      {
+        "country_code": "BD",
+        "country": "Bangladesh",
+        "region": "Asia",
+        "sub_region": "Southern Asia",
+        "intermediate_region": "Unknown",
+        "display_name": "Bangladesh/Asia",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 21600,
+      "timezone": "Asia/Dhaka"
+    }
+  },
+  "Asia/Dili": {
+    "locations": [
+      {
+        "country_code": "TL",
+        "country": "Timor-Leste",
+        "region": "Asia",
+        "sub_region": "South-eastern Asia",
+        "intermediate_region": "Unknown",
+        "display_name": "Timor-Leste/Asia",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 32400,
+      "timezone": "Asia/Dili"
+    }
+  },
+  "Asia/Dubai": {
+    "locations": [
+      {
+        "country_code": "AE",
+        "country": "United Arab Emirates",
+        "region": "Asia",
+        "sub_region": "Western Asia",
+        "intermediate_region": "Unknown",
+        "display_name": "United Arab Emirates/Asia",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 14400,
+      "timezone": "Asia/Dubai"
+    }
+  },
+  "Asia/Dushanbe": {
+    "locations": [
+      {
+        "country_code": "TJ",
+        "country": "Tajikistan",
+        "region": "Asia",
+        "sub_region": "Central Asia",
+        "intermediate_region": "Unknown",
+        "display_name": "Tajikistan/Asia",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 18000,
+      "timezone": "Asia/Dushanbe"
+    }
+  },
+  "Asia/Gaza": {
+    "locations": [
+      {
+        "country_code": "PS",
+        "country": "Palestine",
+        "region": "Asia",
+        "sub_region": "Western Asia",
+        "intermediate_region": "Unknown",
+        "display_name": "Palestine, State of/Asia",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": "2025-10-24T23:00:00Z",
+      "dst_name": "EEST",
+      "dst_offset_seconds": 10800,
+      "dst_start": "2025-04-12T00:00:00Z",
+      "has_dst": true,
+      "standard_offset_seconds": 7200,
+      "timezone": "Asia/Gaza"
+    }
+  },
+  "Asia/Ho_Chi_Minh": {
+    "locations": [
+      {
+        "country_code": "VN",
+        "country": "Vietnam",
+        "region": "Asia",
+        "sub_region": "South-eastern Asia",
+        "intermediate_region": "Unknown",
+        "display_name": "Viet Nam/Asia",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 25200,
+      "timezone": "Asia/Ho_Chi_Minh"
+    }
+  },
+  "Asia/Hong_Kong": {
+    "locations": [
+      {
+        "country_code": "HK",
+        "country": "Hong Kong",
+        "region": "Asia",
+        "sub_region": "Eastern Asia",
+        "intermediate_region": "Unknown",
+        "display_name": "Hong Kong/Asia",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Asia/Hong_Kong",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Asia/Jakarta": {
+    "locations": [
+      {
+        "country_code": "ID",
+        "country": "Indonesia",
+        "region": "Asia",
+        "sub_region": "South-eastern Asia",
+        "intermediate_region": "Unknown",
+        "display_name": "Indonesia/Asia",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 25200,
+      "timezone": "Asia/Jakarta"
+    }
+  },
+  "Asia/Jerusalem": {
+    "locations": [
+      {
+        "country_code": "IL",
+        "country": "Israel",
+        "region": "Asia",
+        "sub_region": "Western Asia",
+        "intermediate_region": "Unknown",
+        "display_name": "Israel/Asia",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": "2025-10-25T23:00:00Z",
+      "dst_name": "IDT",
+      "dst_offset_seconds": 10800,
+      "dst_start": "2025-03-28T00:00:00Z",
+      "has_dst": true,
+      "standard_offset_seconds": 7200,
+      "timezone": "Asia/Jerusalem"
+    }
+  },
+  "Asia/Kabul": {
+    "locations": [
+      {
+        "country_code": "AF",
+        "country": "Afghanistan",
+        "region": "Asia",
+        "sub_region": "Southern Asia",
+        "intermediate_region": "Unknown",
+        "display_name": "Afghanistan/Asia",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 16200,
+      "timezone": "Asia/Kabul"
+    }
+  },
+  "Asia/Karachi": {
+    "locations": [
+      {
+        "country_code": "PK",
+        "country": "Pakistan",
+        "region": "Asia",
+        "sub_region": "Southern Asia",
+        "intermediate_region": "Unknown",
+        "display_name": "Pakistan/Asia",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 18000,
+      "timezone": "Asia/Karachi"
+    }
+  },
+  "Asia/Kathmandu": {
+    "locations": [
+      {
+        "country_code": "NP",
+        "country": "Nepal",
+        "region": "Asia",
+        "sub_region": "Southern Asia",
+        "intermediate_region": "Unknown",
+        "display_name": "Nepal/Asia",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 20700,
+      "timezone": "Asia/Kathmandu"
+    }
+  },
+  "Asia/Kolkata": {
+    "locations": [
+      {
+        "country_code": "IN",
+        "country": "India",
+        "region": "Asia",
+        "sub_region": "Southern Asia",
+        "intermediate_region": "Unknown",
+        "display_name": "India/Asia",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 19800,
+      "timezone": "Asia/Kolkata"
+    }
+  },
+  "Asia/Kuala_Lumpur": {
+    "locations": [
+      {
+        "country_code": "MY",
+        "country": "Malaysia",
+        "region": "Asia",
+        "sub_region": "South-eastern Asia",
+        "intermediate_region": "Unknown",
+        "display_name": "Malaysia/Asia",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 28800,
+      "timezone": "Asia/Kuala_Lumpur"
+    }
+  },
+  "Asia/Kuwait": {
+    "locations": [
+      {
+        "country_code": "KW",
+        "country": "Kuwait",
+        "region": "Asia",
+        "sub_region": "Western Asia",
+        "intermediate_region": "Unknown",
+        "display_name": "Kuwait/Asia",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Asia/Kuwait",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Asia/Macao": {
+    "locations": [
+      {
+        "country_code": "MO",
+        "country": "Macao",
+        "region": "Asia",
+        "sub_region": "Eastern Asia",
+        "intermediate_region": "Unknown",
+        "display_name": "Macao/Asia",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Asia/Macao",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Asia/Manila": {
+    "locations": [
+      {
+        "country_code": "PH",
+        "country": "Philippines",
+        "region": "Asia",
+        "sub_region": "South-eastern Asia",
+        "intermediate_region": "Unknown",
+        "display_name": "Philippines/Asia",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 28800,
+      "timezone": "Asia/Manila"
+    }
+  },
+  "Asia/Muscat": {
+    "locations": [
+      {
+        "country_code": "OM",
+        "country": "Oman",
+        "region": "Asia",
+        "sub_region": "Western Asia",
+        "intermediate_region": "Unknown",
+        "display_name": "Oman/Asia",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 14400,
+      "timezone": "Asia/Muscat"
+    }
+  },
+  "Asia/Nicosia": {
+    "locations": [
+      {
+        "country_code": "CY",
+        "country": "Cyprus",
+        "region": "Asia",
+        "sub_region": "Western Asia",
+        "intermediate_region": "Unknown",
+        "display_name": "Cyprus/Asia",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": "2025-10-26T01:00:00Z",
+      "dst_name": "EEST",
+      "dst_offset_seconds": 10800,
+      "dst_start": "2025-03-30T01:00:00Z",
+      "has_dst": true,
+      "standard_offset_seconds": 7200,
+      "timezone": "Asia/Nicosia"
+    }
+  },
+  "Asia/Phnom_Penh": {
+    "locations": [
+      {
+        "country_code": "KH",
+        "country": "Cambodia",
+        "region": "Asia",
+        "sub_region": "South-eastern Asia",
+        "intermediate_region": "Unknown",
+        "display_name": "Cambodia/Asia",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 25200,
+      "timezone": "Asia/Phnom_Penh"
+    }
+  },
+  "Asia/Qatar": {
+    "locations": [
+      {
+        "country_code": "QA",
+        "country": "Qatar",
+        "region": "Asia",
+        "sub_region": "Western Asia",
+        "intermediate_region": "Unknown",
+        "display_name": "Qatar/Asia",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Asia/Qatar",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Asia/Riyadh": {
+    "locations": [
+      {
+        "country_code": "SA",
+        "country": "Saudi Arabia",
+        "region": "Asia",
+        "sub_region": "Western Asia",
+        "intermediate_region": "Unknown",
+        "display_name": "Saudi Arabia/Asia",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 10800,
+      "timezone": "Asia/Riyadh"
+    }
+  },
+  "Asia/Seoul": {
+    "locations": [
+      {
+        "country_code": "KP",
+        "country": "North Korea",
+        "region": "Asia",
+        "sub_region": "Eastern Asia",
+        "intermediate_region": "Unknown",
+        "display_name": "Korea (Democratic People's Republic of)/Asia",
+        "location_type": "country"
+      },
+      {
+        "country_code": "KR",
+        "country": "South Korea",
+        "region": "Asia",
+        "sub_region": "Eastern Asia",
+        "intermediate_region": "Unknown",
+        "display_name": "Korea, Republic of/Asia",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 32400,
+      "timezone": "Asia/Seoul"
+    }
+  },
+  "Asia/Shanghai": {
+    "locations": [
+      {
+        "country_code": "CN",
+        "country": "China",
+        "region": "Asia",
+        "sub_region": "Eastern Asia",
+        "intermediate_region": "Unknown",
+        "display_name": "China/Asia",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 28800,
+      "timezone": "Asia/Shanghai"
+    }
+  },
+  "Asia/Singapore": {
+    "locations": [
+      {
+        "country_code": "SG",
+        "country": "Singapore",
+        "region": "Asia",
+        "sub_region": "South-eastern Asia",
+        "intermediate_region": "Unknown",
+        "display_name": "Singapore/Asia",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Asia/Singapore",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Asia/Taipei": {
+    "locations": [
+      {
+        "country_code": "TW",
+        "country": "Taiwan",
+        "region": "Asia",
+        "sub_region": "Eastern Asia",
+        "intermediate_region": "Unknown",
+        "display_name": "Taiwan, Province of China/Asia",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 28800,
+      "timezone": "Asia/Taipei"
+    }
+  },
+  "Asia/Tashkent": {
+    "locations": [
+      {
+        "country_code": "UZ",
+        "country": "Uzbekistan",
+        "region": "Asia",
+        "sub_region": "Central Asia",
+        "intermediate_region": "Unknown",
+        "display_name": "Uzbekistan/Asia",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 18000,
+      "timezone": "Asia/Tashkent"
+    }
+  },
+  "Asia/Tbilisi": {
+    "locations": [
+      {
+        "country_code": "GE",
+        "country": "Georgia",
+        "region": "Asia",
+        "sub_region": "Western Asia",
+        "intermediate_region": "Unknown",
+        "display_name": "Georgia/Asia",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 14400,
+      "timezone": "Asia/Tbilisi"
+    }
+  },
+  "Asia/Tehran": {
+    "locations": [
+      {
+        "country_code": "IR",
+        "country": "Iran",
+        "region": "Asia",
+        "sub_region": "Southern Asia",
+        "intermediate_region": "Unknown",
+        "display_name": "Iran (Islamic Republic of)/Asia",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 12600,
+      "timezone": "Asia/Tehran"
+    }
+  },
+  "Asia/Thimphu": {
+    "locations": [
+      {
+        "country_code": "BT",
+        "country": "Bhutan",
+        "region": "Asia",
+        "sub_region": "Southern Asia",
+        "intermediate_region": "Unknown",
+        "display_name": "Bhutan/Asia",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 21600,
+      "timezone": "Asia/Thimphu"
+    }
+  },
+  "Asia/Tokyo": {
+    "locations": [
+      {
+        "country_code": "JP",
+        "country": "Japan",
+        "region": "Asia",
+        "sub_region": "Eastern Asia",
+        "intermediate_region": "Unknown",
+        "display_name": "Japan/Asia",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 32400,
+      "timezone": "Asia/Tokyo"
+    }
+  },
+  "Asia/Ulaanbaatar": {
+    "locations": [
+      {
+        "country_code": "MN",
+        "country": "Mongolia",
+        "region": "Asia",
+        "sub_region": "Eastern Asia",
+        "intermediate_region": "Unknown",
+        "display_name": "Mongolia/Asia",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 28800,
+      "timezone": "Asia/Ulaanbaatar"
+    }
+  },
+  "Asia/Vientiane": {
+    "locations": [
+      {
+        "country_code": "LA",
+        "country": "Laos",
+        "region": "Asia",
+        "sub_region": "South-eastern Asia",
+        "intermediate_region": "Unknown",
+        "display_name": "Lao People's Democratic Republic/Asia",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 25200,
+      "timezone": "Asia/Vientiane"
+    }
+  },
+  "Asia/Yangon": {
+    "locations": [
+      {
+        "country_code": "MM",
+        "country": "Myanmar",
+        "region": "Asia",
+        "sub_region": "South-eastern Asia",
+        "intermediate_region": "Unknown",
+        "display_name": "Myanmar/Asia",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 23400,
+      "timezone": "Asia/Yangon"
+    }
+  },
+  "Asia/Yerevan": {
+    "locations": [
+      {
+        "country_code": "AM",
+        "country": "Armenia",
+        "region": "Asia",
+        "sub_region": "Western Asia",
+        "intermediate_region": "Unknown",
+        "display_name": "Armenia/Asia",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 14400,
+      "timezone": "Asia/Yerevan"
+    }
+  },
+  "Australia/Adelaide": {
+    "locations": [
+      {
+        "country_code": "AU",
+        "country": "Australia",
+        "region": "Oceania",
+        "sub_region": "Australia and New Zealand",
+        "intermediate_region": "Unknown",
+        "display_name": "Australia/Oceania",
+        "location_type": "state",
+        "state": "South Australia",
+        "state_code": "SA"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": "2025-04-05T16:30:00Z",
+      "dst_name": "ACDT",
+      "dst_offset_seconds": 37800,
+      "dst_start": "2024-10-05T16:30:00Z",
+      "has_dst": true,
+      "standard_offset_seconds": 34200,
+      "timezone": "Australia/Adelaide"
+    }
+  },
+  "Australia/Brisbane": {
+    "locations": [
+      {
+        "country_code": "AU",
+        "country": "Australia",
+        "region": "Oceania",
+        "sub_region": "Australia and New Zealand",
+        "intermediate_region": "Unknown",
+        "display_name": "Australia/Oceania",
+        "location_type": "state",
+        "state": "Queensland",
+        "state_code": "QLD"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 36000,
+      "timezone": "Australia/Brisbane"
+    }
+  },
+  "Australia/Darwin": {
+    "locations": [
+      {
+        "country_code": "AU",
+        "country": "Australia",
+        "region": "Oceania",
+        "sub_region": "Australia and New Zealand",
+        "intermediate_region": "Unknown",
+        "display_name": "Australia/Oceania",
+        "location_type": "state",
+        "state": "Northern Territory",
+        "state_code": "NT"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 34200,
+      "timezone": "Australia/Darwin"
+    }
+  },
+  "Australia/Melbourne": {
+    "locations": [
+      {
+        "country_code": "AU",
+        "country": "Australia",
+        "region": "Oceania",
+        "sub_region": "Australia and New Zealand",
+        "intermediate_region": "Unknown",
+        "display_name": "Australia/Oceania",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": "2026-04-04T16:00:00Z",
+      "dst_name": "AEDT",
+      "dst_offset_seconds": 39600,
+      "dst_start": "2025-10-04T16:00:00Z",
+      "has_dst": true,
+      "standard_offset_seconds": 36000,
+      "timezone": "Australia/Melbourne"
+    }
+  },
+  "Australia/Perth": {
+    "locations": [
+      {
+        "country_code": "AU",
+        "country": "Australia",
+        "region": "Oceania",
+        "sub_region": "Australia and New Zealand",
+        "intermediate_region": "Unknown",
+        "display_name": "Australia/Oceania",
+        "location_type": "state",
+        "state": "Western Australia",
+        "state_code": "WA"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 28800,
+      "timezone": "Australia/Perth"
+    }
+  },
+  "Australia/Sydney": {
+    "locations": [
+      {
+        "country_code": "AU",
+        "country": "Australia",
+        "region": "Oceania",
+        "sub_region": "Australia and New Zealand",
+        "intermediate_region": "Unknown",
+        "display_name": "Australia/Oceania",
+        "location_type": "state",
+        "state": "Victoria",
+        "state_code": "VIC"
+      },
+      {
+        "country_code": "AU",
+        "country": "Australia",
+        "region": "Oceania",
+        "sub_region": "Australia and New Zealand",
+        "intermediate_region": "Unknown",
+        "display_name": "Australia/Oceania",
+        "location_type": "state",
+        "state": "Tasmania",
+        "state_code": "TAS"
+      },
+      {
+        "country_code": "AU",
+        "country": "Australia",
+        "region": "Oceania",
+        "sub_region": "Australia and New Zealand",
+        "intermediate_region": "Unknown",
+        "display_name": "Australia/Oceania",
+        "location_type": "state",
+        "state": "New South Wales",
+        "state_code": "NSW"
+      },
+      {
+        "country_code": "AU",
+        "country": "Australia",
+        "region": "Oceania",
+        "sub_region": "Australia and New Zealand",
+        "intermediate_region": "Unknown",
+        "display_name": "Australia/Oceania",
+        "location_type": "state",
+        "state": "Australian Capital Territory",
+        "state_code": "ACT"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": "2025-04-05T16:00:00Z",
+      "dst_name": "AEDT",
+      "dst_offset_seconds": 39600,
+      "dst_start": "2024-10-05T16:00:00Z",
+      "has_dst": true,
+      "standard_offset_seconds": 36000,
+      "timezone": "Australia/Sydney"
+    }
+  },
+  "Canada/Atlantic": {
+    "locations": [
+      {
+        "country_code": "CA",
+        "country": "Canada",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "Canada/Americas",
+        "location_type": "province",
+        "province": "New Brunswick",
+        "province_code": "NB"
+      },
+      {
+        "country_code": "CA",
+        "country": "Canada",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "Canada/Americas",
+        "location_type": "province",
+        "province": "Nova Scotia",
+        "province_code": "NS"
+      },
+      {
+        "country_code": "CA",
+        "country": "Canada",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "Canada/Americas",
+        "location_type": "province",
+        "province": "Prince Edward Island",
+        "province_code": "PE"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": "2025-11-02T08:00:00Z",
+      "dst_name": "ADT",
+      "dst_offset_seconds": -10800,
+      "dst_start": "2025-03-09T09:00:00Z",
+      "has_dst": true,
+      "standard_offset_seconds": -14400,
+      "timezone": "Canada/Atlantic"
+    }
+  },
+  "Canada/Central": {
+    "locations": [
+      {
+        "country_code": "CA",
+        "country": "Canada",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "Canada/Americas",
+        "location_type": "province",
+        "province": "Manitoba",
+        "province_code": "MB"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": "2025-11-02T08:00:00Z",
+      "dst_name": "CDT",
+      "dst_offset_seconds": -18000,
+      "dst_start": "2025-03-09T09:00:00Z",
+      "has_dst": true,
+      "standard_offset_seconds": -21600,
+      "timezone": "Canada/Central"
+    }
+  },
+  "Canada/Eastern": {
+    "locations": [
+      {
+        "country_code": "CA",
+        "country": "Canada",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "Canada/Americas",
+        "location_type": "province",
+        "province": "Ontario",
+        "province_code": "ON"
+      },
+      {
+        "country_code": "CA",
+        "country": "Canada",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "Canada/Americas",
+        "location_type": "province",
+        "province": "Quebec",
+        "province_code": "QC"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": "2025-11-02T08:00:00Z",
+      "dst_name": "EDT",
+      "dst_offset_seconds": -14400,
+      "dst_start": "2025-03-09T09:00:00Z",
+      "has_dst": true,
+      "standard_offset_seconds": -18000,
+      "timezone": "Canada/Eastern"
+    }
+  },
+  "Canada/Mountain": {
+    "locations": [
+      {
+        "country_code": "CA",
+        "country": "Canada",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "Canada/Americas",
+        "location_type": "province",
+        "province": "Alberta",
+        "province_code": "AB"
+      },
+      {
+        "country_code": "CA",
+        "country": "Canada",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "Canada/Americas",
+        "location_type": "province",
+        "province": "Northwest Territories",
+        "province_code": "NT"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": "2025-11-02T08:00:00Z",
+      "dst_name": "MDT",
+      "dst_offset_seconds": -21600,
+      "dst_start": "2025-03-09T09:00:00Z",
+      "has_dst": true,
+      "standard_offset_seconds": -25200,
+      "timezone": "Canada/Mountain"
+    }
+  },
+  "Canada/Newfoundland": {
+    "locations": [
+      {
+        "country_code": "CA",
+        "country": "Canada",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "Canada/Americas",
+        "location_type": "province",
+        "province": "Newfoundland and Labrador",
+        "province_code": "NL"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": "2025-11-02T08:00:00Z",
+      "dst_name": "NDT",
+      "dst_offset_seconds": -9000,
+      "dst_start": "2025-03-09T09:00:00Z",
+      "has_dst": true,
+      "standard_offset_seconds": -12600,
+      "timezone": "Canada/Newfoundland"
+    }
+  },
+  "Canada/Pacific": {
+    "locations": [
+      {
+        "country_code": "CA",
+        "country": "Canada",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "Canada/Americas",
+        "location_type": "province",
+        "province": "British Columbia",
+        "province_code": "BC"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": "2025-11-02T08:00:00Z",
+      "dst_name": "PDT",
+      "dst_offset_seconds": -25200,
+      "dst_start": "2025-03-09T09:00:00Z",
+      "has_dst": true,
+      "standard_offset_seconds": -28800,
+      "timezone": "Canada/Pacific"
+    }
+  },
+  "Canada/Saskatchewan": {
+    "locations": [
+      {
+        "country_code": "CA",
+        "country": "Canada",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "Canada/Americas",
+        "location_type": "province",
+        "province": "Saskatchewan",
+        "province_code": "SK"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": -21600,
+      "timezone": "Canada/Saskatchewan"
+    }
+  },
+  "Canada/Yukon": {
+    "locations": [
+      {
+        "country_code": "CA",
+        "country": "Canada",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "Canada/Americas",
+        "location_type": "province",
+        "province": "Yukon",
+        "province_code": "YT"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": -25200,
+      "timezone": "Canada/Yukon"
+    }
+  },
+  "Europe/Amsterdam": {
+    "locations": [
+      {
+        "country_code": "NL",
+        "country": "Netherlands",
+        "region": "Europe",
+        "sub_region": "Western Europe",
+        "intermediate_region": "Unknown",
+        "display_name": "Netherlands/Europe",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": "2025-10-26T01:00:00Z",
+      "dst_name": "CEST",
+      "dst_offset_seconds": 7200,
+      "dst_start": "2025-03-30T01:00:00Z",
+      "has_dst": true,
+      "standard_offset_seconds": 3600,
+      "timezone": "Europe/Amsterdam"
+    }
+  },
+  "Europe/Andorra": {
+    "locations": [
+      {
+        "country_code": "AD",
+        "country": "Andorra",
+        "region": "Europe",
+        "sub_region": "Southern Europe",
+        "intermediate_region": "Unknown",
+        "display_name": "Andorra/Europe",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Europe/Andorra",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Europe/Athens": {
+    "locations": [
+      {
+        "country_code": "GR",
+        "country": "Greece",
+        "region": "Europe",
+        "sub_region": "Southern Europe",
+        "intermediate_region": "Unknown",
+        "display_name": "Greece/Europe",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": "2025-10-26T01:00:00Z",
+      "dst_name": "EEST",
+      "dst_offset_seconds": 10800,
+      "dst_start": "2025-03-30T01:00:00Z",
+      "has_dst": true,
+      "standard_offset_seconds": 7200,
+      "timezone": "Europe/Athens"
+    }
+  },
+  "Europe/Berlin": {
+    "locations": [
+      {
+        "country_code": "DE",
+        "country": "Germany",
+        "region": "Europe",
+        "sub_region": "Western Europe",
+        "intermediate_region": "Unknown",
+        "display_name": "Germany/Europe",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": "2025-10-26T01:00:00Z",
+      "dst_name": "CEST",
+      "dst_offset_seconds": 7200,
+      "dst_start": "2025-03-30T01:00:00Z",
+      "has_dst": true,
+      "standard_offset_seconds": 3600,
+      "timezone": "Europe/Berlin"
+    }
+  },
+  "Europe/Brussels": {
+    "locations": [
+      {
+        "country_code": "BE",
+        "country": "Belgium",
+        "region": "Europe",
+        "sub_region": "Western Europe",
+        "intermediate_region": "Unknown",
+        "display_name": "Belgium/Europe",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": "2025-10-26T01:00:00Z",
+      "dst_name": "CEST",
+      "dst_offset_seconds": 7200,
+      "dst_start": "2025-03-30T01:00:00Z",
+      "has_dst": true,
+      "standard_offset_seconds": 3600,
+      "timezone": "Europe/Brussels"
+    }
+  },
+  "Europe/Bucharest": {
+    "locations": [
+      {
+        "country_code": "RO",
+        "country": "Romania",
+        "region": "Europe",
+        "sub_region": "Eastern Europe",
+        "intermediate_region": "Unknown",
+        "display_name": "Romania/Europe",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": "2025-10-26T01:00:00Z",
+      "dst_name": "EEST",
+      "dst_offset_seconds": 10800,
+      "dst_start": "2025-03-30T01:00:00Z",
+      "has_dst": true,
+      "standard_offset_seconds": 7200,
+      "timezone": "Europe/Bucharest"
+    }
+  },
+  "Europe/Chisinau": {
+    "locations": [
+      {
+        "country_code": "MD",
+        "country": "Moldova",
+        "region": "Europe",
+        "sub_region": "Eastern Europe",
+        "intermediate_region": "Unknown",
+        "display_name": "Moldova, Republic of/Europe",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": "2025-10-26T00:00:00Z",
+      "dst_name": "EEST",
+      "dst_offset_seconds": 10800,
+      "dst_start": "2025-03-30T00:00:00Z",
+      "has_dst": true,
+      "standard_offset_seconds": 7200,
+      "timezone": "Europe/Chisinau"
+    }
+  },
+  "Europe/Copenhagen": {
+    "locations": [
+      {
+        "country_code": "DK",
+        "country": "Denmark",
+        "region": "Europe",
+        "sub_region": "Northern Europe",
+        "intermediate_region": "Unknown",
+        "display_name": "Denmark/Europe",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": "2025-10-26T01:00:00Z",
+      "dst_name": "CEST",
+      "dst_offset_seconds": 7200,
+      "dst_start": "2025-03-30T01:00:00Z",
+      "has_dst": true,
+      "standard_offset_seconds": 3600,
+      "timezone": "Europe/Copenhagen"
+    }
+  },
+  "Europe/Dublin": {
+    "locations": [
+      {
+        "country_code": "IE",
+        "country": "Ireland",
+        "region": "Europe",
+        "sub_region": "Northern Europe",
+        "intermediate_region": "Unknown",
+        "display_name": "Ireland/Europe",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": "2026-03-29T01:00:00Z",
+      "dst_name": "GMT",
+      "dst_offset_seconds": 0,
+      "dst_start": "2025-10-26T01:00:00Z",
+      "has_dst": true,
+      "standard_offset_seconds": 3600,
+      "timezone": "Europe/Dublin"
+    }
+  },
+  "Europe/Gibraltar": {
+    "locations": [
+      {
+        "country_code": "GI",
+        "country": "Gibraltar",
+        "region": "Europe",
+        "sub_region": "Southern Europe",
+        "intermediate_region": "Unknown",
+        "display_name": "Gibraltar/Europe",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Europe/Gibraltar",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Europe/Guernsey": {
+    "locations": [
+      {
+        "country_code": "GG",
+        "country": "Guernsey",
+        "region": "Europe",
+        "sub_region": "Northern Europe",
+        "intermediate_region": "Channel Islands",
+        "display_name": "Guernsey/Europe",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Europe/Guernsey",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Europe/Helsinki": {
+    "locations": [
+      {
+        "country_code": "FI",
+        "country": "Finland",
+        "region": "Europe",
+        "sub_region": "Northern Europe",
+        "intermediate_region": "Unknown",
+        "display_name": "Finland/Europe",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": "2025-10-26T01:00:00Z",
+      "dst_name": "EEST",
+      "dst_offset_seconds": 10800,
+      "dst_start": "2025-03-30T01:00:00Z",
+      "has_dst": true,
+      "standard_offset_seconds": 7200,
+      "timezone": "Europe/Helsinki"
+    }
+  },
+  "Europe/Isle_of_Man": {
+    "locations": [
+      {
+        "country_code": "IM",
+        "country": "Isle of Man",
+        "region": "Europe",
+        "sub_region": "Northern Europe",
+        "intermediate_region": "Unknown",
+        "display_name": "Isle of Man/Europe",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Europe/Isle_of_Man",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Europe/Istanbul": {
+    "locations": [
+      {
+        "country_code": "TR",
+        "country": "Turkey",
+        "region": "Asia",
+        "sub_region": "Western Asia",
+        "intermediate_region": "Unknown",
+        "display_name": "Turkey/Asia",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 10800,
+      "timezone": "Europe/Istanbul"
+    }
+  },
+  "Europe/Jersey": {
+    "locations": [
+      {
+        "country_code": "JE",
+        "country": "Jersey",
+        "region": "Europe",
+        "sub_region": "Northern Europe",
+        "intermediate_region": "Channel Islands",
+        "display_name": "Jersey/Europe",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Europe/Jersey",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Europe/Kiev": {
+    "locations": [
+      {
+        "country_code": "UA",
+        "country": "Ukraine",
+        "region": "Europe",
+        "sub_region": "Eastern Europe",
+        "intermediate_region": "Unknown",
+        "display_name": "Ukraine/Europe",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": "2025-10-26T01:00:00Z",
+      "dst_name": "EEST",
+      "dst_offset_seconds": 10800,
+      "dst_start": "2025-03-30T01:00:00Z",
+      "has_dst": true,
+      "standard_offset_seconds": 7200,
+      "timezone": "Europe/Kiev"
+    }
+  },
+  "Europe/Lisbon": {
+    "locations": [
+      {
+        "country_code": "PT",
+        "country": "Portugal",
+        "region": "Europe",
+        "sub_region": "Southern Europe",
+        "intermediate_region": "Unknown",
+        "display_name": "Portugal/Europe",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": "2025-10-26T01:00:00Z",
+      "dst_name": "WEST",
+      "dst_offset_seconds": 3600,
+      "dst_start": "2025-03-30T01:00:00Z",
+      "has_dst": true,
+      "standard_offset_seconds": 0,
+      "timezone": "Europe/Lisbon"
+    }
+  },
+  "Europe/London": {
+    "locations": [
+      {
+        "country_code": "GB",
+        "country": "United Kingdom",
+        "region": "Europe",
+        "sub_region": "Northern Europe",
+        "intermediate_region": "Unknown",
+        "display_name": "United Kingdom of Great Britain and Northern Ireland/Europe",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": "2025-10-26T01:00:00Z",
+      "dst_name": "BST",
+      "dst_offset_seconds": 3600,
+      "dst_start": "2025-03-30T01:00:00Z",
+      "has_dst": true,
+      "standard_offset_seconds": 0,
+      "timezone": "Europe/London"
+    }
+  },
+  "Europe/Luxembourg": {
+    "locations": [
+      {
+        "country_code": "LU",
+        "country": "Luxembourg",
+        "region": "Europe",
+        "sub_region": "Western Europe",
+        "intermediate_region": "Unknown",
+        "display_name": "Luxembourg/Europe",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Europe/Luxembourg",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Europe/Madrid": {
+    "locations": [
+      {
+        "country_code": "ES",
+        "country": "Spain",
+        "region": "Europe",
+        "sub_region": "Southern Europe",
+        "intermediate_region": "Unknown",
+        "display_name": "Spain/Europe",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": "2025-10-26T01:00:00Z",
+      "dst_name": "CEST",
+      "dst_offset_seconds": 7200,
+      "dst_start": "2025-03-30T01:00:00Z",
+      "has_dst": true,
+      "standard_offset_seconds": 3600,
+      "timezone": "Europe/Madrid"
+    }
+  },
+  "Europe/Malta": {
+    "locations": [
+      {
+        "country_code": "MT",
+        "country": "Malta",
+        "region": "Europe",
+        "sub_region": "Southern Europe",
+        "intermediate_region": "Unknown",
+        "display_name": "Malta/Europe",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Europe/Malta",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Europe/Minsk": {
+    "locations": [
+      {
+        "country_code": "BY",
+        "country": "Belarus",
+        "region": "Europe",
+        "sub_region": "Eastern Europe",
+        "intermediate_region": "Unknown",
+        "display_name": "Belarus/Europe",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 10800,
+      "timezone": "Europe/Minsk"
+    }
+  },
+  "Europe/Monaco": {
+    "locations": [
+      {
+        "country_code": "MC",
+        "country": "Monaco",
+        "region": "Europe",
+        "sub_region": "Western Europe",
+        "intermediate_region": "Unknown",
+        "display_name": "Monaco/Europe",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Europe/Monaco",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Europe/Moscow": {
+    "locations": [
+      {
+        "country_code": "RU",
+        "country": "Russia",
+        "region": "Europe",
+        "sub_region": "Eastern Europe",
+        "intermediate_region": "Unknown",
+        "display_name": "Russian Federation/Europe",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 10800,
+      "timezone": "Europe/Moscow"
+    }
+  },
+  "Europe/Oslo": {
+    "locations": [
+      {
+        "country_code": "NO",
+        "country": "Norway",
+        "region": "Europe",
+        "sub_region": "Northern Europe",
+        "intermediate_region": "Unknown",
+        "display_name": "Norway/Europe",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": "2025-10-26T01:00:00Z",
+      "dst_name": "CEST",
+      "dst_offset_seconds": 7200,
+      "dst_start": "2025-03-30T01:00:00Z",
+      "has_dst": true,
+      "standard_offset_seconds": 3600,
+      "timezone": "Europe/Oslo"
+    }
+  },
+  "Europe/Paris": {
+    "locations": [
+      {
+        "country_code": "FR",
+        "country": "France",
+        "region": "Europe",
+        "sub_region": "Western Europe",
+        "intermediate_region": "Unknown",
+        "display_name": "France/Europe",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": "2025-10-26T01:00:00Z",
+      "dst_name": "CEST",
+      "dst_offset_seconds": 7200,
+      "dst_start": "2025-03-30T01:00:00Z",
+      "has_dst": true,
+      "standard_offset_seconds": 3600,
+      "timezone": "Europe/Paris"
+    }
+  },
+  "Europe/Prague": {
+    "locations": [
+      {
+        "country_code": "CZ",
+        "country": "Czech Republic",
+        "region": "Europe",
+        "sub_region": "Eastern Europe",
+        "intermediate_region": "Unknown",
+        "display_name": "Czechia/Europe",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": "2025-10-26T01:00:00Z",
+      "dst_name": "CEST",
+      "dst_offset_seconds": 7200,
+      "dst_start": "2025-03-30T01:00:00Z",
+      "has_dst": true,
+      "standard_offset_seconds": 3600,
+      "timezone": "Europe/Prague"
+    }
+  },
+  "Europe/Riga": {
+    "locations": [
+      {
+        "country_code": "LV",
+        "country": "Latvia",
+        "region": "Europe",
+        "sub_region": "Northern Europe",
+        "intermediate_region": "Unknown",
+        "display_name": "Latvia/Europe",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": "2025-10-26T01:00:00Z",
+      "dst_name": "EEST",
+      "dst_offset_seconds": 10800,
+      "dst_start": "2025-03-30T01:00:00Z",
+      "has_dst": true,
+      "standard_offset_seconds": 7200,
+      "timezone": "Europe/Riga"
+    }
+  },
+  "Europe/Rome": {
+    "locations": [
+      {
+        "country_code": "IT",
+        "country": "Italy",
+        "region": "Europe",
+        "sub_region": "Southern Europe",
+        "intermediate_region": "Unknown",
+        "display_name": "Italy/Europe",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": "2025-10-26T01:00:00Z",
+      "dst_name": "CEST",
+      "dst_offset_seconds": 7200,
+      "dst_start": "2025-03-30T01:00:00Z",
+      "has_dst": true,
+      "standard_offset_seconds": 3600,
+      "timezone": "Europe/Rome"
+    }
+  },
+  "Europe/San_Marino": {
+    "locations": [
+      {
+        "country_code": "SM",
+        "country": "San Marino",
+        "region": "Europe",
+        "sub_region": "Southern Europe",
+        "intermediate_region": "Unknown",
+        "display_name": "San Marino/Europe",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Europe/San_Marino",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Europe/Sofia": {
+    "locations": [
+      {
+        "country_code": "BG",
+        "country": "Bulgaria",
+        "region": "Europe",
+        "sub_region": "Eastern Europe",
+        "intermediate_region": "Unknown",
+        "display_name": "Bulgaria/Europe",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": "2025-10-26T01:00:00Z",
+      "dst_name": "EEST",
+      "dst_offset_seconds": 10800,
+      "dst_start": "2025-03-30T01:00:00Z",
+      "has_dst": true,
+      "standard_offset_seconds": 7200,
+      "timezone": "Europe/Sofia"
+    }
+  },
+  "Europe/Stockholm": {
+    "locations": [
+      {
+        "country_code": "SE",
+        "country": "Sweden",
+        "region": "Europe",
+        "sub_region": "Northern Europe",
+        "intermediate_region": "Unknown",
+        "display_name": "Sweden/Europe",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": "2025-10-26T01:00:00Z",
+      "dst_name": "CEST",
+      "dst_offset_seconds": 7200,
+      "dst_start": "2025-03-30T01:00:00Z",
+      "has_dst": true,
+      "standard_offset_seconds": 3600,
+      "timezone": "Europe/Stockholm"
+    }
+  },
+  "Europe/Tallinn": {
+    "locations": [
+      {
+        "country_code": "EE",
+        "country": "Estonia",
+        "region": "Europe",
+        "sub_region": "Northern Europe",
+        "intermediate_region": "Unknown",
+        "display_name": "Estonia/Europe",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": "2025-10-26T01:00:00Z",
+      "dst_name": "EEST",
+      "dst_offset_seconds": 10800,
+      "dst_start": "2025-03-30T01:00:00Z",
+      "has_dst": true,
+      "standard_offset_seconds": 7200,
+      "timezone": "Europe/Tallinn"
+    }
+  },
+  "Europe/Vienna": {
+    "locations": [
+      {
+        "country_code": "AT",
+        "country": "Austria",
+        "region": "Europe",
+        "sub_region": "Western Europe",
+        "intermediate_region": "Unknown",
+        "display_name": "Austria/Europe",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": "2025-10-26T01:00:00Z",
+      "dst_name": "CEST",
+      "dst_offset_seconds": 7200,
+      "dst_start": "2025-03-30T01:00:00Z",
+      "has_dst": true,
+      "standard_offset_seconds": 3600,
+      "timezone": "Europe/Vienna"
+    }
+  },
+  "Europe/Vilnius": {
+    "locations": [
+      {
+        "country_code": "LT",
+        "country": "Lithuania",
+        "region": "Europe",
+        "sub_region": "Northern Europe",
+        "intermediate_region": "Unknown",
+        "display_name": "Lithuania/Europe",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": "2025-10-26T01:00:00Z",
+      "dst_name": "EEST",
+      "dst_offset_seconds": 10800,
+      "dst_start": "2025-03-30T01:00:00Z",
+      "has_dst": true,
+      "standard_offset_seconds": 7200,
+      "timezone": "Europe/Vilnius"
+    }
+  },
+  "Europe/Warsaw": {
+    "locations": [
+      {
+        "country_code": "PL",
+        "country": "Poland",
+        "region": "Europe",
+        "sub_region": "Eastern Europe",
+        "intermediate_region": "Unknown",
+        "display_name": "Poland/Europe",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": "2025-10-26T01:00:00Z",
+      "dst_name": "CEST",
+      "dst_offset_seconds": 7200,
+      "dst_start": "2025-03-30T01:00:00Z",
+      "has_dst": true,
+      "standard_offset_seconds": 3600,
+      "timezone": "Europe/Warsaw"
+    }
+  },
+  "Europe/Zurich": {
+    "locations": [
+      {
+        "country_code": "CH",
+        "country": "Switzerland",
+        "region": "Europe",
+        "sub_region": "Western Europe",
+        "intermediate_region": "Unknown",
+        "display_name": "Switzerland/Europe",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": "2025-10-26T01:00:00Z",
+      "dst_name": "CEST",
+      "dst_offset_seconds": 7200,
+      "dst_start": "2025-03-30T01:00:00Z",
+      "has_dst": true,
+      "standard_offset_seconds": 3600,
+      "timezone": "Europe/Zurich"
+    }
+  },
+  "Indian/Antananarivo": {
+    "locations": [
+      {
+        "country_code": "MG",
+        "country": "Madagascar",
+        "region": "Africa",
+        "sub_region": "Sub-Saharan Africa",
+        "intermediate_region": "Eastern Africa",
+        "display_name": "Madagascar/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 10800,
+      "timezone": "Indian/Antananarivo"
+    }
+  },
+  "Indian/Chagos": {
+    "locations": [
+      {
+        "country_code": "IO",
+        "country": "British Indian Ocean province",
+        "region": "Africa",
+        "sub_region": "Sub-Saharan Africa",
+        "intermediate_region": "Eastern Africa",
+        "display_name": "British Indian Ocean Territory/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 21600,
+      "timezone": "Indian/Chagos"
+    }
+  },
+  "Indian/Christmas": {
+    "locations": [
+      {
+        "country_code": "CX",
+        "country": "Christmas Island",
+        "region": "Oceania",
+        "sub_region": "Australia and New Zealand",
+        "intermediate_region": "Unknown",
+        "display_name": "Christmas Island/Oceania",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 25200,
+      "timezone": "Indian/Christmas"
+    }
+  },
+  "Indian/Comoro": {
+    "locations": [
+      {
+        "country_code": "KM",
+        "country": "Comoros",
+        "region": "Africa",
+        "sub_region": "Sub-Saharan Africa",
+        "intermediate_region": "Eastern Africa",
+        "display_name": "Comoros/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 10800,
+      "timezone": "Indian/Comoro"
+    }
+  },
+  "Indian/Mahe": {
+    "locations": [
+      {
+        "country_code": "SC",
+        "country": "Seychelles",
+        "region": "Africa",
+        "sub_region": "Sub-Saharan Africa",
+        "intermediate_region": "Eastern Africa",
+        "display_name": "Seychelles/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 14400,
+      "timezone": "Indian/Mahe"
+    }
+  },
+  "Indian/Maldives": {
+    "locations": [
+      {
+        "country_code": "MV",
+        "country": "Maldives",
+        "region": "Asia",
+        "sub_region": "Southern Asia",
+        "intermediate_region": "Unknown",
+        "display_name": "Maldives/Asia",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 18000,
+      "timezone": "Indian/Maldives"
+    }
+  },
+  "Indian/Mauritius": {
+    "locations": [
+      {
+        "country_code": "MU",
+        "country": "Mauritius",
+        "region": "Africa",
+        "sub_region": "Sub-Saharan Africa",
+        "intermediate_region": "Eastern Africa",
+        "display_name": "Mauritius/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 14400,
+      "timezone": "Indian/Mauritius"
+    }
+  },
+  "Indian/Mayotte": {
+    "locations": [
+      {
+        "country_code": "YT",
+        "country": "Mayotte",
+        "region": "Africa",
+        "sub_region": "Sub-Saharan Africa",
+        "intermediate_region": "Eastern Africa",
+        "display_name": "Mayotte/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 10800,
+      "timezone": "Indian/Mayotte"
+    }
+  },
+  "Indian/Reunion": {
+    "locations": [
+      {
+        "country_code": "RE",
+        "country": "Réunion",
+        "region": "Africa",
+        "sub_region": "Sub-Saharan Africa",
+        "intermediate_region": "Eastern Africa",
+        "display_name": "Réunion/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 14400,
+      "timezone": "Indian/Reunion"
+    }
+  },
+  "Pacific/Apia": {
+    "locations": [
+      {
+        "country_code": "WS",
+        "country": "Samoa",
+        "region": "Oceania",
+        "sub_region": "Polynesia",
+        "intermediate_region": "Unknown",
+        "display_name": "Samoa/Oceania",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 46800,
+      "timezone": "Pacific/Apia"
+    }
+  },
+  "Pacific/Auckland": {
+    "locations": [
+      {
+        "country_code": "NZ",
+        "country": "New Zealand",
+        "region": "Oceania",
+        "sub_region": "Australia and New Zealand",
+        "intermediate_region": "Unknown",
+        "display_name": "New Zealand/Oceania",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": "2025-04-05T14:00:00Z",
+      "dst_name": "NZDT",
+      "dst_offset_seconds": 46800,
+      "dst_start": "2024-09-28T14:00:00Z",
+      "has_dst": true,
+      "standard_offset_seconds": 43200,
+      "timezone": "Pacific/Auckland"
+    }
+  },
+  "Pacific/Efate": {
+    "locations": [
+      {
+        "country_code": "VU",
+        "country": "Vanuatu",
+        "region": "Oceania",
+        "sub_region": "Melanesia",
+        "intermediate_region": "Unknown",
+        "display_name": "Vanuatu/Oceania",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 39600,
+      "timezone": "Pacific/Efate"
+    }
+  },
+  "Pacific/Fakaofo": {
+    "locations": [
+      {
+        "country_code": "TK",
+        "country": "Tokelau",
+        "region": "Oceania",
+        "sub_region": "Polynesia",
+        "intermediate_region": "Unknown",
+        "display_name": "Tokelau/Oceania",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 46800,
+      "timezone": "Pacific/Fakaofo"
+    }
+  },
+  "Pacific/Fiji": {
+    "locations": [
+      {
+        "country_code": "FJ",
+        "country": "Fiji",
+        "region": "Oceania",
+        "sub_region": "Melanesia",
+        "intermediate_region": "Unknown",
+        "display_name": "Fiji/Oceania",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 43200,
+      "timezone": "Pacific/Fiji"
+    }
+  },
+  "Pacific/Funafuti": {
+    "locations": [
+      {
+        "country_code": "TV",
+        "country": "Tuvalu",
+        "region": "Oceania",
+        "sub_region": "Polynesia",
+        "intermediate_region": "Unknown",
+        "display_name": "Tuvalu/Oceania",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 43200,
+      "timezone": "Pacific/Funafuti"
+    }
+  },
+  "Pacific/Guadalcanal": {
+    "locations": [
+      {
+        "country_code": "SB",
+        "country": "Solomon Islands",
+        "region": "Oceania",
+        "sub_region": "Melanesia",
+        "intermediate_region": "Unknown",
+        "display_name": "Solomon Islands/Oceania",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 39600,
+      "timezone": "Pacific/Guadalcanal"
+    }
+  },
+  "Pacific/Guam": {
+    "locations": [
+      {
+        "country_code": "GU",
+        "country": "Guam",
+        "region": "Oceania",
+        "sub_region": "Micronesia",
+        "intermediate_region": "Unknown",
+        "display_name": "Guam/Oceania",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 36000,
+      "timezone": "Pacific/Guam"
+    }
+  },
+  "Pacific/Majuro": {
+    "locations": [
+      {
+        "country_code": "MH",
+        "country": "Marshall Islands",
+        "region": "Oceania",
+        "sub_region": "Micronesia",
+        "intermediate_region": "Unknown",
+        "display_name": "Marshall Islands/Oceania",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 43200,
+      "timezone": "Pacific/Majuro"
+    }
+  },
+  "Pacific/Nauru": {
+    "locations": [
+      {
+        "country_code": "NR",
+        "country": "Nauru",
+        "region": "Oceania",
+        "sub_region": "Micronesia",
+        "intermediate_region": "Unknown",
+        "display_name": "Nauru/Oceania",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 43200,
+      "timezone": "Pacific/Nauru"
+    }
+  },
+  "Pacific/Niue": {
+    "locations": [
+      {
+        "country_code": "NU",
+        "country": "Niue",
+        "region": "Oceania",
+        "sub_region": "Polynesia",
+        "intermediate_region": "Unknown",
+        "display_name": "Niue/Oceania",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": -39600,
+      "timezone": "Pacific/Niue"
+    }
+  },
+  "Pacific/Norfolk": {
+    "locations": [
+      {
+        "country_code": "NF",
+        "country": "Norfolk Island",
+        "region": "Oceania",
+        "sub_region": "Australia and New Zealand",
+        "intermediate_region": "Unknown",
+        "display_name": "Norfolk Island/Oceania",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": "2025-04-05T15:00:00Z",
+      "dst_name": "+12",
+      "dst_offset_seconds": 43200,
+      "dst_start": "2024-10-05T15:00:00Z",
+      "has_dst": true,
+      "standard_offset_seconds": 39600,
+      "timezone": "Pacific/Norfolk"
+    }
+  },
+  "Pacific/Noumea": {
+    "locations": [
+      {
+        "country_code": "NC",
+        "country": "New Caledonia",
+        "region": "Oceania",
+        "sub_region": "Melanesia",
+        "intermediate_region": "Unknown",
+        "display_name": "New Caledonia/Oceania",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 39600,
+      "timezone": "Pacific/Noumea"
+    }
+  },
+  "Pacific/Pago_Pago": {
+    "locations": [
+      {
+        "country_code": "AS",
+        "country": "American Samoa",
+        "region": "Oceania",
+        "sub_region": "Polynesia",
+        "intermediate_region": "Unknown",
+        "display_name": "American Samoa/Oceania",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": -39600,
+      "timezone": "Pacific/Pago_Pago"
+    }
+  },
+  "Pacific/Palau": {
+    "locations": [
+      {
+        "country_code": "PW",
+        "country": "Palau",
+        "region": "Oceania",
+        "sub_region": "Micronesia",
+        "intermediate_region": "Unknown",
+        "display_name": "Palau/Oceania",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 32400,
+      "timezone": "Pacific/Palau"
+    }
+  },
+  "Pacific/Port_Moresby": {
+    "locations": [
+      {
+        "country_code": "PG",
+        "country": "Papua New Guinea",
+        "region": "Oceania",
+        "sub_region": "Melanesia",
+        "intermediate_region": "Unknown",
+        "display_name": "Papua New Guinea/Oceania",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 36000,
+      "timezone": "Pacific/Port_Moresby"
+    }
+  },
+  "Pacific/Rarotonga": {
+    "locations": [
+      {
+        "country_code": "CK",
+        "country": "Cook Islands",
+        "region": "Oceania",
+        "sub_region": "Polynesia",
+        "intermediate_region": "Unknown",
+        "display_name": "Cook Islands/Oceania",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": -36000,
+      "timezone": "Pacific/Rarotonga"
+    }
+  },
+  "Pacific/Saipan": {
+    "locations": [
+      {
+        "country_code": "FM",
+        "country": "Micronesia",
+        "region": "Oceania",
+        "sub_region": "Micronesia",
+        "intermediate_region": "Unknown",
+        "display_name": "Micronesia (Federated States of)/Oceania",
+        "location_type": "country"
+      },
+      {
+        "country_code": "MP",
+        "country": "Northern Mariana Islands",
+        "region": "Oceania",
+        "sub_region": "Micronesia",
+        "intermediate_region": "Unknown",
+        "display_name": "Northern Mariana Islands/Oceania",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 36000,
+      "timezone": "Pacific/Saipan"
+    }
+  },
+  "Pacific/Tahiti": {
+    "locations": [
+      {
+        "country_code": "PF",
+        "country": "French Polynesia",
+        "region": "Oceania",
+        "sub_region": "Polynesia",
+        "intermediate_region": "Unknown",
+        "display_name": "French Polynesia/Oceania",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": -36000,
+      "timezone": "Pacific/Tahiti"
+    }
+  },
+  "Pacific/Tarawa": {
+    "locations": [
+      {
+        "country_code": "KI",
+        "country": "Kiribati",
+        "region": "Oceania",
+        "sub_region": "Micronesia",
+        "intermediate_region": "Unknown",
+        "display_name": "Kiribati/Oceania",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 43200,
+      "timezone": "Pacific/Tarawa"
+    }
+  },
+  "Pacific/Tongatapu": {
+    "locations": [
+      {
+        "country_code": "TO",
+        "country": "Tonga",
+        "region": "Oceania",
+        "sub_region": "Polynesia",
+        "intermediate_region": "Unknown",
+        "display_name": "Tonga/Oceania",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 46800,
+      "timezone": "Pacific/Tongatapu"
+    }
+  },
+  "Pacific/Wallis": {
+    "locations": [
+      {
+        "country_code": "WF",
+        "country": "Wallis and Futuna",
+        "region": "Oceania",
+        "sub_region": "Polynesia",
+        "intermediate_region": "Unknown",
+        "display_name": "Wallis and Futuna/Oceania",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": 43200,
+      "timezone": "Pacific/Wallis"
+    }
+  },
+  "US/Alaska": {
+    "locations": [
+      {
+        "country_code": "US",
+        "country": "United States",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "United States of America/Americas",
+        "location_type": "state",
+        "state": "Alaska",
+        "state_code": "AK"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": "2025-11-02T08:00:00Z",
+      "dst_name": "AKDT",
+      "dst_offset_seconds": -28800,
+      "dst_start": "2025-03-09T09:00:00Z",
+      "has_dst": true,
+      "standard_offset_seconds": -32400,
+      "timezone": "US/Alaska"
+    }
+  },
+  "US/Central": {
+    "locations": [
+      {
+        "country_code": "US",
+        "country": "United States",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "United States of America/Americas",
+        "location_type": "state",
+        "state": "Alabama",
+        "state_code": "AL"
+      },
+      {
+        "country_code": "US",
+        "country": "United States",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "United States of America/Americas",
+        "location_type": "state",
+        "state": "Arkansas",
+        "state_code": "AR"
+      },
+      {
+        "country_code": "US",
+        "country": "United States",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "United States of America/Americas",
+        "location_type": "state",
+        "state": "Illinois",
+        "state_code": "IL"
+      },
+      {
+        "country_code": "US",
+        "country": "United States",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "United States of America/Americas",
+        "location_type": "state",
+        "state": "Iowa",
+        "state_code": "IA"
+      },
+      {
+        "country_code": "US",
+        "country": "United States",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "United States of America/Americas",
+        "location_type": "state",
+        "state": "Kansas",
+        "state_code": "KS"
+      },
+      {
+        "country_code": "US",
+        "country": "United States",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "United States of America/Americas",
+        "location_type": "state",
+        "state": "Kentucky",
+        "state_code": "KY"
+      },
+      {
+        "country_code": "US",
+        "country": "United States",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "United States of America/Americas",
+        "location_type": "state",
+        "state": "Louisiana",
+        "state_code": "LA"
+      },
+      {
+        "country_code": "US",
+        "country": "United States",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "United States of America/Americas",
+        "location_type": "state",
+        "state": "Minnesota",
+        "state_code": "MN"
+      },
+      {
+        "country_code": "US",
+        "country": "United States",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "United States of America/Americas",
+        "location_type": "state",
+        "state": "Mississippi",
+        "state_code": "MS"
+      },
+      {
+        "country_code": "US",
+        "country": "United States",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "United States of America/Americas",
+        "location_type": "state",
+        "state": "Missouri",
+        "state_code": "MO"
+      },
+      {
+        "country_code": "US",
+        "country": "United States",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "United States of America/Americas",
+        "location_type": "state",
+        "state": "Nebraska",
+        "state_code": "NE"
+      },
+      {
+        "country_code": "US",
+        "country": "United States",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "United States of America/Americas",
+        "location_type": "state",
+        "state": "North Dakota",
+        "state_code": "ND"
+      },
+      {
+        "country_code": "US",
+        "country": "United States",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "United States of America/Americas",
+        "location_type": "state",
+        "state": "Oklahoma",
+        "state_code": "OK"
+      },
+      {
+        "country_code": "US",
+        "country": "United States",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "United States of America/Americas",
+        "location_type": "state",
+        "state": "South Dakota",
+        "state_code": "SD"
+      },
+      {
+        "country_code": "US",
+        "country": "United States",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "United States of America/Americas",
+        "location_type": "state",
+        "state": "Tennessee",
+        "state_code": "TN"
+      },
+      {
+        "country_code": "US",
+        "country": "United States",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "United States of America/Americas",
+        "location_type": "state",
+        "state": "Texas",
+        "state_code": "TX"
+      },
+      {
+        "country_code": "US",
+        "country": "United States",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "United States of America/Americas",
+        "location_type": "state",
+        "state": "Wisconsin",
+        "state_code": "WI"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": "2025-11-02T08:00:00Z",
+      "dst_name": "CDT",
+      "dst_offset_seconds": -18000,
+      "dst_start": "2025-03-09T09:00:00Z",
+      "has_dst": true,
+      "standard_offset_seconds": -21600,
+      "timezone": "US/Central"
+    }
+  },
+  "US/Eastern": {
+    "locations": [
+      {
+        "country_code": "US",
+        "country": "United States",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "United States of America/Americas",
+        "location_type": "state",
+        "state": "Connecticut",
+        "state_code": "CT"
+      },
+      {
+        "country_code": "US",
+        "country": "United States",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "United States of America/Americas",
+        "location_type": "state",
+        "state": "Delaware",
+        "state_code": "DE"
+      },
+      {
+        "country_code": "US",
+        "country": "United States",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "United States of America/Americas",
+        "location_type": "state",
+        "state": "Florida",
+        "state_code": "FL"
+      },
+      {
+        "country_code": "US",
+        "country": "United States",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "United States of America/Americas",
+        "location_type": "state",
+        "state": "Georgia",
+        "state_code": "GA"
+      },
+      {
+        "country_code": "US",
+        "country": "United States",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "United States of America/Americas",
+        "location_type": "state",
+        "state": "Indiana",
+        "state_code": "IN"
+      },
+      {
+        "country_code": "US",
+        "country": "United States",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "United States of America/Americas",
+        "location_type": "state",
+        "state": "Maine",
+        "state_code": "ME"
+      },
+      {
+        "country_code": "US",
+        "country": "United States",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "United States of America/Americas",
+        "location_type": "state",
+        "state": "Maryland",
+        "state_code": "MD"
+      },
+      {
+        "country_code": "US",
+        "country": "United States",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "United States of America/Americas",
+        "location_type": "state",
+        "state": "Massachusetts",
+        "state_code": "MA"
+      },
+      {
+        "country_code": "US",
+        "country": "United States",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "United States of America/Americas",
+        "location_type": "state",
+        "state": "Michigan",
+        "state_code": "MI"
+      },
+      {
+        "country_code": "US",
+        "country": "United States",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "United States of America/Americas",
+        "location_type": "state",
+        "state": "New Hampshire",
+        "state_code": "NH"
+      },
+      {
+        "country_code": "US",
+        "country": "United States",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "United States of America/Americas",
+        "location_type": "state",
+        "state": "New Jersey",
+        "state_code": "NJ"
+      },
+      {
+        "country_code": "US",
+        "country": "United States",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "United States of America/Americas",
+        "location_type": "state",
+        "state": "New York",
+        "state_code": "NY"
+      },
+      {
+        "country_code": "US",
+        "country": "United States",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "United States of America/Americas",
+        "location_type": "state",
+        "state": "North Carolina",
+        "state_code": "NC"
+      },
+      {
+        "country_code": "US",
+        "country": "United States",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "United States of America/Americas",
+        "location_type": "state",
+        "state": "Ohio",
+        "state_code": "OH"
+      },
+      {
+        "country_code": "US",
+        "country": "United States",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "United States of America/Americas",
+        "location_type": "state",
+        "state": "Pennsylvania",
+        "state_code": "PA"
+      },
+      {
+        "country_code": "US",
+        "country": "United States",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "United States of America/Americas",
+        "location_type": "state",
+        "state": "Rhode Island",
+        "state_code": "RI"
+      },
+      {
+        "country_code": "US",
+        "country": "United States",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "United States of America/Americas",
+        "location_type": "state",
+        "state": "South Carolina",
+        "state_code": "SC"
+      },
+      {
+        "country_code": "US",
+        "country": "United States",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "United States of America/Americas",
+        "location_type": "state",
+        "state": "Vermont",
+        "state_code": "VT"
+      },
+      {
+        "country_code": "US",
+        "country": "United States",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "United States of America/Americas",
+        "location_type": "state",
+        "state": "Virginia",
+        "state_code": "VA"
+      },
+      {
+        "country_code": "US",
+        "country": "United States",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "United States of America/Americas",
+        "location_type": "state",
+        "state": "Washington, D.C.",
+        "state_code": "DC"
+      },
+      {
+        "country_code": "US",
+        "country": "United States",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "United States of America/Americas",
+        "location_type": "state",
+        "state": "West Virginia",
+        "state_code": "WV"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": "2025-11-02T08:00:00Z",
+      "dst_name": "EDT",
+      "dst_offset_seconds": -14400,
+      "dst_start": "2025-03-09T09:00:00Z",
+      "has_dst": true,
+      "standard_offset_seconds": -18000,
+      "timezone": "US/Eastern"
+    }
+  },
+  "US/Hawaii": {
+    "locations": [
+      {
+        "country_code": "US",
+        "country": "United States",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "United States of America/Americas",
+        "location_type": "state",
+        "state": "Hawaii",
+        "state_code": "HI"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": null,
+      "dst_name": null,
+      "dst_offset_seconds": null,
+      "dst_start": null,
+      "has_dst": false,
+      "standard_offset_seconds": -36000,
+      "timezone": "US/Hawaii"
+    }
+  },
+  "US/Mountain": {
+    "locations": [
+      {
+        "country_code": "US",
+        "country": "United States",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "United States of America/Americas",
+        "location_type": "state",
+        "state": "Arizona",
+        "state_code": "AZ"
+      },
+      {
+        "country_code": "US",
+        "country": "United States",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "United States of America/Americas",
+        "location_type": "state",
+        "state": "Colorado",
+        "state_code": "CO"
+      },
+      {
+        "country_code": "US",
+        "country": "United States",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "United States of America/Americas",
+        "location_type": "state",
+        "state": "Idaho",
+        "state_code": "ID"
+      },
+      {
+        "country_code": "US",
+        "country": "United States",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "United States of America/Americas",
+        "location_type": "state",
+        "state": "Montana",
+        "state_code": "MT"
+      },
+      {
+        "country_code": "US",
+        "country": "United States",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "United States of America/Americas",
+        "location_type": "state",
+        "state": "New Mexico",
+        "state_code": "NM"
+      },
+      {
+        "country_code": "US",
+        "country": "United States",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "United States of America/Americas",
+        "location_type": "state",
+        "state": "Utah",
+        "state_code": "UT"
+      },
+      {
+        "country_code": "US",
+        "country": "United States",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "United States of America/Americas",
+        "location_type": "state",
+        "state": "Wyoming",
+        "state_code": "WY"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": "2025-11-02T08:00:00Z",
+      "dst_name": "MDT",
+      "dst_offset_seconds": -21600,
+      "dst_start": "2025-03-09T09:00:00Z",
+      "has_dst": true,
+      "standard_offset_seconds": -25200,
+      "timezone": "US/Mountain"
+    }
+  },
+  "US/Pacific": {
+    "locations": [
+      {
+        "country_code": "US",
+        "country": "United States",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "United States of America/Americas",
+        "location_type": "state",
+        "state": "California",
+        "state_code": "CA"
+      },
+      {
+        "country_code": "US",
+        "country": "United States",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "United States of America/Americas",
+        "location_type": "state",
+        "state": "Nevada",
+        "state_code": "NV"
+      },
+      {
+        "country_code": "US",
+        "country": "United States",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "United States of America/Americas",
+        "location_type": "state",
+        "state": "Washington",
+        "state_code": "WA"
+      },
+      {
+        "country_code": "US",
+        "country": "United States",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "United States of America/Americas",
+        "location_type": "state",
+        "state": "Oregon",
+        "state_code": "OR"
+      }
+    ],
+    "timezone_data": {
+      "dst_end": "2025-11-02T09:00:00Z",
+      "dst_name": "PDT",
+      "dst_offset_seconds": -25200,
+      "dst_start": "2025-03-09T10:00:00Z",
+      "has_dst": true,
+      "standard_offset_seconds": -28800,
+      "timezone": "US/Pacific"
+    }
+  },
+  "Africa/Angola": {
+    "locations": [
+      {
+        "country_code": "AO",
+        "country": "Angola",
+        "region": "Africa",
+        "sub_region": "Sub-Saharan Africa",
+        "intermediate_region": "Middle Africa",
+        "display_name": "Angola/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Africa/Angola",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Africa/Burkina_Faso": {
+    "locations": [
+      {
+        "country_code": "BF",
+        "country": "Burkina Faso",
+        "region": "Africa",
+        "sub_region": "Sub-Saharan Africa",
+        "intermediate_region": "Western Africa",
+        "display_name": "Burkina Faso/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Africa/Burkina_Faso",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Africa/Benin": {
+    "locations": [
+      {
+        "country_code": "BJ",
+        "country": "Benin",
+        "region": "Africa",
+        "sub_region": "Sub-Saharan Africa",
+        "intermediate_region": "Western Africa",
+        "display_name": "Benin/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Africa/Benin",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Africa/Central_African_Republic": {
+    "locations": [
+      {
+        "country_code": "CF",
+        "country": "Central African Republic",
+        "region": "Africa",
+        "sub_region": "Sub-Saharan Africa",
+        "intermediate_region": "Middle Africa",
+        "display_name": "Central African Republic/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Africa/Central_African_Republic",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Africa/Congo": {
+    "locations": [
+      {
+        "country_code": "CG",
+        "country": "Congo",
+        "region": "Africa",
+        "sub_region": "Sub-Saharan Africa",
+        "intermediate_region": "Middle Africa",
+        "display_name": "Congo/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Africa/Congo",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Africa/Cameroon": {
+    "locations": [
+      {
+        "country_code": "CM",
+        "country": "Cameroon",
+        "region": "Africa",
+        "sub_region": "Sub-Saharan Africa",
+        "intermediate_region": "Middle Africa",
+        "display_name": "Cameroon/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Africa/Cameroon",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Africa/Cabo_Verde": {
+    "locations": [
+      {
+        "country_code": "CV",
+        "country": "Cabo Verde",
+        "region": "Africa",
+        "sub_region": "Sub-Saharan Africa",
+        "intermediate_region": "Western Africa",
+        "display_name": "Cabo Verde/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Africa/Cabo_Verde",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Africa/Western_Sahara": {
+    "locations": [
+      {
+        "country_code": "EH",
+        "country": "Western Sahara",
+        "region": "Africa",
+        "sub_region": "Northern Africa",
+        "intermediate_region": "Unknown",
+        "display_name": "Western Sahara/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Africa/Western_Sahara",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Africa/Gabon": {
+    "locations": [
+      {
+        "country_code": "GA",
+        "country": "Gabon",
+        "region": "Africa",
+        "sub_region": "Sub-Saharan Africa",
+        "intermediate_region": "Middle Africa",
+        "display_name": "Gabon/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Africa/Gabon",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Africa/Gambia": {
+    "locations": [
+      {
+        "country_code": "GM",
+        "country": "Gambia",
+        "region": "Africa",
+        "sub_region": "Sub-Saharan Africa",
+        "intermediate_region": "Western Africa",
+        "display_name": "Gambia/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Africa/Gambia",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Africa/Guinea": {
+    "locations": [
+      {
+        "country_code": "GN",
+        "country": "Guinea",
+        "region": "Africa",
+        "sub_region": "Sub-Saharan Africa",
+        "intermediate_region": "Western Africa",
+        "display_name": "Guinea/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Africa/Guinea",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Africa/Equatorial_Guinea": {
+    "locations": [
+      {
+        "country_code": "GQ",
+        "country": "Equatorial Guinea",
+        "region": "Africa",
+        "sub_region": "Sub-Saharan Africa",
+        "intermediate_region": "Middle Africa",
+        "display_name": "Equatorial Guinea/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Africa/Equatorial_Guinea",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Africa/Guinea-Bissau": {
+    "locations": [
+      {
+        "country_code": "GW",
+        "country": "Guinea-Bissau",
+        "region": "Africa",
+        "sub_region": "Sub-Saharan Africa",
+        "intermediate_region": "Western Africa",
+        "display_name": "Guinea-Bissau/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Africa/Guinea-Bissau",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Africa/Liberia": {
+    "locations": [
+      {
+        "country_code": "LR",
+        "country": "Liberia",
+        "region": "Africa",
+        "sub_region": "Sub-Saharan Africa",
+        "intermediate_region": "Western Africa",
+        "display_name": "Liberia/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Africa/Liberia",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Africa/Mali": {
+    "locations": [
+      {
+        "country_code": "ML",
+        "country": "Mali",
+        "region": "Africa",
+        "sub_region": "Sub-Saharan Africa",
+        "intermediate_region": "Western Africa",
+        "display_name": "Mali/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Africa/Mali",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Africa/Mauritania": {
+    "locations": [
+      {
+        "country_code": "MR",
+        "country": "Mauritania",
+        "region": "Africa",
+        "sub_region": "Sub-Saharan Africa",
+        "intermediate_region": "Western Africa",
+        "display_name": "Mauritania/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Africa/Mauritania",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Africa/Saint_Helena,_Ascension_and_Tristan_da_Cunha": {
+    "locations": [
+      {
+        "country_code": "SH",
+        "country": "Saint Helena, Ascension and Tristan da Cunha",
+        "region": "Africa",
+        "sub_region": "Sub-Saharan Africa",
+        "intermediate_region": "Western Africa",
+        "display_name": "Saint Helena, Ascension and Tristan da Cunha/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Africa/Saint_Helena,_Ascension_and_Tristan_da_Cunha",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Africa/Sierra_Leone": {
+    "locations": [
+      {
+        "country_code": "SL",
+        "country": "Sierra Leone",
+        "region": "Africa",
+        "sub_region": "Sub-Saharan Africa",
+        "intermediate_region": "Western Africa",
+        "display_name": "Sierra Leone/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Africa/Sierra_Leone",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Africa/Senegal": {
+    "locations": [
+      {
+        "country_code": "SN",
+        "country": "Senegal",
+        "region": "Africa",
+        "sub_region": "Sub-Saharan Africa",
+        "intermediate_region": "Western Africa",
+        "display_name": "Senegal/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Africa/Senegal",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Africa/Sao_Tome_and_Principe": {
+    "locations": [
+      {
+        "country_code": "ST",
+        "country": "Sao Tome and Principe",
+        "region": "Africa",
+        "sub_region": "Sub-Saharan Africa",
+        "intermediate_region": "Middle Africa",
+        "display_name": "Sao Tome and Principe/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Africa/Sao_Tome_and_Principe",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Africa/French_Southern_Territories": {
+    "locations": [
+      {
+        "country_code": "TF",
+        "country": "French Southern Territories",
+        "region": "Africa",
+        "sub_region": "Sub-Saharan Africa",
+        "intermediate_region": "Eastern Africa",
+        "display_name": "French Southern Territories/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Africa/French_Southern_Territories",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Africa/Togo": {
+    "locations": [
+      {
+        "country_code": "TG",
+        "country": "Togo",
+        "region": "Africa",
+        "sub_region": "Sub-Saharan Africa",
+        "intermediate_region": "Western Africa",
+        "display_name": "Togo/Africa",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Africa/Togo",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Americas/Antigua_and_Barbuda": {
+    "locations": [
+      {
+        "country_code": "AG",
+        "country": "Antigua and Barbuda",
+        "region": "Americas",
+        "sub_region": "Latin America and the Caribbean",
+        "intermediate_region": "Caribbean",
+        "display_name": "Antigua and Barbuda/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Americas/Antigua_and_Barbuda",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Americas/Anguilla": {
+    "locations": [
+      {
+        "country_code": "AI",
+        "country": "Anguilla",
+        "region": "Americas",
+        "sub_region": "Latin America and the Caribbean",
+        "intermediate_region": "Caribbean",
+        "display_name": "Anguilla/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Americas/Anguilla",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Americas/Aruba": {
+    "locations": [
+      {
+        "country_code": "AW",
+        "country": "Aruba",
+        "region": "Americas",
+        "sub_region": "Latin America and the Caribbean",
+        "intermediate_region": "Caribbean",
+        "display_name": "Aruba/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Americas/Aruba",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Americas/Barbados": {
+    "locations": [
+      {
+        "country_code": "BB",
+        "country": "Barbados",
+        "region": "Americas",
+        "sub_region": "Latin America and the Caribbean",
+        "intermediate_region": "Caribbean",
+        "display_name": "Barbados/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Americas/Barbados",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Americas/Saint_Barthélemy": {
+    "locations": [
+      {
+        "country_code": "BL",
+        "country": "Saint Barthélemy",
+        "region": "Americas",
+        "sub_region": "Latin America and the Caribbean",
+        "intermediate_region": "Caribbean",
+        "display_name": "Saint Barthélemy/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Americas/Saint_Barthélemy",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Americas/Bermuda": {
+    "locations": [
+      {
+        "country_code": "BM",
+        "country": "Bermuda",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "Bermuda/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Americas/Bermuda",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Americas/Bonaire,_Sint_Eustatius_and_Saba": {
+    "locations": [
+      {
+        "country_code": "BQ",
+        "country": "Bonaire, Sint Eustatius and Saba",
+        "region": "Americas",
+        "sub_region": "Latin America and the Caribbean",
+        "intermediate_region": "Caribbean",
+        "display_name": "Bonaire, Sint Eustatius and Saba/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Americas/Bonaire,_Sint_Eustatius_and_Saba",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Americas/Bahamas": {
+    "locations": [
+      {
+        "country_code": "BS",
+        "country": "Bahamas",
+        "region": "Americas",
+        "sub_region": "Latin America and the Caribbean",
+        "intermediate_region": "Caribbean",
+        "display_name": "Bahamas/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Americas/Bahamas",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Americas/Bouvet_Island": {
+    "locations": [
+      {
+        "country_code": "BV",
+        "country": "Bouvet Island",
+        "region": "Americas",
+        "sub_region": "Latin America and the Caribbean",
+        "intermediate_region": "South America",
+        "display_name": "Bouvet Island/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Americas/Bouvet_Island",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Americas/Canada": {
+    "locations": [
+      {
+        "country_code": "CA",
+        "country": "Canada",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "Canada/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Americas/Canada",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Americas/Curaçao": {
+    "locations": [
+      {
+        "country_code": "CW",
+        "country": "Curaçao",
+        "region": "Americas",
+        "sub_region": "Latin America and the Caribbean",
+        "intermediate_region": "Caribbean",
+        "display_name": "Curaçao/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Americas/Curaçao",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Americas/Dominica": {
+    "locations": [
+      {
+        "country_code": "DM",
+        "country": "Dominica",
+        "region": "Americas",
+        "sub_region": "Latin America and the Caribbean",
+        "intermediate_region": "Caribbean",
+        "display_name": "Dominica/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Americas/Dominica",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Americas/Dominican_Republic": {
+    "locations": [
+      {
+        "country_code": "DO",
+        "country": "Dominican Republic",
+        "region": "Americas",
+        "sub_region": "Latin America and the Caribbean",
+        "intermediate_region": "Caribbean",
+        "display_name": "Dominican Republic/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Americas/Dominican_Republic",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Americas/Ecuador": {
+    "locations": [
+      {
+        "country_code": "EC",
+        "country": "Ecuador",
+        "region": "Americas",
+        "sub_region": "Latin America and the Caribbean",
+        "intermediate_region": "South America",
+        "display_name": "Ecuador/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Americas/Ecuador",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Americas/Falkland_Islands_(Malvinas)": {
+    "locations": [
+      {
+        "country_code": "FK",
+        "country": "Falkland Islands (Malvinas)",
+        "region": "Americas",
+        "sub_region": "Latin America and the Caribbean",
+        "intermediate_region": "South America",
+        "display_name": "Falkland Islands (Malvinas)/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Americas/Falkland_Islands_(Malvinas)",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Americas/Grenada": {
+    "locations": [
+      {
+        "country_code": "GD",
+        "country": "Grenada",
+        "region": "Americas",
+        "sub_region": "Latin America and the Caribbean",
+        "intermediate_region": "Caribbean",
+        "display_name": "Grenada/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Americas/Grenada",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Americas/French_Guiana": {
+    "locations": [
+      {
+        "country_code": "GF",
+        "country": "French Guiana",
+        "region": "Americas",
+        "sub_region": "Latin America and the Caribbean",
+        "intermediate_region": "South America",
+        "display_name": "French Guiana/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Americas/French_Guiana",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Americas/Greenland": {
+    "locations": [
+      {
+        "country_code": "GL",
+        "country": "Greenland",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "Greenland/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Americas/Greenland",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Americas/Guadeloupe": {
+    "locations": [
+      {
+        "country_code": "GP",
+        "country": "Guadeloupe",
+        "region": "Americas",
+        "sub_region": "Latin America and the Caribbean",
+        "intermediate_region": "Caribbean",
+        "display_name": "Guadeloupe/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Americas/Guadeloupe",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Americas/South_Georgia_and_the_South_Sandwich_Islands": {
+    "locations": [
+      {
+        "country_code": "GS",
+        "country": "South Georgia and the South Sandwich Islands",
+        "region": "Americas",
+        "sub_region": "Latin America and the Caribbean",
+        "intermediate_region": "South America",
+        "display_name": "South Georgia and the South Sandwich Islands/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Americas/South_Georgia_and_the_South_Sandwich_Islands",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Americas/Guyana": {
+    "locations": [
+      {
+        "country_code": "GY",
+        "country": "Guyana",
+        "region": "Americas",
+        "sub_region": "Latin America and the Caribbean",
+        "intermediate_region": "South America",
+        "display_name": "Guyana/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Americas/Guyana",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Americas/Haiti": {
+    "locations": [
+      {
+        "country_code": "HT",
+        "country": "Haiti",
+        "region": "Americas",
+        "sub_region": "Latin America and the Caribbean",
+        "intermediate_region": "Caribbean",
+        "display_name": "Haiti/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Americas/Haiti",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Americas/Saint_Kitts_and_Nevis": {
+    "locations": [
+      {
+        "country_code": "KN",
+        "country": "Saint Kitts and Nevis",
+        "region": "Americas",
+        "sub_region": "Latin America and the Caribbean",
+        "intermediate_region": "Caribbean",
+        "display_name": "Saint Kitts and Nevis/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Americas/Saint_Kitts_and_Nevis",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Americas/Cayman_Islands": {
+    "locations": [
+      {
+        "country_code": "KY",
+        "country": "Cayman Islands",
+        "region": "Americas",
+        "sub_region": "Latin America and the Caribbean",
+        "intermediate_region": "Caribbean",
+        "display_name": "Cayman Islands/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Americas/Cayman_Islands",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Americas/Saint_Lucia": {
+    "locations": [
+      {
+        "country_code": "LC",
+        "country": "Saint Lucia",
+        "region": "Americas",
+        "sub_region": "Latin America and the Caribbean",
+        "intermediate_region": "Caribbean",
+        "display_name": "Saint Lucia/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Americas/Saint_Lucia",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Americas/Saint_Martin_(French_part)": {
+    "locations": [
+      {
+        "country_code": "MF",
+        "country": "Saint Martin (French part)",
+        "region": "Americas",
+        "sub_region": "Latin America and the Caribbean",
+        "intermediate_region": "Caribbean",
+        "display_name": "Saint Martin (French part)/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Americas/Saint_Martin_(French_part)",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Americas/Martinique": {
+    "locations": [
+      {
+        "country_code": "MQ",
+        "country": "Martinique",
+        "region": "Americas",
+        "sub_region": "Latin America and the Caribbean",
+        "intermediate_region": "Caribbean",
+        "display_name": "Martinique/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Americas/Martinique",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Americas/Montserrat": {
+    "locations": [
+      {
+        "country_code": "MS",
+        "country": "Montserrat",
+        "region": "Americas",
+        "sub_region": "Latin America and the Caribbean",
+        "intermediate_region": "Caribbean",
+        "display_name": "Montserrat/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Americas/Montserrat",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Americas/Saint_Pierre_and_Miquelon": {
+    "locations": [
+      {
+        "country_code": "PM",
+        "country": "Saint Pierre and Miquelon",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "Saint Pierre and Miquelon/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Americas/Saint_Pierre_and_Miquelon",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Americas/Puerto_Rico": {
+    "locations": [
+      {
+        "country_code": "PR",
+        "country": "Puerto Rico",
+        "region": "Americas",
+        "sub_region": "Latin America and the Caribbean",
+        "intermediate_region": "Caribbean",
+        "display_name": "Puerto Rico/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Americas/Puerto_Rico",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Americas/Suriname": {
+    "locations": [
+      {
+        "country_code": "SR",
+        "country": "Suriname",
+        "region": "Americas",
+        "sub_region": "Latin America and the Caribbean",
+        "intermediate_region": "South America",
+        "display_name": "Suriname/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Americas/Suriname",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Americas/Sint_Maarten_(Dutch_part)": {
+    "locations": [
+      {
+        "country_code": "SX",
+        "country": "Sint Maarten (Dutch part)",
+        "region": "Americas",
+        "sub_region": "Latin America and the Caribbean",
+        "intermediate_region": "Caribbean",
+        "display_name": "Sint Maarten (Dutch part)/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Americas/Sint_Maarten_(Dutch_part)",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Americas/Turks_and_Caicos_Islands": {
+    "locations": [
+      {
+        "country_code": "TC",
+        "country": "Turks and Caicos Islands",
+        "region": "Americas",
+        "sub_region": "Latin America and the Caribbean",
+        "intermediate_region": "Caribbean",
+        "display_name": "Turks and Caicos Islands/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Americas/Turks_and_Caicos_Islands",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Americas/Trinidad_and_Tobago": {
+    "locations": [
+      {
+        "country_code": "TT",
+        "country": "Trinidad and Tobago",
+        "region": "Americas",
+        "sub_region": "Latin America and the Caribbean",
+        "intermediate_region": "Caribbean",
+        "display_name": "Trinidad and Tobago/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Americas/Trinidad_and_Tobago",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Americas/United_States_of_America": {
+    "locations": [
+      {
+        "country_code": "US",
+        "country": "United States of America",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "United States of America/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Americas/United_States_of_America",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Americas/Saint_Vincent_and_the_Grenadines": {
+    "locations": [
+      {
+        "country_code": "VC",
+        "country": "Saint Vincent and the Grenadines",
+        "region": "Americas",
+        "sub_region": "Latin America and the Caribbean",
+        "intermediate_region": "Caribbean",
+        "display_name": "Saint Vincent and the Grenadines/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Americas/Saint_Vincent_and_the_Grenadines",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Americas/Virgin_Islands_(British)": {
+    "locations": [
+      {
+        "country_code": "VG",
+        "country": "Virgin Islands (British)",
+        "region": "Americas",
+        "sub_region": "Latin America and the Caribbean",
+        "intermediate_region": "Caribbean",
+        "display_name": "Virgin Islands (British)/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Americas/Virgin_Islands_(British)",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Americas/Virgin_Islands_(U.S.)": {
+    "locations": [
+      {
+        "country_code": "VI",
+        "country": "Virgin Islands (U.S.)",
+        "region": "Americas",
+        "sub_region": "Latin America and the Caribbean",
+        "intermediate_region": "Caribbean",
+        "display_name": "Virgin Islands (U.S.)/Americas",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Americas/Virgin_Islands_(U.S.)",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Europe/Albania": {
+    "locations": [
+      {
+        "country_code": "AL",
+        "country": "Albania",
+        "region": "Europe",
+        "sub_region": "Southern Europe",
+        "intermediate_region": "Unknown",
+        "display_name": "Albania/Europe",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Europe/Albania",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Europe/Åland_Islands": {
+    "locations": [
+      {
+        "country_code": "AX",
+        "country": "Åland Islands",
+        "region": "Europe",
+        "sub_region": "Northern Europe",
+        "intermediate_region": "Unknown",
+        "display_name": "Åland Islands/Europe",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Europe/Åland_Islands",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Europe/Bosnia_and_Herzegovina": {
+    "locations": [
+      {
+        "country_code": "BA",
+        "country": "Bosnia and Herzegovina",
+        "region": "Europe",
+        "sub_region": "Southern Europe",
+        "intermediate_region": "Unknown",
+        "display_name": "Bosnia and Herzegovina/Europe",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Europe/Bosnia_and_Herzegovina",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Europe/Faroe_Islands": {
+    "locations": [
+      {
+        "country_code": "FO",
+        "country": "Faroe Islands",
+        "region": "Europe",
+        "sub_region": "Northern Europe",
+        "intermediate_region": "Unknown",
+        "display_name": "Faroe Islands/Europe",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Europe/Faroe_Islands",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Europe/Croatia": {
+    "locations": [
+      {
+        "country_code": "HR",
+        "country": "Croatia",
+        "region": "Europe",
+        "sub_region": "Southern Europe",
+        "intermediate_region": "Unknown",
+        "display_name": "Croatia/Europe",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Europe/Croatia",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Europe/Hungary": {
+    "locations": [
+      {
+        "country_code": "HU",
+        "country": "Hungary",
+        "region": "Europe",
+        "sub_region": "Eastern Europe",
+        "intermediate_region": "Unknown",
+        "display_name": "Hungary/Europe",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Europe/Hungary",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Europe/Iceland": {
+    "locations": [
+      {
+        "country_code": "IS",
+        "country": "Iceland",
+        "region": "Europe",
+        "sub_region": "Northern Europe",
+        "intermediate_region": "Unknown",
+        "display_name": "Iceland/Europe",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Europe/Iceland",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Europe/Liechtenstein": {
+    "locations": [
+      {
+        "country_code": "LI",
+        "country": "Liechtenstein",
+        "region": "Europe",
+        "sub_region": "Western Europe",
+        "intermediate_region": "Unknown",
+        "display_name": "Liechtenstein/Europe",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Europe/Liechtenstein",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Europe/Montenegro": {
+    "locations": [
+      {
+        "country_code": "ME",
+        "country": "Montenegro",
+        "region": "Europe",
+        "sub_region": "Southern Europe",
+        "intermediate_region": "Unknown",
+        "display_name": "Montenegro/Europe",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Europe/Montenegro",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Europe/North_Macedonia": {
+    "locations": [
+      {
+        "country_code": "MK",
+        "country": "North Macedonia",
+        "region": "Europe",
+        "sub_region": "Southern Europe",
+        "intermediate_region": "Unknown",
+        "display_name": "North Macedonia/Europe",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Europe/North_Macedonia",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Europe/Serbia": {
+    "locations": [
+      {
+        "country_code": "RS",
+        "country": "Serbia",
+        "region": "Europe",
+        "sub_region": "Southern Europe",
+        "intermediate_region": "Unknown",
+        "display_name": "Serbia/Europe",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Europe/Serbia",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Europe/Slovenia": {
+    "locations": [
+      {
+        "country_code": "SI",
+        "country": "Slovenia",
+        "region": "Europe",
+        "sub_region": "Southern Europe",
+        "intermediate_region": "Unknown",
+        "display_name": "Slovenia/Europe",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Europe/Slovenia",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Europe/Svalbard_and_Jan_Mayen": {
+    "locations": [
+      {
+        "country_code": "SJ",
+        "country": "Svalbard and Jan Mayen",
+        "region": "Europe",
+        "sub_region": "Northern Europe",
+        "intermediate_region": "Unknown",
+        "display_name": "Svalbard and Jan Mayen/Europe",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Europe/Svalbard_and_Jan_Mayen",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Europe/Slovakia": {
+    "locations": [
+      {
+        "country_code": "SK",
+        "country": "Slovakia",
+        "region": "Europe",
+        "sub_region": "Eastern Europe",
+        "intermediate_region": "Unknown",
+        "display_name": "Slovakia/Europe",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Europe/Slovakia",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Europe/Holy_See": {
+    "locations": [
+      {
+        "country_code": "VA",
+        "country": "Holy See",
+        "region": "Europe",
+        "sub_region": "Southern Europe",
+        "intermediate_region": "Unknown",
+        "display_name": "Holy See/Europe",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Europe/Holy_See",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Europe/Kosovo": {
+    "locations": [
+      {
+        "country_code": "XK",
+        "country": "Kosovo",
+        "region": "Europe",
+        "sub_region": "Southern Europe",
+        "intermediate_region": "Unknown",
+        "display_name": "Kosovo/Europe",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Europe/Kosovo",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Oceania/Cocos_(Keeling)_Islands": {
+    "locations": [
+      {
+        "country_code": "CC",
+        "country": "Cocos (Keeling) Islands",
+        "region": "Oceania",
+        "sub_region": "Australia and New Zealand",
+        "intermediate_region": "Unknown",
+        "display_name": "Cocos (Keeling) Islands/Oceania",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Oceania/Cocos_(Keeling)_Islands",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Oceania/Heard_Island_and_McDonald_Islands": {
+    "locations": [
+      {
+        "country_code": "HM",
+        "country": "Heard Island and McDonald Islands",
+        "region": "Oceania",
+        "sub_region": "Australia and New Zealand",
+        "intermediate_region": "Unknown",
+        "display_name": "Heard Island and McDonald Islands/Oceania",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Oceania/Heard_Island_and_McDonald_Islands",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Oceania/Pitcairn": {
+    "locations": [
+      {
+        "country_code": "PN",
+        "country": "Pitcairn",
+        "region": "Oceania",
+        "sub_region": "Polynesia",
+        "intermediate_region": "Unknown",
+        "display_name": "Pitcairn/Oceania",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Oceania/Pitcairn",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "Oceania/United_States_Minor_Outlying_Islands": {
+    "locations": [
+      {
+        "country_code": "UM",
+        "country": "United States Minor Outlying Islands",
+        "region": "Oceania",
+        "sub_region": "Micronesia",
+        "intermediate_region": "Unknown",
+        "display_name": "United States Minor Outlying Islands/Oceania",
+        "location_type": "country"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "Oceania/United_States_Minor_Outlying_Islands",
+      "has_dst": false,
+      "dst_name": null,
+      "dst_start": null,
+      "dst_end": null,
+      "standard_offset_seconds": 0,
+      "dst_offset_seconds": 0
+    }
+  },
+  "America/Iqaluit": {
+    "locations": [
+      {
+        "country_code": "CA",
+        "country": "Canada",
+        "region": "Americas",
+        "sub_region": "Northern America",
+        "intermediate_region": "Unknown",
+        "display_name": "Canada/Americas",
+        "location_type": "province",
+        "province": "Nunavut",
+        "province_code": "NU"
+      }
+    ],
+    "timezone_data": {
+      "timezone": "America/Iqaluit",
+      "has_dst": true,
+      "dst_name": "EDT",
+      "dst_start": "2025-03-09T07:00:00Z",
+      "dst_end": "2025-11-02T06:00:00Z",
+      "standard_offset_seconds": -18000,
+      "dst_offset_seconds": -14400
+    }
+  }
+}

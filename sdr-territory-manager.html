@@ -1,0 +1,1779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDR Territory Manager</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 1.25em; /* 20px */
+        }
+        .container {
+            max-width: 100em; /* 1600px */
+            margin: auto;
+            font-size: 90%;
+        }
+        
+        /* SDR Color Legend */
+        .sdr-legend {
+            display: flex;
+            gap: 15px;
+            margin: 20px 0;
+            padding: 15px;
+            background: #f5f5f5;
+            border-radius: 8px;
+            flex-wrap: wrap;
+        }
+        .sdr-legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .sdr-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+            border: 2px solid #333;
+        }
+        
+        /* Territory Controls */
+        .territory-controls {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        .territory-control-group {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 8px;
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        label {
+            font-weight: bold;
+            margin-top: 0.625em; /* 10px */
+            display: block;
+        }
+        select {
+            width: 100%;
+            padding: 0.5em; /* 8px */
+            margin: 0.31em 0; /* 5px 0 */
+            border: 0.06em solid #ddd; /* 1px */
+            border-radius: 0.25em; /* 4px */
+        }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 0.625em 1.25em; /* 10px 20px */
+            border-radius: 0.25em; /* 4px */
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        
+        #svg-world-map-container { 
+            width: 100%; 
+            border: 0.06em solid #ddd; /* 1px */
+            border-radius: 0.5em; /* 8px */
+            overflow: hidden; 
+            box-shadow: 0 0.125em 0.5em rgba(0,0,0,0.1); /* 0 2px 8px */
+            margin-bottom: 1.25em; /* 20px */
+        }
+        @media (max-width: 106.25em) { /* 1700px */
+            .container { max-width: 100%; }
+        }
+        @media (max-width: 48em) { /* 768px */
+            #svg-world-map { height: 25em; /* 400px */ }
+        }
+        
+        /* Territory Assignment List */
+        .territory-assignments {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .region-group {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+        }
+        .region-title {
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #333;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #007bff;
+        }
+        .location-assignment {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .location-assignment:last-child {
+            border-bottom: none;
+        }
+        .location-name {
+            font-weight: 500;
+            flex: 1;
+        }
+        .location-type {
+            font-size: 0.8em;
+            color: #666;
+            margin-left: 8px;
+        }
+        .sdr-select {
+            width: 120px;
+            padding: 4px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+        
+        /* Search and Filter */
+        .search-controls {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        .search-input {
+            flex: 1;
+            min-width: 200px;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .filter-select {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        /* Stats */
+        .territory-stats {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+        }
+        .stat-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            flex: 1;
+            min-width: 150px;
+        }
+        .stat-number {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #007bff;
+            line-height: 1.3;
+        }
+        .stat-label {
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        /* Bulk Actions */
+        .bulk-options-list {
+            max-height: 200px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 10px;
+            background: white;
+            margin: 10px 0;
+        }
+        .bulk-option-item {
+            display: flex;
+            align-items: center;
+            padding: 5px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .bulk-option-item:last-child {
+            border-bottom: none;
+        }
+        .bulk-option-checkbox {
+            margin-right: 10px;
+        }
+        .bulk-option-label {
+            flex: 1;
+            font-size: 0.9em;
+        }
+        .bulk-option-count {
+            color: #666;
+            font-size: 0.8em;
+            margin-left: 10px;
+        }
+        
+        /* Territory Summary */
+        .territory-summary {
+            margin: 20px 0;
+        }
+        .summary-card {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 20px;
+            max-width: 400px;
+        }
+        .summary-title {
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #333;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #007bff;
+        }
+        .summary-content {
+            margin-bottom: 15px;
+        }
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .summary-row:last-child {
+            border-bottom: none;
+        }
+        .summary-label {
+            font-weight: 500;
+            color: #555;
+        }
+        .summary-value {
+            font-weight: bold;
+            color: #007bff;
+            font-size: 1.1em;
+        }
+        .summary-note {
+            font-size: 0.85em;
+            color: #666;
+            line-height: 1.4;
+            padding: 10px;
+            background: #fff;
+            border-radius: 4px;
+            border-left: 3px solid #007bff;
+        }
+        
+        /* Copy buttons */
+        .copy-buttons {
+            margin-top: 15px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .copy-btn {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.85em;
+            flex: 1;
+            min-width: 120px;
+        }
+        .copy-btn:hover {
+            background: #0056b3;
+        }
+        .copy-btn:active {
+            background: #004085;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>SDR Territory Manager</h2>
+    
+    <!-- SDR Legend -->
+    <div class="sdr-legend">
+        <div class="sdr-legend-item">
+            <div class="sdr-color" style="background-color: #FF6B6B;"></div>
+            <span><strong>Emmanuel</strong></span>
+        </div>
+        <div class="sdr-legend-item">
+            <div class="sdr-color" style="background-color: #f1ab6b;"></div>
+            <span><strong>Lina</strong></span>
+        </div>
+        <div class="sdr-legend-item">
+            <div class="sdr-color" style="background-color: #45B7D1;"></div>
+            <span><strong>James</strong></span>
+        </div>
+        <div class="sdr-legend-item">
+            <div class="sdr-color" style="background-color: #51af71;"></div>
+            <span><strong>Tyrese</strong></span>
+        </div>
+        <div class="sdr-legend-item">
+            <div class="sdr-color" style="background-color: #E0E0E0;"></div>
+            <span><strong>Unassigned</strong></span>
+        </div>
+    </div>
+    
+    <!-- World Map -->
+    <div id="svg-world-map-container">
+        <object id="svg-world-map" type="image/svg+xml" data="world-states-provinces.svg" width="100%" height="600"></object>
+    </div>
+    
+    <!-- Territory Stats -->
+    <div class="territory-stats">
+        <div class="summary-card">
+            <div class="summary-title">Emmanuel</div>
+            <div class="summary-content">
+                <div class="summary-row">
+                    <span class="summary-label">Countries:</span>
+                    <span class="summary-value" id="emmanuelCountries">0</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">US States:</span>
+                    <span class="summary-value" id="emmanuelUSStates">0</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">Canada Provinces:</span>
+                    <span class="summary-value" id="emmanuelCAProvinces">0</span>
+                </div>
+            </div>
+            <div class="copy-buttons">
+                <button onclick="copyPersonCountries('Emmanuel', event)" class="copy-btn">Copy Countries</button>
+                <button onclick="copyPersonStates('Emmanuel', event)" class="copy-btn">Copy US/CA States</button>
+            </div>
+        </div>
+        
+        <div class="summary-card">
+            <div class="summary-title">Lina</div>
+            <div class="summary-content">
+                <div class="summary-row">
+                    <span class="summary-label">Countries:</span>
+                    <span class="summary-value" id="linaCountries">0</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">US States:</span>
+                    <span class="summary-value" id="linaUSStates">0</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">Canada Provinces:</span>
+                    <span class="summary-value" id="linaCAProvinces">0</span>
+                </div>
+            </div>
+            <div class="copy-buttons">
+                <button onclick="copyPersonCountries('Lina', event)" class="copy-btn">Copy Countries</button>
+                <button onclick="copyPersonStates('Lina', event)" class="copy-btn">Copy US/CA States</button>
+            </div>
+        </div>
+        
+        <div class="summary-card">
+            <div class="summary-title">James</div>
+            <div class="summary-content">
+                <div class="summary-row">
+                    <span class="summary-label">Countries:</span>
+                    <span class="summary-value" id="jamesCountries">0</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">US States:</span>
+                    <span class="summary-value" id="jamesUSStates">0</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">Canada Provinces:</span>
+                    <span class="summary-value" id="jamesCAProvinces">0</span>
+                </div>
+            </div>
+            <div class="copy-buttons">
+                <button onclick="copyPersonCountries('James', event)" class="copy-btn">Copy Countries</button>
+                <button onclick="copyPersonStates('James', event)" class="copy-btn">Copy US/CA States</button>
+            </div>
+        </div>
+        
+        <div class="summary-card">
+            <div class="summary-title">Tyrese</div>
+            <div class="summary-content">
+                <div class="summary-row">
+                    <span class="summary-label">Countries:</span>
+                    <span class="summary-value" id="tyreseCountries">0</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">US States:</span>
+                    <span class="summary-value" id="tyreseUSStates">0</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">Canada Provinces:</span>
+                    <span class="summary-value" id="tyreseCAProvinces">0</span>
+                </div>
+            </div>
+            <div class="copy-buttons">
+                <button onclick="copyPersonCountries('Tyrese', event)" class="copy-btn">Copy Countries</button>
+                <button onclick="copyPersonStates('Tyrese', event)" class="copy-btn">Copy US/CA States</button>
+            </div>
+        </div>
+        
+        <div class="summary-card">
+            <div class="summary-title">Unassigned</div>
+            <div class="summary-content">
+                <div class="summary-row">
+                    <span class="summary-label">Countries:</span>
+                    <span class="summary-value" id="unassignedCountries">0</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">US States:</span>
+                    <span class="summary-value" id="unassignedUSStates">0</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">Canada Provinces:</span>
+                    <span class="summary-value" id="unassignedCAProvinces">0</span>
+                </div>
+            </div>
+            <div class="copy-buttons">
+                <button onclick="copyPersonCountries('unassigned', event)" class="copy-btn">Copy Countries</button>
+                <button onclick="copyPersonStates('unassigned', event)" class="copy-btn">Copy US/CA States</button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <!-- Territory Summary and Data Management -->
+    <div class="territory-controls">
+        <div class="territory-control-group">
+            <h3>Territory Summary</h3>
+            <div class="summary-content">
+                <div class="summary-row">
+                    <span class="summary-label">Total Countries:</span>
+                    <span class="summary-value" id="totalCountries">0</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">Total US States:</span>
+                    <span class="summary-value" id="totalUSStates">0</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">Total Canada Provinces:</span>
+                    <span class="summary-value" id="totalCAProvinces">0</span>
+                </div>
+            </div>
+            <div class="summary-note">
+                <strong>Note:</strong> US & Canada are counted by states/provinces only. 
+                DC (District of Columbia) is counted as a state. Antarctica is excluded.
+            </div>
+        </div>
+        
+        <div class="territory-control-group">
+            <h3>Data Management</h3>
+            <div style="margin-bottom: 15px; padding: 10px; background: #e8f4f8; border-radius: 4px; border-left: 3px solid #007bff;">
+                <strong>Workflow:</strong> Make changes → Export new master file → Upload to GitHub
+            </div>
+            <button onclick="exportMasterFile()" style="background: #28a745;">Export New Master File</button>
+            <button onclick="clearAllAssignments()" style="background: #dc3545;">Clear All</button>
+        </div>
+    </div>
+    
+    <!-- Bulk Actions and Search/Filter -->
+    <div class="territory-controls">
+        <div class="territory-control-group">
+            <h3>Bulk Actions</h3>
+            <label for="bulkAssignType">Assign by:</label>
+            <select id="bulkAssignType" onchange="updateBulkOptions()">
+                <option value="">Select type...</option>
+                <option value="region">Region</option>
+                <option value="sub-region">Sub-Region</option>
+                <option value="usca-timezone">US/CA Timezones</option>
+            </select>
+            
+            <div id="bulkOptionsContainer" style="display: none;">
+                <label id="bulkOptionsLabel">Select options:</label>
+                <div id="bulkOptionsList" class="bulk-options-list">
+                    <!-- Options will be populated dynamically -->
+                </div>
+            </div>
+            
+            <label for="bulkSdr">Assign to SDR:</label>
+            <select id="bulkSdr">
+                <option value="">Select SDR...</option>
+                <option value="Emmanuel">Emmanuel</option>
+                <option value="Lina">Lina</option>
+                <option value="James">James</option>
+                <option value="Tyrese">Tyrese</option>
+            </select>
+            <button onclick="assignBulkSelected()" id="bulkAssignButton" style="display: none;">Assign Selected</button>
+        </div>
+        
+        <div class="territory-control-group">
+            <h3>Search and Filter</h3>
+            <div class="search-controls">
+                <input type="text" id="searchLocation" class="search-input" placeholder="Search countries/states..." onkeyup="filterLocations()">
+                <select id="filterSdr" class="filter-select" onchange="filterLocations()">
+                    <option value="">All SDRs</option>
+                    <option value="Emmanuel">Emmanuel</option>
+                    <option value="Lina">Lina</option>
+                    <option value="James">James</option>
+                    <option value="Tyrese">Tyrese</option>
+                    <option value="unassigned">Unassigned</option>
+                </select>
+                <select id="filterRegion" class="filter-select" onchange="filterLocations()">
+                    <option value="">All HubSpot Regions</option>
+                    <option value="Africa">Africa</option>
+                    <option value="Americas">Americas</option>
+                    <option value="Asia">Asia</option>
+                    <option value="Europe">Europe</option>
+                    <option value="Oceania">Oceania</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <!-- Territory Assignments -->
+    <div class="territory-assignments" id="territoryAssignments">
+        <!-- Will be populated by JavaScript -->
+    </div>
+</div>
+
+<script>
+    let timezoneData = {};
+    let sdrAssignments = {}; // locationKey -> sdrName
+    let allLocations = []; // Flattened list of all locations
+    
+    // SDR colors
+    const SDR_COLORS = {
+        'Emmanuel': '#FF6B6B',
+        'Lina': '#f1ab6b', 
+        'James': '#45B7D1',
+        'Tyrese': '#51af71',
+        'unassigned': '#E0E0E0'
+    };
+    
+    const SDRS = ['Emmanuel', 'Lina', 'James', 'Tyrese'];
+    
+    async function loadTimezoneData() {
+        try {
+            const response = await fetch('integrated_timezone_data.json');
+            timezoneData = await response.json();
+            
+            // Build flattened locations list
+            allLocations = [];
+            Object.entries(timezoneData).forEach(([tz, data]) => {
+                data.locations.forEach(location => {
+                    // Create unique key for each location
+                    const locationKey = createLocationKey(location);
+                    allLocations.push({
+                        ...location,
+                        timezone: tz,
+                        locationKey: locationKey
+                    });
+                });
+            });
+            
+            // Try to load from master file first, fallback to localStorage
+            try {
+                const response = await fetch('master_territories.json');
+                if (response.ok) {
+                    const masterData = await response.json();
+                    const rawAssignments = masterData.assignments || {};
+                    
+                    // Convert human-readable assignments back to location keys
+                    sdrAssignments = {};
+                    Object.entries(rawAssignments).forEach(([humanReadableKey, sdrName]) => {
+                        // Try to find the location key for this human-readable key
+                        const location = allLocations.find(loc => {
+                            // Handle US states
+                            if (loc.country_code === 'US' && loc.state_code) {
+                                const stateFormat = `${loc.state_code} - ${loc.state}`;
+                                if (stateFormat === humanReadableKey) {
+                                    return true;
+                                }
+                            }
+                            // Handle Canadian provinces
+                            if (loc.country_code === 'CA' && loc.province_code) {
+                                const provinceFormat = `${loc.province_code} - ${loc.province}`;
+                                if (provinceFormat === humanReadableKey) {
+                                    return true;
+                                }
+                            }
+                            // Handle countries (but exclude US/CA since we handle them by states/provinces)
+                            if (loc.country_code && loc.country_code !== 'US' && loc.country_code !== 'CA') {
+                                // Make sure it's not a state/province entry
+                                if (!loc.state && !loc.province) {
+                                    const hubspotFormat = hubspotCountryMapping[loc.country_code];
+                                    if (hubspotFormat === humanReadableKey) {
+                                        return true;
+                                    }
+                                }
+                            }
+                            return false;
+                        });
+                        
+                        if (location) {
+                            sdrAssignments[location.locationKey] = sdrName;
+                        } else {
+                            // Fallback: if we can't find the location, keep the original key
+                            console.warn(`Could not find location for: ${humanReadableKey}`);
+                        }
+                    });
+                    
+                    console.log(`Loaded ${Object.keys(sdrAssignments).length} assignments from master file`);
+                } else {
+                    throw new Error('Master file not found');
+                }
+            } catch (error) {
+                console.log('Master file not found, loading from localStorage...');
+                const saved = localStorage.getItem('sdrAssignments');
+                if (saved) {
+                    sdrAssignments = JSON.parse(saved);
+                }
+            }
+            
+            // Initialize map
+            initializeMap();
+            
+            // Render assignments
+            renderTerritoryAssignments();
+            updateStats();
+            
+        } catch (error) {
+            console.error('Error loading timezone data:', error);
+        }
+    }
+    
+    function createLocationKey(location) {
+        // Create unique key for location
+        if (location.state_code && location.country_code) {
+            return `${location.country_code}-${location.state_code}`;
+        } else if (location.province_code && location.country_code) {
+            return `${location.country_code}-${location.province_code}`;
+        } else if (location.country_code) {
+            return location.country_code;
+        } else {
+            // Fallback for locations without country_code - use country name
+            const countryName = location.country || 'Unknown';
+            return `COUNTRY-${countryName.replace(/[^a-zA-Z0-9]/g, '_').toUpperCase()}`;
+        }
+    }
+    
+    function initializeMap() {
+        const svgObject = document.getElementById('svg-world-map');
+        
+        if (svgObject.contentDocument) {
+            setTimeout(() => {
+                updateMapColors();
+            }, 100);
+        } else {
+            svgObject.addEventListener('load', () => {
+                setTimeout(() => {
+                    updateMapColors();
+                }, 100);
+            }, { once: true });
+        }
+    }
+    
+    function updateMapColors() {
+        const svgObject = document.getElementById('svg-world-map');
+        if (!svgObject.contentDocument) return;
+        
+        const svgDoc = svgObject.contentDocument;
+        
+        // Hide Antarctica
+        const antarctica = svgDoc.getElementById('AQ');
+        if (antarctica) {
+            antarctica.style.display = 'none';
+        }
+        
+        // Hide ocean layer
+        const ocean = svgDoc.getElementById('Ocean');
+        if (ocean) {
+            ocean.style.display = 'none';
+        }
+        
+        // Reset all countries and states
+        const allCountryGroups = svgDoc.querySelectorAll('g[id]');
+        allCountryGroups.forEach(group => {
+            if (group.id && group.id.length === 2 && group.id.match(/^[A-Z]{2}$/)) {
+                const paths = group.querySelectorAll('path');
+                paths.forEach(path => {
+                    path.style.fill = SDR_COLORS.unassigned;
+                    path.style.stroke = '#888';
+                    path.style.strokeWidth = '0.5';
+                });
+            }
+        });
+        
+        // Reset all state/province elements
+        const stateElements = svgDoc.querySelectorAll('[id^="US-"], [id^="CA-"], [id^="AU-"]');
+        stateElements.forEach(element => {
+            element.style.fill = SDR_COLORS.unassigned;
+            element.style.stroke = '#888';
+            element.style.strokeWidth = '0.5';
+        });
+        
+        // Hide country fills for US, CA, AU
+        ['US', 'CA', 'AU'].forEach(countryCode => {
+            const countryGroup = svgDoc.getElementById(countryCode);
+            if (countryGroup) {
+                countryGroup.style.fill = 'none';
+                const paths = countryGroup.querySelectorAll('path');
+                paths.forEach(path => {
+                    if (!path.id || !path.id.match(/^(US|CA|AU)-[A-Z]{2,3}(-|$)/)) {
+                        path.style.fill = 'none';
+                        path.style.stroke = '#888';
+                        path.style.strokeWidth = '0.5';
+                    }
+                });
+            }
+        });
+        
+        // Apply SDR colors
+        Object.entries(sdrAssignments).forEach(([locationKey, sdrName]) => {
+            const color = SDR_COLORS[sdrName] || SDR_COLORS.unassigned;
+            
+            // Find the location data
+            const location = allLocations.find(loc => loc.locationKey === locationKey);
+            if (!location) return;
+            
+            if (location.state_code || location.province_code) {
+                // Handle state/province
+                let elementId;
+                if (location.country_code === 'US' && location.state_code) {
+                    elementId = `US-${location.state_code}`;
+                } else if (location.country_code === 'CA' && location.province_code) {
+                    elementId = `CA-${location.province_code}`;
+                } else if (location.country_code === 'AU' && location.state_code) {
+                    elementId = `AU-${location.state_code}`;
+                }
+                
+                if (elementId) {
+                    const stateElement = svgDoc.getElementById(elementId);
+                    if (stateElement) {
+                        stateElement.style.fill = color;
+                        stateElement.style.stroke = '#888';
+                        stateElement.style.strokeWidth = '0.5';
+                        
+                        // Handle nested elements
+                        const nestedElements = svgDoc.querySelectorAll(`[id^="${elementId}-"]`);
+                        nestedElements.forEach(nestedElement => {
+                            nestedElement.style.fill = color;
+                            nestedElement.style.stroke = '#888';
+                            nestedElement.style.strokeWidth = '0.5';
+                        });
+                    }
+                }
+            } else if (location.country_code) {
+                // Handle country (only if we have a proper country code)
+                const countryCode = location.country_code.toUpperCase();
+                if (countryCode !== 'US' && countryCode !== 'CA') {
+                    const countryGroup = svgDoc.getElementById(countryCode);
+                    if (countryGroup) {
+                        const paths = countryGroup.querySelectorAll('path');
+                        paths.forEach(path => {
+                            path.style.fill = color;
+                            path.style.stroke = '#888';
+                            path.style.strokeWidth = '0.5';
+                        });
+                    }
+                }
+            }
+            // Note: Locations without country_code won't be colored on the map
+        });
+    }
+    
+    function renderTerritoryAssignments() {
+        const container = document.getElementById('territoryAssignments');
+        container.innerHTML = '';
+        
+        // Group locations by HubSpot region, with Americas sub-grouped by timezone
+        const regionGroups = {
+            'Africa': [],
+            'Asia': [],
+            'Europe': [],
+            'Oceania': [],
+            'Americas': [] // For non-US/CA Americas countries
+        };
+        const americasTimezoneGroups = {};
+        
+                allLocations.forEach(location => {
+            const hubspotRegion = location.region || 'Unknown';
+            
+            // Skip country-level entries for US and Canada since we manage them at state/province level
+            if ((location.country_code === 'US' || location.country_code === 'CA') && 
+                !location.state && !location.province) {
+                return;
+            }
+            
+            // Skip Australian state-level entries since we treat Australia as a country only
+            if (location.country_code === 'AU' && (location.state || location.province)) {
+                return;
+            }
+            
+            if (hubspotRegion === 'Americas') {
+                // Check if this is a US/CA location (has state or province)
+                if (location.state || location.province) {
+                    // For US/CA locations, group by timezone with friendly names
+                let timezoneGroup = location.timezone;
+                    
+                    // Map timezone names to friendly display names
+                    const timezoneDisplayNames = {
+                        'US/Eastern': 'Eastern Time',
+                        'US/Central': 'Central Time', 
+                        'US/Mountain': 'Mountain Time',
+                        'US/Pacific': 'Pacific Time',
+                        'US/Alaska': 'Alaska Time',
+                        'US/Hawaii': 'Hawaii Time',
+                        'Canada/Eastern': 'Eastern Time',
+                        'Canada/Central': 'Central Time',
+                        'Canada/Mountain': 'Mountain Time', 
+                        'Canada/Pacific': 'Pacific Time',
+                        'Canada/Atlantic': 'Atlantic Time',
+                        'Canada/Newfoundland': 'Newfoundland Time',
+                        'Canada/Saskatchewan': 'Saskatchewan Time',
+                        'Canada/Yukon': 'Yukon Time'
+                    };
+                    
+                    // Group similar timezones together
+                    if (timezoneGroup.includes('Eastern') || timezoneGroup.includes('Toronto') || timezoneGroup.includes('Montreal') || timezoneGroup.includes('Iqaluit')) {
+                        timezoneGroup = 'Eastern Time';
+                    } else if (timezoneGroup.includes('Central') || timezoneGroup.includes('Chicago') || timezoneGroup.includes('Winnipeg') || timezoneGroup.includes('Saskatchewan') || timezoneGroup.includes('Regina')) {
+                        timezoneGroup = 'Central Time';
+                    } else if (timezoneGroup.includes('Mountain') || timezoneGroup.includes('Denver') || timezoneGroup.includes('Edmonton')) {
+                        timezoneGroup = 'Mountain Time';
+                    } else if (timezoneGroup.includes('Pacific') || timezoneGroup.includes('Los_Angeles') || timezoneGroup.includes('Vancouver') || timezoneGroup.includes('Yukon') || timezoneGroup.includes('Whitehorse')) {
+                        timezoneGroup = 'Pacific Time';
+                    } else if (timezoneGroup.includes('Alaska') || timezoneGroup.includes('Anchorage')) {
+                        timezoneGroup = 'Alaska Time';
+                    } else if (timezoneGroup.includes('Hawaii') || timezoneGroup.includes('Honolulu')) {
+                        timezoneGroup = 'Hawaii Time';
+                    } else if (timezoneGroup.includes('Atlantic') || timezoneGroup.includes('Halifax')) {
+                        timezoneGroup = 'Atlantic Time';
+                    } else if (timezoneGroup.includes('Newfoundland') || timezoneGroup.includes('St_Johns')) {
+                        timezoneGroup = 'Newfoundland Time';
+                    } else {
+                        // For other American countries, use country name
+                        timezoneGroup = location.country || 'Other Americas';
+                    }
+                    
+                    if (!americasTimezoneGroups[timezoneGroup]) {
+                        americasTimezoneGroups[timezoneGroup] = [];
+                    }
+                    americasTimezoneGroups[timezoneGroup].push(location);
+                } else {
+                    // For other Americas countries (not US/CA), add to regionGroups for sub-region grouping
+                    regionGroups['Americas'].push(location);
+                }
+            } else {
+                regionGroups[hubspotRegion].push(location);
+            }
+        });
+        
+        // Sort locations within each group
+        Object.keys(regionGroups).forEach(region => {
+            regionGroups[region].sort((a, b) => {
+                const aName = a.state || a.province || a.country || 'Unknown';
+                const bName = b.state || b.province || b.country || 'Unknown';
+                return aName.localeCompare(bName);
+            });
+        });
+        
+        Object.keys(americasTimezoneGroups).forEach(timezoneGroup => {
+            americasTimezoneGroups[timezoneGroup].sort((a, b) => {
+                const aName = a.state || a.province || a.country || 'Unknown';
+                const bName = b.state || b.province || b.country || 'Unknown';
+                return aName.localeCompare(bName);
+            });
+        });
+        
+        // Create Americas timezone sections first
+        const americasTimezoneOrder = ['Hawaii Time', 'Alaska Time', 'Pacific Time', 'Mountain Time', 'Central Time', 'Eastern Time', 
+                                      'Atlantic Time', 'Newfoundland Time'];
+        
+        americasTimezoneOrder.forEach(timezoneGroup => {
+            if (americasTimezoneGroups[timezoneGroup] && americasTimezoneGroups[timezoneGroup].length > 0) {
+                createLocationGroup(container, timezoneGroup, americasTimezoneGroups[timezoneGroup], 'Americas');
+                delete americasTimezoneGroups[timezoneGroup]; // Remove from remaining groups
+            }
+        });
+        
+        // Add remaining Americas groups (other countries)
+        Object.entries(americasTimezoneGroups).forEach(([timezoneGroup, locations]) => {
+            if (locations.length > 0) {
+                createLocationGroup(container, timezoneGroup, locations, 'Americas');
+            }
+        });
+        
+        // Create other region sections grouped by sub-region
+        Object.entries(regionGroups).forEach(([region, locations]) => {
+            if (locations.length === 0) return;
+            
+            // Group locations by sub-region
+            const subRegionGroups = {};
+            locations.forEach(location => {
+                const subRegion = location.sub_region || 'Unknown';
+                if (!subRegionGroups[subRegion]) {
+                    subRegionGroups[subRegion] = [];
+                }
+                subRegionGroups[subRegion].push(location);
+            });
+            
+            // Sort sub-regions and create groups
+            Object.entries(subRegionGroups).forEach(([subRegion, subRegionLocations]) => {
+                if (subRegionLocations.length > 0) {
+                    // Sort locations within sub-region
+                    subRegionLocations.sort((a, b) => {
+                        const aName = a.state || a.province || a.country || 'Unknown';
+                        const bName = b.state || b.province || b.country || 'Unknown';
+                        return aName.localeCompare(bName);
+                    });
+                    
+                    createLocationGroup(container, subRegion, subRegionLocations, region);
+                }
+            });
+        });
+    }
+    
+    function createLocationGroup(container, title, locations, region) {
+        const regionDiv = document.createElement('div');
+        regionDiv.className = 'region-group';
+        regionDiv.dataset.region = region;
+        
+        const titleDiv = document.createElement('div');
+        titleDiv.className = 'region-title';
+        titleDiv.textContent = `${title} (${locations.length} locations)`;
+        regionDiv.appendChild(titleDiv);
+        
+        locations.forEach(location => {
+            const locationDiv = document.createElement('div');
+            locationDiv.className = 'location-assignment';
+            locationDiv.dataset.locationKey = location.locationKey;
+            
+            const nameDiv = document.createElement('div');
+            nameDiv.className = 'location-name';
+            
+            const locationName = location.state || location.province || location.country || 'Unknown';
+            let displayName = locationName;
+            
+            if (location.state || location.province) {
+                displayName += ` (${location.country})`;
+                const typeSpan = document.createElement('span');
+                typeSpan.className = 'location-type';
+                typeSpan.textContent = location.location_type || 'region';
+                nameDiv.appendChild(document.createTextNode(displayName));
+                nameDiv.appendChild(typeSpan);
+            } else {
+                nameDiv.textContent = displayName;
+            }
+            
+            const select = document.createElement('select');
+            select.className = 'sdr-select';
+            select.onchange = () => assignLocation(location.locationKey, select.value);
+            
+            // Add options
+            const unassignedOption = document.createElement('option');
+            unassignedOption.value = '';
+            unassignedOption.textContent = 'Unassigned';
+            select.appendChild(unassignedOption);
+            
+            SDRS.forEach(sdr => {
+                const option = document.createElement('option');
+                option.value = sdr;
+                option.textContent = sdr;
+                select.appendChild(option);
+            });
+            
+            // Set current assignment
+            const currentAssignment = sdrAssignments[location.locationKey] || '';
+            select.value = currentAssignment;
+            
+            locationDiv.appendChild(nameDiv);
+            locationDiv.appendChild(select);
+            regionDiv.appendChild(locationDiv);
+        });
+        
+        container.appendChild(regionDiv);
+    }
+    
+    function assignLocation(locationKey, sdrName) {
+        if (sdrName === '') {
+            delete sdrAssignments[locationKey];
+        } else {
+            sdrAssignments[locationKey] = sdrName;
+        }
+        
+        updateMapColors();
+        updateStats();
+        
+        // Auto-save
+        localStorage.setItem('sdrAssignments', JSON.stringify(sdrAssignments));
+    }
+    
+    function updateStats() {
+        const stats = {
+            'Emmanuel': { countries: 0, usStates: 0, caProvinces: 0 },
+            'Lina': { countries: 0, usStates: 0, caProvinces: 0 },
+            'James': { countries: 0, usStates: 0, caProvinces: 0 },
+            'Tyrese': { countries: 0, usStates: 0, caProvinces: 0 },
+            'unassigned': { countries: 0, usStates: 0, caProvinces: 0 }
+        };
+        
+        // Track unique countries per SDR to avoid duplicates
+        const sdrCountries = {
+            'Emmanuel': new Set(),
+            'Lina': new Set(),
+            'James': new Set(),
+            'Tyrese': new Set(),
+            'unassigned': new Set()
+        };
+        
+        allLocations.forEach(location => {
+            const assignment = sdrAssignments[location.locationKey] || 'unassigned';
+            
+            // Check if this is a state/province and categorize by country
+            if (location.country_code === 'US' && (location.state || location.province)) {
+                stats[assignment].usStates++;
+            } else if (location.country_code === 'CA' && (location.state || location.province)) {
+                stats[assignment].caProvinces++;
+            } else {
+                // This is a country (but exclude US/CA since we count them by states)
+                if (location.country_code !== 'US' && location.country_code !== 'CA') {
+                    // Also exclude Australian state-level entries since we treat Australia as a country only
+                    if (!(location.country_code === 'AU' && location.state_code)) {
+                        // Only count unique countries
+                        sdrCountries[assignment].add(location.country_code);
+                    }
+                }
+            }
+        });
+        
+        // Convert unique country sets to counts
+        Object.keys(stats).forEach(sdr => {
+            stats[sdr].countries = sdrCountries[sdr].size;
+        });
+        
+        // Update display with detailed breakdown
+        document.getElementById('emmanuelCountries').textContent = stats.Emmanuel.countries;
+        document.getElementById('emmanuelUSStates').textContent = stats.Emmanuel.usStates;
+        document.getElementById('emmanuelCAProvinces').textContent = stats.Emmanuel.caProvinces;
+        
+        document.getElementById('linaCountries').textContent = stats.Lina.countries;
+        document.getElementById('linaUSStates').textContent = stats.Lina.usStates;
+        document.getElementById('linaCAProvinces').textContent = stats.Lina.caProvinces;
+        
+        document.getElementById('jamesCountries').textContent = stats.James.countries;
+        document.getElementById('jamesUSStates').textContent = stats.James.usStates;
+        document.getElementById('jamesCAProvinces').textContent = stats.James.caProvinces;
+        
+        document.getElementById('tyreseCountries').textContent = stats.Tyrese.countries;
+        document.getElementById('tyreseUSStates').textContent = stats.Tyrese.usStates;
+        document.getElementById('tyreseCAProvinces').textContent = stats.Tyrese.caProvinces;
+        
+        document.getElementById('unassignedCountries').textContent = stats.unassigned.countries;
+        document.getElementById('unassignedUSStates').textContent = stats.unassigned.usStates;
+        document.getElementById('unassignedCAProvinces').textContent = stats.unassigned.caProvinces;
+        
+        // Update summary totals
+        const totalCountries = stats.Emmanuel.countries + stats.Lina.countries + stats.James.countries + stats.Tyrese.countries + stats.unassigned.countries;
+        const totalUSStates = stats.Emmanuel.usStates + stats.Lina.usStates + stats.James.usStates + stats.Tyrese.usStates + stats.unassigned.usStates;
+        const totalCAProvinces = stats.Emmanuel.caProvinces + stats.Lina.caProvinces + stats.James.caProvinces + stats.Tyrese.caProvinces + stats.unassigned.caProvinces;
+        document.getElementById('totalCountries').textContent = totalCountries;
+        document.getElementById('totalUSStates').textContent = totalUSStates;
+        document.getElementById('totalCAProvinces').textContent = totalCAProvinces;
+    }
+    
+    function updateBulkOptions() {
+        const assignType = document.getElementById('bulkAssignType').value;
+        const container = document.getElementById('bulkOptionsContainer');
+        const optionsList = document.getElementById('bulkOptionsList');
+        const assignButton = document.getElementById('bulkAssignButton');
+        const optionsLabel = document.getElementById('bulkOptionsLabel');
+        
+        if (!assignType) {
+            container.style.display = 'none';
+            assignButton.style.display = 'none';
+            return;
+        }
+        
+        // Clear existing options
+        optionsList.innerHTML = '';
+        
+        if (assignType === 'region') {
+            optionsLabel.textContent = 'Select Regions:';
+            
+            // Get unique regions and their counts
+            const regionCounts = {};
+            allLocations.forEach(location => {
+                const region = location.region || 'Unknown';
+                regionCounts[region] = (regionCounts[region] || 0) + 1;
+            });
+            
+            // Create checkboxes for each region
+            Object.entries(regionCounts).forEach(([region, count]) => {
+                const item = document.createElement('div');
+                item.className = 'bulk-option-item';
+                
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.className = 'bulk-option-checkbox';
+                checkbox.value = region;
+                checkbox.id = `bulk-option-${region}`;
+                
+                const label = document.createElement('label');
+                label.className = 'bulk-option-label';
+                label.htmlFor = `bulk-option-${region}`;
+                label.textContent = region;
+                
+                const countSpan = document.createElement('span');
+                countSpan.className = 'bulk-option-count';
+                countSpan.textContent = `(${count} locations)`;
+                
+                item.appendChild(checkbox);
+                item.appendChild(label);
+                item.appendChild(countSpan);
+                optionsList.appendChild(item);
+            });
+            
+        } else if (assignType === 'sub-region') {
+            optionsLabel.textContent = 'Select Sub-Regions:';
+            
+            // Get unique sub-regions and their counts
+            const subRegionCounts = {};
+            allLocations.forEach(location => {
+                const subRegion = location.sub_region || 'Unknown';
+                subRegionCounts[subRegion] = (subRegionCounts[subRegion] || 0) + 1;
+            });
+            
+            // Create checkboxes for each sub-region
+            Object.entries(subRegionCounts).forEach(([subRegion, count]) => {
+                const item = document.createElement('div');
+                item.className = 'bulk-option-item';
+                
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.className = 'bulk-option-checkbox';
+                checkbox.value = subRegion;
+                checkbox.id = `bulk-option-${subRegion}`;
+                
+                const label = document.createElement('label');
+                label.className = 'bulk-option-label';
+                label.htmlFor = `bulk-option-${subRegion}`;
+                label.textContent = subRegion;
+                
+                const countSpan = document.createElement('span');
+                countSpan.className = 'bulk-option-count';
+                countSpan.textContent = `(${count} locations)`;
+                
+                item.appendChild(checkbox);
+                item.appendChild(label);
+                item.appendChild(countSpan);
+                optionsList.appendChild(item);
+            });
+        } else if (assignType === 'usca-timezone') {
+            optionsLabel.textContent = 'Select US/CA Timezones:';
+            
+            // Get unique timezones for US/CA locations and their counts
+            const timezoneCounts = {};
+            allLocations.forEach(location => {
+                // Only include US and Canada locations with states/provinces
+                if ((location.country_code === 'US' || location.country_code === 'CA') && 
+                    (location.state || location.province)) {
+                    const timezone = location.timezone;
+                    if (timezone) {
+                        // Map timezone names to friendly display names
+                        let displayName = timezone;
+                        if (timezone.includes('Eastern') || timezone.includes('Toronto') || timezone.includes('Montreal') || timezone.includes('Iqaluit')) {
+                            displayName = 'Eastern Time';
+                        } else if (timezone.includes('Central') || timezone.includes('Chicago') || timezone.includes('Winnipeg')) {
+                            displayName = 'Central Time';
+                        } else if (timezone.includes('Mountain') || timezone.includes('Denver') || timezone.includes('Edmonton')) {
+                            displayName = 'Mountain Time';
+                        } else if (timezone.includes('Pacific') || timezone.includes('Los_Angeles') || timezone.includes('Vancouver')) {
+                            displayName = 'Pacific Time';
+                        } else if (timezone.includes('Alaska') || timezone.includes('Anchorage')) {
+                            displayName = 'Alaska Time';
+                        } else if (timezone.includes('Hawaii') || timezone.includes('Honolulu')) {
+                            displayName = 'Hawaii Time';
+                        } else if (timezone.includes('Atlantic') || timezone.includes('Halifax')) {
+                            displayName = 'Atlantic Time';
+                        } else if (timezone.includes('Newfoundland') || timezone.includes('St_Johns')) {
+                            displayName = 'Newfoundland Time';
+                        } else if (timezone.includes('Saskatchewan') || timezone.includes('Regina')) {
+                            displayName = 'Saskatchewan Time';
+                        } else if (timezone.includes('Yukon') || timezone.includes('Whitehorse')) {
+                            displayName = 'Yukon Time';
+                        }
+                        
+                        timezoneCounts[displayName] = (timezoneCounts[displayName] || 0) + 1;
+                    }
+                }
+            });
+            
+            // Create checkboxes for each timezone
+            Object.entries(timezoneCounts).forEach(([timezone, count]) => {
+                const item = document.createElement('div');
+                item.className = 'bulk-option-item';
+                
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.className = 'bulk-option-checkbox';
+                checkbox.value = timezone;
+                checkbox.id = `bulk-option-${timezone}`;
+                
+                const label = document.createElement('label');
+                label.className = 'bulk-option-label';
+                label.htmlFor = `bulk-option-${timezone}`;
+                label.textContent = timezone;
+                
+                const countSpan = document.createElement('span');
+                countSpan.className = 'bulk-option-count';
+                countSpan.textContent = `(${count} locations)`;
+                
+                item.appendChild(checkbox);
+                item.appendChild(label);
+                item.appendChild(countSpan);
+                optionsList.appendChild(item);
+            });
+        }
+        
+        container.style.display = 'block';
+        assignButton.style.display = 'block';
+    }
+    
+    function assignBulkSelected() {
+        const assignType = document.getElementById('bulkAssignType').value;
+        const sdr = document.getElementById('bulkSdr').value;
+        
+        if (!assignType || !sdr) {
+            alert('Please select both assignment type and SDR');
+            return;
+        }
+        
+        // Get selected checkboxes
+        const selectedCheckboxes = document.querySelectorAll('#bulkOptionsList input[type="checkbox"]:checked');
+        
+        if (selectedCheckboxes.length === 0) {
+            alert('Please select at least one option to assign');
+            return;
+        }
+        
+        const selectedValues = Array.from(selectedCheckboxes).map(cb => cb.value);
+        
+        let assignedCount = 0;
+        
+        allLocations.forEach(location => {
+            let shouldAssign = false;
+            
+            if (assignType === 'region') {
+                shouldAssign = selectedValues.includes(location.region);
+            } else if (assignType === 'sub-region') {
+                shouldAssign = selectedValues.includes(location.sub_region);
+            } else if (assignType === 'usca-timezone') {
+                // Only assign US/CA locations with states/provinces
+                if ((location.country_code === 'US' || location.country_code === 'CA') && 
+                    (location.state || location.province)) {
+                    const timezone = location.timezone;
+                    if (timezone) {
+                        // Map timezone to display name (same logic as above)
+                        let displayName = timezone;
+                        if (timezone.includes('Eastern') || timezone.includes('Toronto') || timezone.includes('Montreal') || timezone.includes('Iqaluit')) {
+                            displayName = 'Eastern Time';
+                        } else if (timezone.includes('Central') || timezone.includes('Chicago') || timezone.includes('Winnipeg') || timezone.includes('Saskatchewan') || timezone.includes('Regina')) {
+                            displayName = 'Central Time';
+                        } else if (timezone.includes('Mountain') || timezone.includes('Denver') || timezone.includes('Edmonton')) {
+                            displayName = 'Mountain Time';
+                        } else if (timezone.includes('Pacific') || timezone.includes('Los_Angeles') || timezone.includes('Vancouver') || timezone.includes('Yukon') || timezone.includes('Whitehorse')) {
+                            displayName = 'Pacific Time';
+                        } else if (timezone.includes('Alaska') || timezone.includes('Anchorage')) {
+                            displayName = 'Alaska Time';
+                        } else if (timezone.includes('Hawaii') || timezone.includes('Honolulu')) {
+                            displayName = 'Hawaii Time';
+                        } else if (timezone.includes('Atlantic') || timezone.includes('Halifax')) {
+                            displayName = 'Atlantic Time';
+                        } else if (timezone.includes('Newfoundland') || timezone.includes('St_Johns')) {
+                            displayName = 'Newfoundland Time';
+                        }
+                        
+                        shouldAssign = selectedValues.includes(displayName);
+                    }
+                }
+            }
+            
+            if (shouldAssign) {
+                sdrAssignments[location.locationKey] = sdr;
+                assignedCount++;
+            }
+        });
+        
+        renderTerritoryAssignments();
+        updateMapColors();
+        updateStats();
+        localStorage.setItem('sdrAssignments', JSON.stringify(sdrAssignments));
+    }
+    
+
+    
+    function clearAllAssignments() {
+        if (!confirm('Clear all SDR assignments? This cannot be undone.')) return;
+        
+        sdrAssignments = {};
+        renderTerritoryAssignments();
+        updateMapColors();
+        updateStats();
+        localStorage.removeItem('sdrAssignments');
+    }
+    
+
+    
+    function exportMasterFile() {
+        const currentDate = new Date().toISOString();
+        
+        // Convert assignments to human-readable format
+        const humanReadableAssignments = {};
+        Object.entries(sdrAssignments).forEach(([locationKey, sdrName]) => {
+            // Find the location data to get human-readable name
+            const location = allLocations.find(loc => loc.locationKey === locationKey);
+            if (location) {
+                let humanReadableKey;
+                
+                if (location.country_code === 'US' && location.state_code) {
+                    // US state format: "CA - California"
+                    humanReadableKey = `${location.state_code} - ${location.state}`;
+                } else if (location.country_code === 'CA' && location.province_code) {
+                    // Canadian province format: "ON - Ontario"
+                    humanReadableKey = `${location.province_code} - ${location.province}`;
+                } else if (location.country_code) {
+                    // Country format: "AL - Albania"
+                    const hubspotFormat = hubspotCountryMapping[location.country_code];
+                    humanReadableKey = hubspotFormat || `${location.country_code} - ${location.country || 'Unknown'}`;
+                } else {
+                    // Fallback
+                    humanReadableKey = locationKey;
+                }
+                
+                humanReadableAssignments[humanReadableKey] = sdrName;
+            }
+        });
+        
+        const masterData = {
+            metadata: {
+                version: "1.0",
+                last_updated: currentDate,
+                description: "Master SDR territory assignments",
+                exported_by: "SDR Territory Manager",
+                total_locations: allLocations.length
+            },
+            assignments: humanReadableAssignments,
+            sdrs: SDRS,
+            stats: {
+                total_locations: allLocations.length,
+                assigned_locations: Object.keys(sdrAssignments).length,
+                unassigned_locations: allLocations.length - Object.keys(sdrAssignments).length
+            }
+        };
+        
+        const blob = new Blob([JSON.stringify(masterData, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `master_territories_${currentDate.split('T')[0]}.json`;
+        a.click();
+        URL.revokeObjectURL(url);
+        
+        alert(`Master file exported with ${Object.keys(sdrAssignments).length} assignments!\n\nNext steps:\n1. Upload this file to GitHub\n2. Rename it to master_territories.json\n3. Commit the changes`);
+    }
+    
+    // HubSpot country code mapping
+    const hubspotCountryMapping = {
+        'AF': 'AF - Afghanistan',
+        'AX': 'AX - Ãland Islands',
+        'AL': 'AL - Albania',
+        'DZ': 'DZ - Algeria',
+        'AS': 'AS - American Samoa',
+        'AD': 'AD - Andorra',
+        'AO': 'AO - Angola',
+        'AI': 'AI - Anguilla',
+        'AQ': 'AQ - Antarctica',
+        'AG': 'AG - Antigua and Barbuda',
+        'AR': 'AR - Argentina',
+        'AM': 'AM - Armenia',
+        'AW': 'AW - Aruba',
+        'AU': 'AU - Australia',
+        'AT': 'AT - Austria',
+        'AZ': 'AZ - Azerbaijan',
+        'BS': 'BS - Bahamas',
+        'BH': 'BH - Bahrain',
+        'BD': 'BD - Bangladesh',
+        'BB': 'BB - Barbados',
+        'BY': 'BY - Belarus',
+        'BE': 'BE - Belgium',
+        'BZ': 'BZ - Belize',
+        'BJ': 'BJ - Benin',
+        'BM': 'BM - Bermuda',
+        'BT': 'BT - Bhutan',
+        'BO': 'BO - Bolivia (Plurinational State of)',
+        'BQ': 'BQ - Bonaire, Sint Eustatius and Saba',
+        'BA': 'BA - Bosnia and Herzegovina',
+        'BW': 'BW - Botswana',
+        'BV': 'BV - Bouvet Island',
+        'BR': 'BR - Brazil',
+        'IO': 'IO - British Indian Ocean Territory',
+        'BN': 'BN - Brunei Darussalam',
+        'BG': 'BG - Bulgaria',
+        'BF': 'BF - Burkina Faso',
+        'BI': 'BI - Burundi',
+        'CV': 'CV - Cabo Verde',
+        'KH': 'KH - Cambodia',
+        'CM': 'CM - Cameroon',
+        'CA': 'CA - Canada',
+        'KY': 'KY - Cayman Islands',
+        'CF': 'CF - Central African Republic',
+        'TD': 'TD - Chad',
+        'CL': 'CL - Chile',
+        'CN': 'CN - China',
+        'CX': 'CX - Christmas Island',
+        'CC': 'CC - Cocos (Keeling) Islands',
+        'CO': 'CO - Colombia',
+        'KM': 'KM - Comoros',
+        'CG': 'CG - Congo',
+        'CD': 'CD - Congo, Democratic Republic of the',
+        'CK': 'CK - Cook Islands',
+        'CR': 'CR - Costa Rica',
+        'CI': 'CI - Côte d\'Ivoire',
+        'HR': 'HR - Croatia',
+        'CU': 'CU - Cuba',
+        'CW': 'CW - Curaçao',
+        'CY': 'CY - Cyprus',
+        'CZ': 'CZ - Czechia',
+        'DK': 'DK - Denmark',
+        'DJ': 'DJ - Djibouti',
+        'DM': 'DM - Dominica',
+        'DO': 'DO - Dominican Republic',
+        'EC': 'EC - Ecuador',
+        'EG': 'EG - Egypt',
+        'SV': 'SV - El Salvador',
+        'GQ': 'GQ - Equatorial Guinea',
+        'ER': 'ER - Eritrea',
+        'EE': 'EE - Estonia',
+        'SZ': 'SZ - Eswatini',
+        'ET': 'ET - Ethiopia',
+        'FK': 'FK - Falkland Islands (Malvinas)',
+        'FO': 'FO - Faroe Islands',
+        'FJ': 'FJ - Fiji',
+        'FI': 'FI - Finland',
+        'FR': 'FR - France',
+        'GF': 'GF - French Guiana',
+        'PF': 'PF - French Polynesia',
+        'TF': 'TF - French Southern Territories',
+        'GA': 'GA - Gabon',
+        'GM': 'GM - Gambia',
+        'GE': 'GE - Georgia',
+        'DE': 'DE - Germany',
+        'GH': 'GH - Ghana',
+        'GI': 'GI - Gibraltar',
+        'GR': 'GR - Greece',
+        'GL': 'GL - Greenland',
+        'GD': 'GD - Grenada',
+        'GP': 'GP - Guadeloupe',
+        'GU': 'GU - Guam',
+        'GT': 'GT - Guatemala',
+        'GG': 'GG - Guernsey',
+        'GN': 'GN - Guinea',
+        'GW': 'GW - Guinea-Bissau',
+        'GY': 'GY - Guyana',
+        'HT': 'HT - Haiti',
+        'HM': 'HM - Heard Island and McDonald Islands',
+        'VA': 'VA - Holy See',
+        'HN': 'HN - Honduras',
+        'HK': 'HK - Hong Kong',
+        'HU': 'HU - Hungary',
+        'IS': 'IS - Iceland',
+        'IN': 'IN - India',
+        'ID': 'ID - Indonesia',
+        'IR': 'IR - Iran (Islamic Republic of)',
+        'IQ': 'IQ - Iraq',
+        'IE': 'IE - Ireland',
+        'IM': 'IM - Isle of Man',
+        'IL': 'IL - Israel',
+        'IT': 'IT - Italy',
+        'JM': 'JM - Jamaica',
+        'JP': 'JP - Japan',
+        'JE': 'JE - Jersey',
+        'JO': 'JO - Jordan',
+        'KZ': 'KZ - Kazakhstan',
+        'KE': 'KE - Kenya',
+        'KI': 'KI - Kiribati',
+        'KP': 'KP - Korea (Democratic People\'s Republic of)',
+        'KR': 'KR - Korea, Republic of',
+        'KW': 'KW - Kuwait',
+        'KG': 'KG - Kyrgyzstan',
+        'LA': 'LA - Lao People\'s Democratic Republic',
+        'LV': 'LV - Latvia',
+        'LB': 'LB - Lebanon',
+        'LS': 'LS - Lesotho',
+        'LR': 'LR - Liberia',
+        'LY': 'LY - Libya',
+        'LI': 'LI - Liechtenstein',
+        'LT': 'LT - Lithuania',
+        'LU': 'LU - Luxembourg',
+        'MO': 'MO - Macao',
+        'MG': 'MG - Madagascar',
+        'MW': 'MW - Malawi',
+        'MY': 'MY - Malaysia',
+        'MV': 'MV - Maldives',
+        'ML': 'ML - Mali',
+        'MT': 'MT - Malta',
+        'MH': 'MH - Marshall Islands',
+        'MQ': 'MQ - Martinique',
+        'MR': 'MR - Mauritania',
+        'MU': 'MU - Mauritius',
+        'YT': 'YT - Mayotte',
+        'MX': 'MX - Mexico',
+        'FM': 'FM - Micronesia (Federated States of)',
+        'MD': 'MD - Moldova, Republic of',
+        'MC': 'MC - Monaco',
+        'MN': 'MN - Mongolia',
+        'ME': 'ME - Montenegro',
+        'MS': 'MS - Montserrat',
+        'MA': 'MA - Morocco',
+        'MZ': 'MZ - Mozambique',
+        'MM': 'MM - Myanmar',
+        'NA': 'NA - Namibia',
+        'NR': 'NR - Nauru',
+        'NP': 'NP - Nepal',
+        'NL': 'NL - Netherlands',
+        'NC': 'NC - New Caledonia',
+        'NZ': 'NZ - New Zealand',
+        'NI': 'NI - Nicaragua',
+        'NE': 'NE - Niger',
+        'NG': 'NG - Nigeria',
+        'NU': 'NU - Niue',
+        'NF': 'NF - Norfolk Island',
+        'MK': 'MK - North Macedonia',
+        'MP': 'MP - Northern Mariana Islands',
+        'NO': 'NO - Norway',
+        'OM': 'OM - Oman',
+        'PK': 'PK - Pakistan',
+        'PW': 'PW - Palau',
+        'PS': 'PS - Palestine, State of',
+        'PA': 'PA - Panama',
+        'PG': 'PG - Papua New Guinea',
+        'PY': 'PY - Paraguay',
+        'PE': 'PE - Peru',
+        'PH': 'PH - Philippines',
+        'PN': 'PN - Pitcairn',
+        'PL': 'PL - Poland',
+        'PT': 'PT - Portugal',
+        'PR': 'PR - Puerto Rico',
+        'QA': 'QA - Qatar',
+        'RE': 'RE - Réunion',
+        'RO': 'RO - Romania',
+        'RU': 'RU - Russian Federation',
+        'RW': 'RW - Rwanda',
+        'BL': 'BL - Saint Barthélemy',
+        'SH': 'SH - Saint Helena, Ascension and Tristan da Cunha',
+        'KN': 'KN - Saint Kitts and Nevis',
+        'LC': 'LC - Saint Lucia',
+        'MF': 'MF - Saint Martin (French part)',
+        'PM': 'PM - Saint Pierre and Miquelon',
+        'VC': 'VC - Saint Vincent and the Grenadines',
+        'WS': 'WS - Samoa',
+        'SM': 'SM - San Marino',
+        'ST': 'ST - Sao Tome and Principe',
+        'SA': 'SA - Saudi Arabia',
+        'SN': 'SN - Senegal',
+        'RS': 'RS - Serbia',
+        'SC': 'SC - Seychelles',
+        'SL': 'SL - Sierra Leone',
+        'SG': 'SG - Singapore',
+        'SX': 'SX - Sint Maarten (Dutch part)',
+        'SK': 'SK - Slovakia',
+        'SI': 'SI - Slovenia',
+        'SB': 'SB - Solomon Islands',
+        'SO': 'SO - Somalia',
+        'ZA': 'ZA - South Africa',
+        'GS': 'GS - South Georgia and the South Sandwich Islands',
+        'SS': 'SS - South Sudan',
+        'ES': 'ES - Spain',
+        'LK': 'LK - Sri Lanka',
+        'SD': 'SD - Sudan',
+        'SR': 'SR - Suriname',
+        'SJ': 'SJ - Svalbard and Jan Mayen',
+        'SE': 'SE - Sweden',
+        'CH': 'CH - Switzerland',
+        'SY': 'SY - Syrian Arab Republic',
+        'TW': 'TW - Taiwan, Province of China',
+        'TJ': 'TJ - Tajikistan',
+        'TZ': 'TZ - Tanzania, United Republic of',
+        'TH': 'TH - Thailand',
+        'TL': 'TL - Timor-Leste',
+        'TG': 'TG - Togo',
+        'TK': 'TK - Tokelau',
+        'TO': 'TO - Tonga',
+        'TT': 'TT - Trinidad and Tobago',
+        'TN': 'TN - Tunisia',
+        'TR': 'TR - Turkey',
+        'TM': 'TM - Turkmenistan',
+        'TC': 'TC - Turks and Caicos Islands',
+        'TV': 'TV - Tuvalu',
+        'UG': 'UG - Uganda',
+        'UA': 'UA - Ukraine',
+        'AE': 'AE - United Arab Emirates',
+        'GB': 'GB - United Kingdom of Great Britain and Northern Ireland',
+        'US': 'US - United States of America',
+        'UM': 'UM - United States Minor Outlying Islands',
+        'UY': 'UY - Uruguay',
+        'UZ': 'UZ - Uzbekistan',
+        'VU': 'VU - Vanuatu',
+        'VE': 'VE - Venezuela (Bolivarian Republic of)',
+        'VN': 'VN - Viet Nam',
+        'VG': 'VG - Virgin Islands (British)',
+        'VI': 'VI - Virgin Islands (U.S.)',
+        'WF': 'WF - Wallis and Futuna',
+        'EH': 'EH - Western Sahara',
+        'YE': 'YE - Yemen',
+        'ZM': 'ZM - Zambia',
+        'ZW': 'ZW - Zimbabwe',
+        'XK': 'XK - Kosovo'
+    };
+    
+    function copyPersonCountries(personName, event) {
+        const countries = [];
+        
+        allLocations.forEach(location => {
+            const assignment = sdrAssignments[location.locationKey] || 'unassigned';
+            if (assignment === personName) {
+                // Only include countries (not US/CA states/provinces)
+                if (location.country_code && 
+                    location.country_code !== 'US' && 
+                    location.country_code !== 'CA' && 
+                    !location.state && 
+                    !location.province) {
+                    
+                    const hubspotFormat = hubspotCountryMapping[location.country_code];
+                    if (hubspotFormat && !countries.includes(hubspotFormat)) {
+                        countries.push(hubspotFormat);
+                    }
+                }
+            }
+        });
+        
+        const countriesText = countries.join(';');
+        navigator.clipboard.writeText(countriesText).then(() => {
+            // Show feedback
+            const button = event.target;
+            const originalText = button.textContent;
+            button.textContent = 'Copied!';
+            button.style.background = '#28a745';
+            setTimeout(() => {
+                button.textContent = originalText;
+                button.style.background = '#007bff';
+            }, 2000);
+        }).catch(err => {
+            console.error('Failed to copy: ', err);
+            alert('Failed to copy to clipboard');
+        });
+    }
+    
+    function copyPersonStates(personName, event) {
+        const states = [];
+        
+        allLocations.forEach(location => {
+            const assignment = sdrAssignments[location.locationKey] || 'unassigned';
+            if (assignment === personName) {
+                // Only include US/CA states/provinces
+                if ((location.country_code === 'US' && location.state_code) ||
+                    (location.country_code === 'CA' && location.province_code)) {
+                    
+                    let stateCode;
+                    if (location.country_code === 'US') {
+                        stateCode = location.state_code;
+                    } else if (location.country_code === 'CA') {
+                        stateCode = location.province_code;
+                    }
+                    
+                    if (stateCode && !states.includes(stateCode)) {
+                        states.push(stateCode);
+                    }
+                }
+            }
+        });
+        
+        const statesText = states.join(';');
+        navigator.clipboard.writeText(statesText).then(() => {
+            // Show feedback
+            const button = event.target;
+            const originalText = button.textContent;
+            button.textContent = 'Copied!';
+            button.style.background = '#28a745';
+            setTimeout(() => {
+                button.textContent = originalText;
+                button.style.background = '#007bff';
+            }, 2000);
+        }).catch(err => {
+            console.error('Failed to copy: ', err);
+            alert('Failed to copy to clipboard');
+        });
+    }
+    
+
+    
+    function filterLocations() {
+        const searchTerm = document.getElementById('searchLocation').value.toLowerCase();
+        const sdrFilter = document.getElementById('filterSdr').value;
+        const regionFilter = document.getElementById('filterRegion').value;
+        
+        const regionGroups = document.querySelectorAll('.region-group');
+        
+        regionGroups.forEach(regionGroup => {
+            const region = regionGroup.dataset.region;
+            let hasVisibleLocations = false;
+            
+            if (regionFilter && region !== regionFilter) {
+                regionGroup.style.display = 'none';
+                return;
+            }
+            
+            const locationAssignments = regionGroup.querySelectorAll('.location-assignment');
+            locationAssignments.forEach(locationDiv => {
+                const locationKey = locationDiv.dataset.locationKey;
+                const location = allLocations.find(loc => loc.locationKey === locationKey);
+                const assignment = sdrAssignments[locationKey] || 'unassigned';
+                
+                let shouldShow = true;
+                
+                // Search filter
+                if (searchTerm) {
+                    const locationName = (location.state || location.province || location.country || '').toLowerCase();
+                    const countryName = (location.country || '').toLowerCase();
+                    if (!locationName.includes(searchTerm) && !countryName.includes(searchTerm)) {
+                        shouldShow = false;
+                    }
+                }
+                
+                // SDR filter
+                if (sdrFilter && assignment !== sdrFilter) {
+                    shouldShow = false;
+                }
+                
+                locationDiv.style.display = shouldShow ? 'flex' : 'none';
+                if (shouldShow) hasVisibleLocations = true;
+            });
+            
+            regionGroup.style.display = hasVisibleLocations ? 'block' : 'none';
+        });
+    }
+    
+    // Initialize when page loads
+    document.addEventListener('DOMContentLoaded', function() {
+        loadTimezoneData();
+    });
+</script>
+
+</body>
+</html>
