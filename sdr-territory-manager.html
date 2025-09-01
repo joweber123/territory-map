@@ -15,27 +15,6 @@
             font-size: 90%;
         }
         
-        /* SDR Color Legend */
-        .sdr-legend {
-            display: flex;
-            gap: 15px;
-            margin: 20px 0;
-            padding: 15px;
-            background: #f5f5f5;
-            border-radius: 8px;
-            flex-wrap: wrap;
-        }
-        .sdr-legend-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .sdr-color {
-            width: 20px;
-            height: 20px;
-            border-radius: 4px;
-            border: 2px solid #333;
-        }
         
         /* Territory Controls */
         .territory-controls {
@@ -111,6 +90,14 @@
             margin-bottom: 15px;
             padding-bottom: 8px;
             border-bottom: 2px solid #007bff;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+        .region-title:hover {
+            background-color: #f0f8ff;
+            border-bottom-color: #0056b3;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .location-assignment {
             display: flex;
@@ -162,10 +149,9 @@
         /* Stats */
         .territory-stats {
             display: flex;
-            gap: 20px;
+            gap: 10px;
             margin: 20px 0;
-            flex-wrap: nowrap;
-            justify-content: space-between;
+            flex-wrap: wrap;
         }
         .stat-card {
             background: white;
@@ -228,7 +214,8 @@
             border: 1px solid #dee2e6;
             border-radius: 8px;
             padding: 20px;
-            max-width: 400px;
+            flex: 1;
+            min-width: 220px;
         }
         .summary-title {
             font-weight: bold;
@@ -237,6 +224,17 @@
             margin-bottom: 15px;
             padding-bottom: 8px;
             border-bottom: 2px solid #007bff;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+        }
+        .summary-title:hover {
+            background-color: #e3f2fd;
+            color: #0056b3;
+            border-bottom-color: #0056b3;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .summary-content {
             margin-bottom: 15px;
@@ -274,19 +272,18 @@
         .copy-buttons {
             margin-top: 15px;
             display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 8px;
         }
         .copy-btn {
             background: #007bff;
             color: white;
             border: none;
-            padding: 8px 12px;
+            padding: 10px 16px;
             border-radius: 4px;
             cursor: pointer;
-            font-size: 0.85em;
-            flex: 1;
-            min-width: 120px;
+            font-size: 0.9em;
+            width: 100%;
         }
         .copy-btn:hover {
             background: #0056b3;
@@ -301,33 +298,6 @@
 <div class="container">
     <h2>SDR Territory Manager</h2>
     
-    <!-- SDR Legend -->
-    <div class="sdr-legend">
-        <div class="sdr-legend-item">
-            <div class="sdr-color" style="background-color: #FF6B6B;"></div>
-            <span><strong>Emmanuel</strong></span>
-        </div>
-        <div class="sdr-legend-item">
-            <div class="sdr-color" style="background-color: #f1ab6b;"></div>
-            <span><strong>Lina</strong></span>
-        </div>
-        <div class="sdr-legend-item">
-            <div class="sdr-color" style="background-color: #45B7D1;"></div>
-            <span><strong>James</strong></span>
-        </div>
-        <div class="sdr-legend-item">
-            <div class="sdr-color" style="background-color: #51af71;"></div>
-            <span><strong>Tyrese</strong></span>
-        </div>
-        <div class="sdr-legend-item">
-            <div class="sdr-color" style="background-color: #A8A8A8;"></div>
-            <span><strong>Country-Specific Reps</strong></span>
-        </div>
-        <div class="sdr-legend-item">
-            <div class="sdr-color" style="background-color: #E0E0E0;"></div>
-            <span><strong>Unassigned</strong></span>
-        </div>
-    </div>
     
     <!-- World Map -->
     <div id="svg-world-map-container">
@@ -337,7 +307,10 @@
     <!-- Territory Stats -->
     <div class="territory-stats">
         <div class="summary-card">
-            <div class="summary-title">Emmanuel</div>
+            <div class="summary-title">
+                <div class="sdr-color" style="background-color: #FF6B6B; width: 20px; height: 20px; border-radius: 4px; border: 2px solid #333; margin-right: 10px; display: inline-block;"></div>
+                Emmanuel
+            </div>
             <div class="summary-content">
                 <div class="summary-row">
                     <span class="summary-label">Countries:</span>
@@ -351,15 +324,24 @@
                     <span class="summary-label">Canada Provinces:</span>
                     <span class="summary-value" id="emmanuelCAProvinces">0</span>
                 </div>
+                <div class="summary-row" id="emmanuelSubRegions" style="display: none;">
+                    <span class="summary-label">Complete Sub-Regions:</span>
+                    <span class="summary-value" id="emmanuelSubRegionsList"></span>
+                </div>
             </div>
             <div class="copy-buttons">
+                <button onclick="copyPersonSubRegions('Emmanuel', event)" class="copy-btn">Copy Sub-Regions</button>
                 <button onclick="copyPersonCountries('Emmanuel', event)" class="copy-btn">Copy Countries</button>
+                <button onclick="copyPersonExcludes('Emmanuel', event)" class="copy-btn">Copy Excludes</button>
                 <button onclick="copyPersonStates('Emmanuel', event)" class="copy-btn">Copy US/CA States</button>
             </div>
         </div>
         
         <div class="summary-card">
-            <div class="summary-title">Lina</div>
+            <div class="summary-title">
+                <div class="sdr-color" style="background-color: #f1ab6b; width: 20px; height: 20px; border-radius: 4px; border: 2px solid #333; margin-right: 10px; display: inline-block;"></div>
+                Lina
+            </div>
             <div class="summary-content">
                 <div class="summary-row">
                     <span class="summary-label">Countries:</span>
@@ -373,15 +355,24 @@
                     <span class="summary-label">Canada Provinces:</span>
                     <span class="summary-value" id="linaCAProvinces">0</span>
                 </div>
+                <div class="summary-row" id="linaSubRegions" style="display: none;">
+                    <span class="summary-label">Complete Sub-Regions:</span>
+                    <span class="summary-value" id="linaSubRegionsList"></span>
+                </div>
             </div>
             <div class="copy-buttons">
+                <button onclick="copyPersonSubRegions('Lina', event)" class="copy-btn">Copy Sub-Regions</button>
                 <button onclick="copyPersonCountries('Lina', event)" class="copy-btn">Copy Countries</button>
+                <button onclick="copyPersonExcludes('Lina', event)" class="copy-btn">Copy Excludes</button>
                 <button onclick="copyPersonStates('Lina', event)" class="copy-btn">Copy US/CA States</button>
             </div>
         </div>
         
         <div class="summary-card">
-            <div class="summary-title">James</div>
+            <div class="summary-title">
+                <div class="sdr-color" style="background-color: #45B7D1; width: 20px; height: 20px; border-radius: 4px; border: 2px solid #333; margin-right: 10px; display: inline-block;"></div>
+                James
+            </div>
             <div class="summary-content">
                 <div class="summary-row">
                     <span class="summary-label">Countries:</span>
@@ -395,15 +386,24 @@
                     <span class="summary-label">Canada Provinces:</span>
                     <span class="summary-value" id="jamesCAProvinces">0</span>
                 </div>
+                <div class="summary-row" id="jamesSubRegions" style="display: none;">
+                    <span class="summary-label">Complete Sub-Regions:</span>
+                    <span class="summary-value" id="jamesSubRegionsList"></span>
+                </div>
             </div>
             <div class="copy-buttons">
+                <button onclick="copyPersonSubRegions('James', event)" class="copy-btn">Copy Sub-Regions</button>
                 <button onclick="copyPersonCountries('James', event)" class="copy-btn">Copy Countries</button>
+                <button onclick="copyPersonExcludes('James', event)" class="copy-btn">Copy Excludes</button>
                 <button onclick="copyPersonStates('James', event)" class="copy-btn">Copy US/CA States</button>
             </div>
         </div>
         
         <div class="summary-card">
-            <div class="summary-title">Tyrese</div>
+            <div class="summary-title">
+                <div class="sdr-color" style="background-color: #51af71; width: 20px; height: 20px; border-radius: 4px; border: 2px solid #333; margin-right: 10px; display: inline-block;"></div>
+                Tyrese
+            </div>
             <div class="summary-content">
                 <div class="summary-row">
                     <span class="summary-label">Countries:</span>
@@ -417,15 +417,24 @@
                     <span class="summary-label">Canada Provinces:</span>
                     <span class="summary-value" id="tyreseCAProvinces">0</span>
                 </div>
+                <div class="summary-row" id="tyreseSubRegions" style="display: none;">
+                    <span class="summary-label">Complete Sub-Regions:</span>
+                    <span class="summary-value" id="tyreseSubRegionsList"></span>
+                </div>
             </div>
             <div class="copy-buttons">
+                <button onclick="copyPersonSubRegions('Tyrese', event)" class="copy-btn">Copy Sub-Regions</button>
                 <button onclick="copyPersonCountries('Tyrese', event)" class="copy-btn">Copy Countries</button>
+                <button onclick="copyPersonExcludes('Tyrese', event)" class="copy-btn">Copy Excludes</button>
                 <button onclick="copyPersonStates('Tyrese', event)" class="copy-btn">Copy US/CA States</button>
             </div>
         </div>
         
         <div class="summary-card">
-            <div class="summary-title">Unassigned</div>
+            <div class="summary-title">
+                <div class="sdr-color" style="background-color: #E0E0E0; width: 20px; height: 20px; border-radius: 4px; border: 2px solid #333; margin-right: 10px; display: inline-block;"></div>
+                Unassigned
+            </div>
             <div class="summary-content">
                 <div class="summary-row">
                     <span class="summary-label">Countries:</span>
@@ -439,10 +448,6 @@
                     <span class="summary-label">Canada Provinces:</span>
                     <span class="summary-value" id="unassignedCAProvinces">0</span>
                 </div>
-            </div>
-            <div class="copy-buttons">
-                <button onclick="copyPersonCountries('unassigned', event)" class="copy-btn">Copy Countries</button>
-                <button onclick="copyPersonStates('unassigned', event)" class="copy-btn">Copy US/CA States</button>
             </div>
         </div>
     </div>
@@ -471,6 +476,19 @@
                 <strong>Note:</strong> US & Canada are counted by states/provinces only. 
                 DC (District of Columbia) is counted as a state. Antarctica is excluded.
                 Japan, Spain, and Indonesia are excluded (handled by country-specific reps).
+            </div>
+            
+            <!-- Mixed Coverage Sub-Regions -->
+            <div id="mixedCoverageSection" style="margin-top: 15px; display: none;">
+                <div style="font-weight: bold; margin-bottom: 8px; color: #333;">
+                    Mixed Coverage Sub-Regions:
+                </div>
+                <div id="mixedCoverageList" style="padding-left: 0;">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+                <div style="font-size: 0.85em; color: #666; margin-top: 8px; font-style: italic;">
+                    These sub-regions have mixed SDR coverage and require individual country assignments in HubSpot.
+                </div>
             </div>
         </div>
         
@@ -794,7 +812,12 @@
     }
     
     function renderTerritoryAssignments() {
+        console.log('renderTerritoryAssignments called');
         const container = document.getElementById('territoryAssignments');
+        if (!container) {
+            console.error('territoryAssignments container not found!');
+            return;
+        }
         container.innerHTML = '';
         
         // Group locations by HubSpot region, with Americas sub-grouped by timezone
@@ -954,6 +977,7 @@
     }
     
     function createLocationGroup(container, title, locations, region) {
+        console.log('createLocationGroup called for:', title, 'with', locations.length, 'locations');
         const regionDiv = document.createElement('div');
         regionDiv.className = 'region-group';
         regionDiv.dataset.region = region;
@@ -961,6 +985,38 @@
         const titleDiv = document.createElement('div');
         titleDiv.className = 'region-title';
         titleDiv.textContent = `${title} (${locations.length} locations)`;
+        
+        titleDiv.title = `Hover to highlight ${locations.length} locations on map`;
+        
+        console.log('Adding hover events to region title:', title);
+        
+        titleDiv.addEventListener('mouseenter', (e) => {
+            console.log('HOVER ENTER:', title);
+            e.target.style.backgroundColor = '#e3f2fd';
+            e.target.style.color = '#0056b3';
+            
+            const svgObject = document.getElementById('svg-world-map');
+            if (svgObject && svgObject.contentDocument) {
+                console.log('SVG is accessible, highlighting map...');
+                highlightRegionOnMap(title, locations, region);
+            } else {
+                console.log('SVG not accessible yet, skipping map highlight');
+            }
+        });
+        
+        titleDiv.addEventListener('mouseleave', (e) => {
+            console.log('HOVER LEAVE:', title);
+            e.target.style.backgroundColor = '';
+            e.target.style.color = '';
+            unhighlightRegionOnMap();
+        });
+        
+        titleDiv.addEventListener('click', () => {
+            console.log('Clicked on region:', title);
+        });
+        
+        console.log('Event listeners attached to:', title);
+        
         regionDiv.appendChild(titleDiv);
         
         locations.forEach(location => {
@@ -1012,6 +1068,339 @@
         });
         
         container.appendChild(regionDiv);
+    }
+    
+    function highlightRegionOnMap(title, locations, region) {
+        console.log('Highlighting region:', title, 'with', locations.length, 'locations');
+        
+        const svgObject = document.getElementById('svg-world-map');
+        if (!svgObject) {
+            console.log('SVG object not found');
+            return;
+        }
+        
+        if (!svgObject.contentDocument) {
+            console.log('SVG content document not ready');
+            return;
+        }
+        
+        const svgDoc = svgObject.contentDocument;
+        console.log('SVG document ready, looking for elements...');
+        
+        // Store original colors to restore later
+        if (!window.originalMapColors) {
+            window.originalMapColors = new Map();
+        }
+        
+        let highlightedCount = 0;
+        
+        // Highlight each location in this region
+        locations.forEach(location => {
+            if (location.state_code || location.province_code) {
+                // Handle state/province
+                let elementId;
+                if (location.country_code === 'US' && location.state_code) {
+                    elementId = `US-${location.state_code}`;
+                } else if (location.country_code === 'CA' && location.province_code) {
+                    elementId = `CA-${location.province_code}`;
+                } else if (location.country_code === 'AU' && location.state_code) {
+                    elementId = `AU-${location.state_code}`;
+                }
+                
+                if (elementId) {
+                    const stateElement = svgDoc.getElementById(elementId);
+                    if (stateElement) {
+                        console.log('Found state element:', elementId);
+                        // Store original color if not already stored
+                        if (!window.originalMapColors.has(elementId)) {
+                            window.originalMapColors.set(elementId, stateElement.style.fill);
+                        }
+                        
+                        // Apply highlight effect (brighter version of current color)
+                        const currentColor = stateElement.style.fill;
+                        if (currentColor && currentColor !== 'none') {
+                            const highlightedColor = brightenColor(currentColor, 0.3);
+                            stateElement.style.fill = highlightedColor;
+                            stateElement.style.stroke = '#FF6B6B';
+                            stateElement.style.strokeWidth = '2';
+                            highlightedCount++;
+                        }
+                    } else {
+                        console.log('State element not found:', elementId);
+                    }
+                }
+            } else if (location.country_code) {
+                // Handle country
+                const countryCode = location.country_code.toUpperCase();
+                if (countryCode !== 'US' && countryCode !== 'CA') {
+                    const countryGroup = svgDoc.getElementById(countryCode);
+                    if (countryGroup) {
+                        console.log('Found country group:', countryCode);
+                        const paths = countryGroup.querySelectorAll('path');
+                        paths.forEach(path => {
+                            const pathId = path.id || `${countryCode}-path`;
+                            
+                            // Store original color if not already stored
+                            if (!window.originalMapColors.has(pathId)) {
+                                window.originalMapColors.set(pathId, path.style.fill);
+                            }
+                            
+                            // Apply highlight effect
+                            const currentColor = path.style.fill;
+                            if (currentColor && currentColor !== 'none') {
+                                const highlightedColor = brightenColor(currentColor, 0.3);
+                                path.style.fill = highlightedColor;
+                                path.style.stroke = '#FF6B6B';
+                                path.style.strokeWidth = '2';
+                                highlightedCount++;
+                            }
+                        });
+                    } else {
+                        console.log('Country group not found:', countryCode);
+                    }
+                }
+            }
+        });
+        
+        console.log('Highlighted', highlightedCount, 'elements for region:', title);
+    }
+    
+    function unhighlightRegionOnMap() {
+        const svgObject = document.getElementById('svg-world-map');
+        if (!svgObject.contentDocument || !window.originalMapColors) return;
+        
+        const svgDoc = svgObject.contentDocument;
+        
+        // Restore original colors
+        window.originalMapColors.forEach((originalColor, elementId) => {
+            if (elementId.includes('-path')) {
+                // This is a path element
+                const pathId = elementId.replace('-path', '');
+                const path = svgDoc.getElementById(pathId);
+                if (path) {
+                    path.style.fill = originalColor;
+                    path.style.stroke = '#888';
+                    path.style.strokeWidth = '0.5';
+                }
+            } else {
+                // This is a state/province element
+                const element = svgDoc.getElementById(elementId);
+                if (element) {
+                    element.style.fill = originalColor;
+                    element.style.stroke = '#888';
+                    element.style.strokeWidth = '0.5';
+                }
+            }
+        });
+        
+        // Clear the stored colors
+        window.originalMapColors.clear();
+    }
+    
+    function brightenColor(color, factor) {
+        // Handle different color formats
+        if (color.startsWith('#')) {
+            // Hex color
+            const r = parseInt(color.slice(1, 3), 16);
+            const g = parseInt(color.slice(3, 5), 16);
+            const b = parseInt(color.slice(5, 7), 16);
+            
+            const brightR = Math.min(255, Math.round(r + (255 - r) * factor));
+            const brightG = Math.min(255, Math.round(g + (255 - g) * factor));
+            const brightB = Math.min(255, Math.round(b + (255 - b) * factor));
+            
+            return `#${brightR.toString(16).padStart(2, '0')}${brightG.toString(16).padStart(2, '0')}${brightB.toString(16).padStart(2, '0')}`;
+        } else if (color.startsWith('rgb(')) {
+            // RGB color
+            const rgbMatch = color.match(/rgb\((\d+),\s*(\d+),\s*(\d+)\)/);
+            if (rgbMatch) {
+                const r = parseInt(rgbMatch[1]);
+                const g = parseInt(rgbMatch[2]);
+                const b = parseInt(rgbMatch[3]);
+                
+                const brightR = Math.min(255, Math.round(r + (255 - r) * factor));
+                const brightG = Math.min(255, Math.round(g + (255 - g) * factor));
+                const brightB = Math.min(255, Math.round(b + (255 - b) * factor));
+                
+                return `rgb(${brightR}, ${brightG}, ${brightB})`;
+            }
+        }
+        
+        // If color format not recognized, return a brighter version of the original SDR color
+        console.log('Unknown color format:', color, 'returning fallback');
+        return color;
+    }
+    
+    function highlightSDRTerritories(sdrName) {
+        console.log('Highlighting territories for SDR:', sdrName);
+        
+        const svgObject = document.getElementById('svg-world-map');
+        if (!svgObject || !svgObject.contentDocument) {
+            console.log('SVG not accessible');
+            return;
+        }
+        
+        const svgDoc = svgObject.contentDocument;
+        
+        // Store original colors to restore later
+        if (!window.originalSDRMapColors) {
+            window.originalSDRMapColors = new Map();
+        }
+        
+        let highlightedCount = 0;
+        
+        // Find all locations assigned to this SDR
+        allLocations.forEach(location => {
+            const assignment = sdrAssignments[location.locationKey] || 'unassigned';
+            if (assignment === sdrName) {
+                if (location.state_code || location.province_code) {
+                    // Handle state/province
+                    let elementId;
+                    if (location.country_code === 'US' && location.state_code) {
+                        elementId = `US-${location.state_code}`;
+                    } else if (location.country_code === 'CA' && location.province_code) {
+                        elementId = `CA-${location.province_code}`;
+                    } else if (location.country_code === 'AU' && location.state_code) {
+                        elementId = `AU-${location.state_code}`;
+                    }
+                    
+                    if (elementId) {
+                        const stateElement = svgDoc.getElementById(elementId);
+                        if (stateElement) {
+                            if (!window.originalSDRMapColors.has(elementId)) {
+                                window.originalSDRMapColors.set(elementId, stateElement.style.fill);
+                            }
+                            
+                            const highlightedColor = brightenColor(SDR_COLORS[sdrName], 0.4);
+                            stateElement.style.fill = highlightedColor;
+                            stateElement.style.strokeWidth = '1';
+                            highlightedCount++;
+                        }
+                    }
+                } else if (location.country_code) {
+                    // Handle country
+                    const countryCode = location.country_code.toUpperCase();
+                    if (countryCode !== 'US' && countryCode !== 'CA') {
+                        const countryGroup = svgDoc.getElementById(countryCode);
+                        if (countryGroup) {
+                            const paths = countryGroup.querySelectorAll('path');
+                            paths.forEach((path, index) => {
+                                const pathId = path.id || `${countryCode}-path-${index}`;
+                                
+                                if (!window.originalSDRMapColors.has(pathId)) {
+                                    window.originalSDRMapColors.set(pathId, path.style.fill);
+                                }
+                                
+                                const highlightedColor = brightenColor(SDR_COLORS[sdrName], 0.4);
+                                path.style.fill = highlightedColor;
+                                path.style.strokeWidth = '1';
+                                highlightedCount++;
+                            });
+                        }
+                    }
+                }
+            }
+        });
+        
+        console.log('Highlighted', highlightedCount, 'territories for SDR:', sdrName);
+    }
+    
+    function unhighlightSDRTerritories() {
+        const svgObject = document.getElementById('svg-world-map');
+        if (!svgObject.contentDocument || !window.originalSDRMapColors) return;
+        
+        const svgDoc = svgObject.contentDocument;
+        
+        // Restore original colors
+        window.originalSDRMapColors.forEach((originalColor, elementId) => {
+            if (elementId.includes('-path')) {
+                // This is a path element
+                const pathId = elementId.replace(/-path-\d+$/, '').replace('-path', '');
+                const path = svgDoc.getElementById(pathId);
+                if (path) {
+                    path.style.fill = originalColor;
+                    path.style.stroke = '#888';
+                    path.style.strokeWidth = '0.5';
+                }
+            } else {
+                // This is a state/province element
+                const element = svgDoc.getElementById(elementId);
+                if (element) {
+                    element.style.fill = originalColor;
+                    element.style.stroke = '#888';
+                    element.style.strokeWidth = '0.5';
+                }
+            }
+        });
+        
+        window.originalSDRMapColors.clear();
+    }
+    
+    function highlightSubRegionOnMap(subRegionName) {
+        console.log('Highlighting sub-region:', subRegionName);
+        
+        const svgObject = document.getElementById('svg-world-map');
+        if (!svgObject || !svgObject.contentDocument) {
+            console.log('SVG not accessible');
+            return;
+        }
+        
+        const svgDoc = svgObject.contentDocument;
+        
+        // Store original colors to restore later
+        if (!window.originalMapColors) {
+            window.originalMapColors = new Map();
+        }
+        
+        let highlightedCount = 0;
+        
+        // Find all locations in this sub-region
+        const subRegionLocations = allLocations.filter(location => 
+            location.sub_region === subRegionName &&
+            location.country_code &&
+            location.country_code !== 'US' && 
+            location.country_code !== 'CA' &&
+            !location.state && 
+            !location.province
+        );
+        
+        console.log('Found', subRegionLocations.length, 'countries in sub-region:', subRegionName);
+        
+        // Highlight each country in this sub-region
+        subRegionLocations.forEach(location => {
+            const countryCode = location.country_code.toUpperCase();
+            const countryGroup = svgDoc.getElementById(countryCode);
+            if (countryGroup) {
+                console.log('Highlighting country:', countryCode, 'in sub-region:', subRegionName);
+                const paths = countryGroup.querySelectorAll('path');
+                paths.forEach((path, index) => {
+                    const pathId = path.id || `${countryCode}-path-${index}`;
+                    
+                    // Store original color if not already stored
+                    if (!window.originalMapColors.has(pathId)) {
+                        window.originalMapColors.set(pathId, path.style.fill);
+                    }
+                    
+                    // Apply highlight effect (brighter version of current color)
+                    const currentColor = path.style.fill;
+                    const currentStroke = path.style.stroke || '#888';
+                    const currentStrokeWidth = parseFloat(path.style.strokeWidth || '0.5');
+                    
+                    if (currentColor && currentColor !== 'none') {
+                        console.log('Original color:', currentColor, 'stroke:', currentStroke, 'width:', currentStrokeWidth);
+                        const highlightedColor = brightenColor(currentColor, 0.3);
+                        path.style.fill = highlightedColor;
+                        // Keep existing border color but make it thicker
+                        path.style.strokeWidth = '1';
+                        highlightedCount++;
+                    }
+                });
+            } else {
+                console.log('Country group not found:', countryCode);
+            }
+        });
+        
+        console.log('Highlighted', highlightedCount, 'elements for sub-region:', subRegionName);
     }
     
     function assignLocation(locationKey, sdrName) {
@@ -1107,6 +1496,333 @@
         document.getElementById('totalCountries').textContent = totalCountries;
         document.getElementById('totalUSStates').textContent = totalUSStates;
         document.getElementById('totalCAProvinces').textContent = totalCAProvinces;
+        
+        // Calculate and display complete sub-regions for each SDR
+        updateSubRegionsDisplay();
+        
+        // Calculate and display mixed coverage sub-regions
+        updateMixedCoverageDisplay();
+        
+        // Add hover events to SDR summary titles
+        addSDRHoverEvents();
+    }
+    
+    function updateSubRegionsDisplay() {
+        const sdrNames = ['Emmanuel', 'Lina', 'James', 'Tyrese'];
+        
+        sdrNames.forEach(sdrName => {
+            // Get all countries assigned to this SDR
+            const sdrCountries = new Set();
+            allLocations.forEach(location => {
+                const assignment = sdrAssignments[location.locationKey] || 'unassigned';
+                if (assignment === sdrName && location.country_code && 
+                    location.country_code !== 'US' && location.country_code !== 'CA' && 
+                    !location.state && !location.province) {
+                    sdrCountries.add(location.country_code);
+                }
+            });
+            
+            // Check which sub-regions are completely covered
+            const completeSubRegions = [];
+            const subRegionCountries = {};
+            
+            // Build sub-region to countries mapping
+            allLocations.forEach(location => {
+                if (location.sub_region && location.country_code && 
+                    location.country_code !== 'US' && location.country_code !== 'CA' && 
+                    !location.state && !location.province) {
+                    if (!subRegionCountries[location.sub_region]) {
+                        subRegionCountries[location.sub_region] = new Set();
+                    }
+                    subRegionCountries[location.sub_region].add(location.country_code);
+                }
+            });
+            
+            // Check which sub-regions are completely covered by this SDR
+            Object.entries(subRegionCountries).forEach(([subRegion, countries]) => {
+                let allAssignableCountriesInSubRegion = true;
+                let excludedCountries = [];
+                
+                // Debug logging for Emmanuel
+                if (sdrName === 'Emmanuel') {
+                    console.log(`Emmanuel sub-region check: ${subRegion}, countries:`, Array.from(countries));
+                }
+                
+                // Special handling for Northern America - always add US/CA as excluded since they're handled by timezones
+                if (subRegion === 'Northern America') {
+                    excludedCountries.push('US', 'CA');
+                    console.log(`Northern America for ${sdrName} - excluded:`, excludedCountries);
+                }
+                
+                countries.forEach(countryCode => {
+                    // Check if this country is handled by country-specific reps
+                    if (['JP', 'ES', 'ID'].includes(countryCode)) {
+                        excludedCountries.push(countryCode);
+                    } 
+                    // Skip US/CA for Northern America (they're handled by timezones, not SDR assignment)
+                    else if (subRegion === 'Northern America' && ['US', 'CA'].includes(countryCode)) {
+                        // Already added to excludedCountries above, skip assignment check
+                    } 
+                    else if (!sdrCountries.has(countryCode)) {
+                        allAssignableCountriesInSubRegion = false;
+                    }
+                });
+                
+                // For Northern America, we consider it "complete" if SDR has all non-US/CA countries
+                // For other regions, standard logic applies
+                if (allAssignableCountriesInSubRegion && (countries.size - excludedCountries.length) > 0) {
+                    const subRegionObj = {
+                        name: subRegion,
+                        excludedCountries: excludedCountries
+                    };
+                    console.log('Adding complete sub-region for', sdrName, ':', subRegionObj);
+                    completeSubRegions.push(subRegionObj);
+                }
+            });
+            
+            // Update the display
+            const subRegionsRow = document.getElementById(`${sdrName.toLowerCase()}SubRegions`);
+            const subRegionsList = document.getElementById(`${sdrName.toLowerCase()}SubRegionsList`);
+            
+            if (completeSubRegions.length > 0) {
+                subRegionsRow.style.display = 'block';
+                subRegionsRow.style.flexDirection = 'column';
+                
+                // Clear existing content and restructure
+                subRegionsRow.innerHTML = '';
+                
+                // Create header
+                const header = document.createElement('div');
+                header.className = 'summary-label';
+                header.textContent = 'Complete Sub-Regions:';
+                header.style.fontWeight = 'bold';
+                header.style.marginBottom = '8px';
+                header.style.color = '#333';
+                
+                // Create list container
+                const listContainer = document.createElement('div');
+                listContainer.style.paddingLeft = '0';
+                
+                // Create list of sub-regions
+                const ul = document.createElement('ul');
+                ul.style.margin = '0';
+                ul.style.paddingLeft = '20px';
+                ul.style.listStyleType = 'disc';
+                
+                completeSubRegions.forEach((subRegionObj) => {
+                    const subRegionName = typeof subRegionObj === 'string' ? subRegionObj : subRegionObj.name;
+                    const excludedCountries = typeof subRegionObj === 'string' ? [] : (subRegionObj.excludedCountries || []);
+                    
+                    const li = document.createElement('li');
+                    li.style.marginBottom = '8px';
+                    
+                    const subRegionSpan = document.createElement('span');
+                    subRegionSpan.textContent = subRegionName;
+                    subRegionSpan.style.cursor = 'pointer';
+                    subRegionSpan.style.textDecoration = 'underline';
+                    subRegionSpan.style.color = '#007bff';
+                    subRegionSpan.title = `Hover to highlight ${subRegionName} countries on map`;
+                    
+                    // Add hover events
+                    subRegionSpan.addEventListener('mouseenter', () => {
+                        console.log('Hovering over sub-region:', subRegionName);
+                        highlightSubRegionOnMap(subRegionName);
+                    });
+                    
+                    subRegionSpan.addEventListener('mouseleave', () => {
+                        console.log('Leaving sub-region hover:', subRegionName);
+                        unhighlightRegionOnMap();
+                    });
+                    
+                    li.appendChild(subRegionSpan);
+                    
+                    // Add excluded countries as nested info if any
+                    if (excludedCountries.length > 0) {
+                        const excludeDiv = document.createElement('div');
+                        excludeDiv.style.marginTop = '4px';
+                        excludeDiv.style.fontSize = '0.8em';
+                        excludeDiv.style.fontStyle = 'italic';
+                        excludeDiv.style.color = '#dc3545';
+                        excludeDiv.style.paddingLeft = '10px';
+                        
+                        const excludeText = document.createElement('span');
+                        excludeText.textContent = 'Manually exclude: ';
+                        
+                        excludedCountries.forEach((countryCode, index) => {
+                            // Get country name
+                            const location = allLocations.find(loc => loc.country_code === countryCode && !loc.state && !loc.province);
+                            const countryName = location ? location.country : countryCode;
+                            
+                            const countrySpan = document.createElement('span');
+                            countrySpan.textContent = countryName;
+                            countrySpan.style.fontWeight = 'bold';
+                            
+                            excludeText.appendChild(countrySpan);
+                            
+                            if (index < excludedCountries.length - 1) {
+                                excludeText.appendChild(document.createTextNode(', '));
+                            }
+                        });
+                        
+                        excludeDiv.appendChild(excludeText);
+                        li.appendChild(excludeDiv);
+                    }
+                    
+                    ul.appendChild(li);
+                });
+                
+                listContainer.appendChild(ul);
+                subRegionsRow.appendChild(header);
+                subRegionsRow.appendChild(listContainer);
+            } else {
+                subRegionsRow.style.display = 'none';
+            }
+        });
+    }
+    
+    function updateMixedCoverageDisplay() {
+        const mixedCoverageSection = document.getElementById('mixedCoverageSection');
+        const mixedCoverageList = document.getElementById('mixedCoverageList');
+        
+        // Build sub-region to countries mapping
+        const subRegionCountries = {};
+        allLocations.forEach(location => {
+            if (location.sub_region && location.country_code && 
+                location.country_code !== 'US' && location.country_code !== 'CA' && 
+                !location.state && !location.province &&
+                !['JP', 'ES', 'ID'].includes(location.country_code)) {
+                if (!subRegionCountries[location.sub_region]) {
+                    subRegionCountries[location.sub_region] = new Set();
+                }
+                subRegionCountries[location.sub_region].add(location.country_code);
+            }
+        });
+        
+        // Find sub-regions with mixed SDR coverage
+        const mixedSubRegions = [];
+        Object.entries(subRegionCountries).forEach(([subRegion, countries]) => {
+            // Special case: Northern America is always mixed because US/CA are handled by timezones
+            if (subRegion === 'Northern America') {
+                mixedSubRegions.push({
+                    name: subRegion,
+                    countries: Array.from(countries),
+                    assignments: ['Multiple (by timezone)']
+                });
+                return;
+            }
+            
+            if (countries.size > 1) {
+                // Check if this sub-region has mixed SDR assignments
+                const sdrAssignmentsInSubRegion = new Set();
+                countries.forEach(countryCode => {
+                    const location = allLocations.find(loc => 
+                        loc.country_code === countryCode && 
+                        loc.sub_region === subRegion &&
+                        !loc.state && !loc.province
+                    );
+                    if (location) {
+                        const assignment = sdrAssignments[location.locationKey] || 'unassigned';
+                        sdrAssignmentsInSubRegion.add(assignment);
+                    }
+                });
+                
+                // If more than one SDR covers this sub-region, it's mixed
+                if (sdrAssignmentsInSubRegion.size > 1) {
+                    mixedSubRegions.push({
+                        name: subRegion,
+                        countries: Array.from(countries),
+                        assignments: Array.from(sdrAssignmentsInSubRegion)
+                    });
+                }
+            }
+        });
+        
+        if (mixedSubRegions.length > 0) {
+            mixedCoverageSection.style.display = 'block';
+            mixedCoverageList.innerHTML = '';
+            
+            // Create list of mixed sub-regions
+            const ul = document.createElement('ul');
+            ul.style.margin = '0';
+            ul.style.paddingLeft = '20px';
+            ul.style.listStyleType = 'disc';
+            
+            mixedSubRegions.forEach((mixedSubRegion) => {
+                const li = document.createElement('li');
+                li.style.marginBottom = '4px';
+                
+                const subRegionSpan = document.createElement('span');
+                subRegionSpan.textContent = mixedSubRegion.name;
+                subRegionSpan.style.cursor = 'pointer';
+                subRegionSpan.style.textDecoration = 'underline';
+                subRegionSpan.style.color = '#dc3545';
+                subRegionSpan.title = `Hover to highlight ${mixedSubRegion.name} countries (mixed coverage: ${mixedSubRegion.assignments.join(', ')})`;
+                
+                // Add hover events
+                subRegionSpan.addEventListener('mouseenter', () => {
+                    console.log('Hovering over mixed sub-region:', mixedSubRegion.name);
+                    highlightSubRegionOnMap(mixedSubRegion.name);
+                });
+                
+                subRegionSpan.addEventListener('mouseleave', () => {
+                    console.log('Leaving mixed sub-region hover:', mixedSubRegion.name);
+                    unhighlightRegionOnMap();
+                });
+                
+                li.appendChild(subRegionSpan);
+                ul.appendChild(li);
+            });
+            
+            mixedCoverageList.appendChild(ul);
+        } else {
+            mixedCoverageSection.style.display = 'none';
+        }
+    }
+    
+    function addSDRHoverEvents() {
+        const sdrNames = ['Emmanuel', 'Lina', 'James', 'Tyrese'];
+        
+        sdrNames.forEach(sdrName => {
+            // Find the summary title element for this SDR
+            const summaryCards = document.querySelectorAll('.summary-card .summary-title');
+            summaryCards.forEach(titleElement => {
+                if (titleElement.textContent.trim() === sdrName) {
+                    console.log('Adding hover events to SDR summary:', sdrName);
+                    
+                    titleElement.addEventListener('mouseenter', () => {
+                        console.log('Hovering over SDR:', sdrName);
+                        highlightSDRTerritories(sdrName);
+                    });
+                    
+                    titleElement.addEventListener('mouseleave', () => {
+                        console.log('Leaving SDR hover:', sdrName);
+                        unhighlightSDRTerritories();
+                    });
+                    
+                    titleElement.title = `Hover to highlight all territories assigned to ${sdrName}`;
+                }
+            });
+        });
+        
+        // Also add hover to Unassigned summary
+        const summaryCards = document.querySelectorAll('.summary-card .summary-title');
+        summaryCards.forEach(titleElement => {
+            if (titleElement.textContent.trim() === 'Unassigned') {
+                console.log('Adding hover events to Unassigned summary');
+                
+                titleElement.addEventListener('mouseenter', () => {
+                    console.log('Hovering over Unassigned territories');
+                    highlightSDRTerritories('unassigned');
+                });
+                
+                titleElement.addEventListener('mouseleave', () => {
+                    console.log('Leaving Unassigned hover');
+                    unhighlightSDRTerritories();
+                });
+                
+                titleElement.title = 'Hover to highlight all unassigned territories';
+            }
+        });
     }
     
     function updateBulkOptions() {
@@ -1672,32 +2388,111 @@
         'XK': 'XK - Kosovo'
     };
     
-    function copyPersonCountries(personName, event) {
-        const countries = [];
+    function copyPersonSubRegions(personName, event) {
+        const subRegions = [];
         
+        // Get all countries assigned to this SDR
+        const sdrCountries = new Set();
         allLocations.forEach(location => {
             const assignment = sdrAssignments[location.locationKey] || 'unassigned';
-            if (assignment === personName) {
-                // Skip excluded countries (handled by country-specific reps)
-                if (['JP', 'ES', 'ID'].includes(location.country_code)) {
-                    return;
-                }
-                
-                // Only include countries (not US/CA states/provinces)
-                if (location.country_code && 
-                    location.country_code !== 'US' && 
-                    location.country_code !== 'CA' && 
-                    !location.state && 
-                    !location.province) {
-                    
-                    const hubspotFormat = hubspotCountryMapping[location.country_code];
-                    if (hubspotFormat && !countries.includes(hubspotFormat)) {
-                        countries.push(hubspotFormat);
-                    }
-                }
+            if (assignment === personName && location.country_code && 
+                location.country_code !== 'US' && location.country_code !== 'CA' && 
+                !location.state && !location.province &&
+                !['JP', 'ES', 'ID'].includes(location.country_code)) {
+                sdrCountries.add(location.country_code);
             }
         });
         
+        // Check which sub-regions are completely covered
+        const subRegionCountries = {};
+        allLocations.forEach(location => {
+            if (location.sub_region && location.country_code && 
+                location.country_code !== 'US' && location.country_code !== 'CA' && 
+                !location.state && !location.province &&
+                !['JP', 'ES', 'ID'].includes(location.country_code)) {
+                if (!subRegionCountries[location.sub_region]) {
+                    subRegionCountries[location.sub_region] = new Set();
+                }
+                subRegionCountries[location.sub_region].add(location.country_code);
+            }
+        });
+        
+        // Find complete sub-regions for this SDR
+        Object.entries(subRegionCountries).forEach(([subRegion, countries]) => {
+            let allCountriesInSubRegion = true;
+            countries.forEach(countryCode => {
+                if (!sdrCountries.has(countryCode)) {
+                    allCountriesInSubRegion = false;
+                }
+            });
+            if (allCountriesInSubRegion && countries.size > 0) {
+                subRegions.push(subRegion);
+            }
+        });
+        
+        // Special case: Add Northern America if this SDR has any US states or CA provinces
+        const hasUSStates = allLocations.some(location => {
+            const assignment = sdrAssignments[location.locationKey] || 'unassigned';
+            return assignment === personName && location.country_code === 'US' && location.state;
+        });
+        const hasCAProvinces = allLocations.some(location => {
+            const assignment = sdrAssignments[location.locationKey] || 'unassigned';
+            return assignment === personName && location.country_code === 'CA' && location.province;
+        });
+        
+        if ((hasUSStates || hasCAProvinces) && !subRegions.includes('Northern America')) {
+            // Check if they have the other Northern America countries too
+            const otherNorthernAmericaCountries = allLocations.filter(location =>
+                location.sub_region === 'Northern America' &&
+                location.country_code !== 'US' && location.country_code !== 'CA' &&
+                !location.state && !location.province
+            );
+            
+            const hasOtherNorthernAmerica = otherNorthernAmericaCountries.every(location => {
+                const assignment = sdrAssignments[location.locationKey] || 'unassigned';
+                return assignment === personName;
+            });
+            
+            if (hasOtherNorthernAmerica || otherNorthernAmericaCountries.length === 0) {
+                subRegions.push('Northern America');
+            }
+        }
+        
+        const subRegionsText = subRegions.join(';');
+        navigator.clipboard.writeText(subRegionsText).then(() => {
+            // Show feedback
+            const button = event.target;
+            const originalText = button.textContent;
+            button.textContent = 'Copied!';
+            button.style.background = '#28a745';
+            setTimeout(() => {
+                button.textContent = originalText;
+                button.style.background = '#007bff';
+            }, 2000);
+        }).catch(err => {
+            console.error('Failed to copy: ', err);
+            alert('Failed to copy to clipboard');
+        });
+    }
+    
+    function copyPersonCountries(personName, event) {
+        const countries = [];
+        
+        // Get ALL countries assigned to this person
+        allLocations.forEach(location => {
+            const assignment = sdrAssignments[location.locationKey] || 'unassigned';
+            if (assignment === personName && location.country_code && 
+                location.country_code !== 'US' && location.country_code !== 'CA' && 
+                !location.state && !location.province &&
+                !['JP', 'ES', 'ID'].includes(location.country_code)) {
+                
+                const hubspotFormat = hubspotCountryMapping[location.country_code];
+                if (hubspotFormat && !countries.includes(hubspotFormat)) {
+                    countries.push(hubspotFormat);
+                }
+            }
+        });
+
         const countriesText = countries.join(';');
         navigator.clipboard.writeText(countriesText).then(() => {
             // Show feedback
@@ -1756,6 +2551,84 @@
         });
     }
     
+    function copyPersonExcludes(personName, event) {
+        const excludes = [];
+        
+        // Get all complete sub-regions for this person and their excluded countries
+        const subRegionCountries = {};
+        allLocations.forEach(location => {
+            if (location.sub_region && location.country_code && 
+                location.country_code !== 'US' && location.country_code !== 'CA' && 
+                !location.state && !location.province) {
+                if (!subRegionCountries[location.sub_region]) {
+                    subRegionCountries[location.sub_region] = new Set();
+                }
+                subRegionCountries[location.sub_region].add(location.country_code);
+            }
+        });
+        
+        // Get all countries assigned to this SDR
+        const sdrCountries = new Set();
+        allLocations.forEach(location => {
+            const assignment = sdrAssignments[location.locationKey] || 'unassigned';
+            if (assignment === personName && location.country_code && 
+                location.country_code !== 'US' && location.country_code !== 'CA' && 
+                !location.state && !location.province &&
+                !['JP', 'ES', 'ID'].includes(location.country_code)) {
+                sdrCountries.add(location.country_code);
+            }
+        });
+        
+        // Find complete sub-regions and their excluded countries
+        Object.entries(subRegionCountries).forEach(([subRegion, countries]) => {
+            let allAssignableCountriesInSubRegion = true;
+            let excludedCountries = [];
+            
+            // Special handling for Northern America - always add US/CA as excluded
+            if (subRegion === 'Northern America') {
+                excludedCountries.push('US', 'CA');
+            }
+            
+            countries.forEach(countryCode => {
+                // Check if this country is handled by country-specific reps
+                if (['JP', 'ES', 'ID'].includes(countryCode)) {
+                    excludedCountries.push(countryCode);
+                } 
+                else if (subRegion === 'Northern America' && ['US', 'CA'].includes(countryCode)) {
+                    // Already handled above
+                } 
+                else if (!sdrCountries.has(countryCode)) {
+                    allAssignableCountriesInSubRegion = false;
+                }
+            });
+            
+            // If this is a complete sub-region with excludes, add the excludes
+            if (allAssignableCountriesInSubRegion && excludedCountries.length > 0) {
+                excludedCountries.forEach(countryCode => {
+                    const countryInfo = hubspotCountryMapping[countryCode];
+                    if (countryInfo && !excludes.includes(countryInfo)) {
+                        excludes.push(countryInfo);
+                    }
+                });
+            }
+        });
+
+        const excludesText = excludes.join(';');
+        navigator.clipboard.writeText(excludesText).then(() => {
+            // Show feedback
+            const button = event.target;
+            const originalText = button.textContent;
+            button.textContent = 'Copied!';
+            button.style.background = '#28a745';
+            setTimeout(() => {
+                button.textContent = originalText;
+                button.style.background = '#007bff';
+            }, 2000);
+        }).catch(err => {
+            console.error('Failed to copy: ', err);
+            alert('Failed to copy to clipboard');
+        });
+    }
 
     
     function filterLocations() {
@@ -1813,8 +2686,12 @@
     
     // Initialize when page loads
     document.addEventListener('DOMContentLoaded', function() {
+        console.log('DOM loaded, initializing...');
         loadTimezoneData();
     });
+    
+    // Test if JavaScript is running
+    console.log('SDR Territory Manager script loaded');
 </script>
 
 </body>
