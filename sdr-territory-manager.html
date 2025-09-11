@@ -306,36 +306,6 @@
     
     <!-- Territory Stats -->
     <div class="territory-stats">
-        <div class="summary-card">
-            <div class="summary-title">
-                <div class="sdr-color" style="background-color: #FF6B6B; width: 20px; height: 20px; border-radius: 4px; border: 2px solid #333; margin-right: 10px; display: inline-block;"></div>
-                Emmanuel
-            </div>
-            <div class="summary-content">
-                <div class="summary-row">
-                    <span class="summary-label">Countries:</span>
-                    <span class="summary-value" id="emmanuelCountries">0</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">US States:</span>
-                    <span class="summary-value" id="emmanuelUSStates">0</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">Canada Provinces:</span>
-                    <span class="summary-value" id="emmanuelCAProvinces">0</span>
-                </div>
-                <div class="summary-row" id="emmanuelSubRegions" style="display: none;">
-                    <span class="summary-label">Complete Sub-Regions:</span>
-                    <span class="summary-value" id="emmanuelSubRegionsList"></span>
-                </div>
-            </div>
-            <div class="copy-buttons">
-                <button onclick="copyPersonSubRegions('Emmanuel', event)" class="copy-btn">Copy Sub-Regions</button>
-                <button onclick="copyPersonCountries('Emmanuel', event)" class="copy-btn">Copy Countries</button>
-                <button onclick="copyPersonExcludes('Emmanuel', event)" class="copy-btn">Copy Excludes</button>
-                <button onclick="copyPersonStates('Emmanuel', event)" class="copy-btn">Copy US/CA States</button>
-            </div>
-        </div>
         
         <div class="summary-card">
             <div class="summary-title">
@@ -524,7 +494,6 @@
             <label for="bulkSdr">Assign to SDR:</label>
             <select id="bulkSdr">
                 <option value="">Select SDR...</option>
-                <option value="Emmanuel">Emmanuel</option>
                 <option value="Lina">Lina</option>
                 <option value="James">James</option>
                 <option value="Tyrese">Tyrese</option>
@@ -538,7 +507,6 @@
                 <input type="text" id="searchLocation" class="search-input" placeholder="Search countries/states..." onkeyup="filterLocations()">
                 <select id="filterSdr" class="filter-select" onchange="filterLocations()">
                     <option value="">All SDRs</option>
-                    <option value="Emmanuel">Emmanuel</option>
                     <option value="Lina">Lina</option>
                     <option value="James">James</option>
                     <option value="Tyrese">Tyrese</option>
@@ -571,7 +539,6 @@
     
     // SDR colors
     const SDR_COLORS = {
-        'Emmanuel': '#FF6B6B',
         'Lina': '#f1ab6b', 
         'James': '#45B7D1',
         'Tyrese': '#51af71',
@@ -579,7 +546,7 @@
         'country-specific': '#A8A8A8'
     };
     
-    const SDRS = ['Emmanuel', 'Lina', 'James', 'Tyrese'];
+    const SDRS = ['Lina', 'James', 'Tyrese'];
     
     async function loadTimezoneData() {
         try {
@@ -1419,7 +1386,6 @@
     
     function updateStats() {
         const stats = {
-            'Emmanuel': { countries: 0, usStates: 0, caProvinces: 0 },
             'Lina': { countries: 0, usStates: 0, caProvinces: 0 },
             'James': { countries: 0, usStates: 0, caProvinces: 0 },
             'Tyrese': { countries: 0, usStates: 0, caProvinces: 0 },
@@ -1428,7 +1394,6 @@
         
         // Track unique countries per SDR to avoid duplicates
         const sdrCountries = {
-            'Emmanuel': new Set(),
             'Lina': new Set(),
             'James': new Set(),
             'Tyrese': new Set(),
@@ -1469,9 +1434,6 @@
         });
         
         // Update display with detailed breakdown
-        document.getElementById('emmanuelCountries').textContent = stats.Emmanuel.countries;
-        document.getElementById('emmanuelUSStates').textContent = stats.Emmanuel.usStates;
-        document.getElementById('emmanuelCAProvinces').textContent = stats.Emmanuel.caProvinces;
         
         document.getElementById('linaCountries').textContent = stats.Lina.countries;
         document.getElementById('linaUSStates').textContent = stats.Lina.usStates;
@@ -1490,9 +1452,9 @@
         document.getElementById('unassignedCAProvinces').textContent = stats.unassigned.caProvinces;
         
         // Update summary totals
-        const totalCountries = stats.Emmanuel.countries + stats.Lina.countries + stats.James.countries + stats.Tyrese.countries + stats.unassigned.countries;
-        const totalUSStates = stats.Emmanuel.usStates + stats.Lina.usStates + stats.James.usStates + stats.Tyrese.usStates + stats.unassigned.usStates;
-        const totalCAProvinces = stats.Emmanuel.caProvinces + stats.Lina.caProvinces + stats.James.caProvinces + stats.Tyrese.caProvinces + stats.unassigned.caProvinces;
+        const totalCountries = stats.Lina.countries + stats.James.countries + stats.Tyrese.countries + stats.unassigned.countries;
+        const totalUSStates = stats.Lina.usStates + stats.James.usStates + stats.Tyrese.usStates + stats.unassigned.usStates;
+        const totalCAProvinces = stats.Lina.caProvinces + stats.James.caProvinces + stats.Tyrese.caProvinces + stats.unassigned.caProvinces;
         document.getElementById('totalCountries').textContent = totalCountries;
         document.getElementById('totalUSStates').textContent = totalUSStates;
         document.getElementById('totalCAProvinces').textContent = totalCAProvinces;
@@ -1508,7 +1470,7 @@
     }
     
     function updateSubRegionsDisplay() {
-        const sdrNames = ['Emmanuel', 'Lina', 'James', 'Tyrese'];
+        const sdrNames = ['Lina', 'James', 'Tyrese'];
         
         sdrNames.forEach(sdrName => {
             // Get all countries assigned to this SDR
@@ -1543,10 +1505,6 @@
                 let allAssignableCountriesInSubRegion = true;
                 let excludedCountries = [];
                 
-                // Debug logging for Emmanuel
-                if (sdrName === 'Emmanuel') {
-                    console.log(`Emmanuel sub-region check: ${subRegion}, countries:`, Array.from(countries));
-                }
                 
                 // Special handling for Northern America - always add US/CA as excluded since they're handled by timezones
                 if (subRegion === 'Northern America') {
@@ -1780,7 +1738,7 @@
     }
     
     function addSDRHoverEvents() {
-        const sdrNames = ['Emmanuel', 'Lina', 'James', 'Tyrese'];
+        const sdrNames = ['Lina', 'James', 'Tyrese'];
         
         sdrNames.forEach(sdrName => {
             // Find the summary title element for this SDR
