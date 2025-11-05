@@ -399,7 +399,38 @@
                 <button onclick="copyPersonStates('Tyrese', event)" class="copy-btn">Copy US/CA States</button>
             </div>
         </div>
-        
+
+        <div class="summary-card">
+            <div class="summary-title">
+                <div class="sdr-color" style="background-color: #9B59B6; width: 20px; height: 20px; border-radius: 4px; border: 2px solid #333; margin-right: 10px; display: inline-block;"></div>
+                Ricky
+            </div>
+            <div class="summary-content">
+                <div class="summary-row">
+                    <span class="summary-label">Countries:</span>
+                    <span class="summary-value" id="rickyCountries">0</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">US States:</span>
+                    <span class="summary-value" id="rickyUSStates">0</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">Canada Provinces:</span>
+                    <span class="summary-value" id="rickyCAProvinces">0</span>
+                </div>
+                <div class="summary-row" id="rickySubRegions" style="display: none;">
+                    <span class="summary-label">Complete Sub-Regions:</span>
+                    <span class="summary-value" id="rickySubRegionsList"></span>
+                </div>
+            </div>
+            <div class="copy-buttons">
+                <button onclick="copyPersonSubRegions('Ricky', event)" class="copy-btn">Copy Sub-Regions</button>
+                <button onclick="copyPersonCountries('Ricky', event)" class="copy-btn">Copy Countries</button>
+                <button onclick="copyPersonExcludes('Ricky', event)" class="copy-btn">Copy Excludes</button>
+                <button onclick="copyPersonStates('Ricky', event)" class="copy-btn">Copy US/CA States</button>
+            </div>
+        </div>
+
         <div class="summary-card">
             <div class="summary-title">
                 <div class="sdr-color" style="background-color: #E0E0E0; width: 20px; height: 20px; border-radius: 4px; border: 2px solid #333; margin-right: 10px; display: inline-block;"></div>
@@ -497,6 +528,7 @@
                 <option value="Lina">Lina</option>
                 <option value="James">James</option>
                 <option value="Tyrese">Tyrese</option>
+                <option value="Ricky">Ricky</option>
             </select>
             <button onclick="assignBulkSelected()" id="bulkAssignButton" style="display: none;">Assign Selected</button>
         </div>
@@ -510,6 +542,7 @@
                     <option value="Lina">Lina</option>
                     <option value="James">James</option>
                     <option value="Tyrese">Tyrese</option>
+                    <option value="Ricky">Ricky</option>
                     <option value="unassigned">Unassigned</option>
                 </select>
                 <select id="filterRegion" class="filter-select" onchange="filterLocations()">
@@ -539,14 +572,15 @@
     
     // SDR colors
     const SDR_COLORS = {
-        'Lina': '#f1ab6b', 
+        'Lina': '#f1ab6b',
         'James': '#45B7D1',
         'Tyrese': '#51af71',
+        'Ricky': '#9B59B6',
         'unassigned': '#E0E0E0',
         'country-specific': '#A8A8A8'
     };
-    
-    const SDRS = ['Lina', 'James', 'Tyrese'];
+
+    const SDRS = ['Lina', 'James', 'Tyrese', 'Ricky'];
     
     async function loadTimezoneData() {
         try {
@@ -1389,14 +1423,16 @@
             'Lina': { countries: 0, usStates: 0, caProvinces: 0 },
             'James': { countries: 0, usStates: 0, caProvinces: 0 },
             'Tyrese': { countries: 0, usStates: 0, caProvinces: 0 },
+            'Ricky': { countries: 0, usStates: 0, caProvinces: 0 },
             'unassigned': { countries: 0, usStates: 0, caProvinces: 0 }
         };
-        
+
         // Track unique countries per SDR to avoid duplicates
         const sdrCountries = {
             'Lina': new Set(),
             'James': new Set(),
             'Tyrese': new Set(),
+            'Ricky': new Set(),
             'unassigned': new Set()
         };
         
@@ -1446,15 +1482,19 @@
         document.getElementById('tyreseCountries').textContent = stats.Tyrese.countries;
         document.getElementById('tyreseUSStates').textContent = stats.Tyrese.usStates;
         document.getElementById('tyreseCAProvinces').textContent = stats.Tyrese.caProvinces;
-        
+
+        document.getElementById('rickyCountries').textContent = stats.Ricky.countries;
+        document.getElementById('rickyUSStates').textContent = stats.Ricky.usStates;
+        document.getElementById('rickyCAProvinces').textContent = stats.Ricky.caProvinces;
+
         document.getElementById('unassignedCountries').textContent = stats.unassigned.countries;
         document.getElementById('unassignedUSStates').textContent = stats.unassigned.usStates;
         document.getElementById('unassignedCAProvinces').textContent = stats.unassigned.caProvinces;
         
         // Update summary totals
-        const totalCountries = stats.Lina.countries + stats.James.countries + stats.Tyrese.countries + stats.unassigned.countries;
-        const totalUSStates = stats.Lina.usStates + stats.James.usStates + stats.Tyrese.usStates + stats.unassigned.usStates;
-        const totalCAProvinces = stats.Lina.caProvinces + stats.James.caProvinces + stats.Tyrese.caProvinces + stats.unassigned.caProvinces;
+        const totalCountries = stats.Lina.countries + stats.James.countries + stats.Tyrese.countries + stats.Ricky.countries + stats.unassigned.countries;
+        const totalUSStates = stats.Lina.usStates + stats.James.usStates + stats.Tyrese.usStates + stats.Ricky.usStates + stats.unassigned.usStates;
+        const totalCAProvinces = stats.Lina.caProvinces + stats.James.caProvinces + stats.Tyrese.caProvinces + stats.Ricky.caProvinces + stats.unassigned.caProvinces;
         document.getElementById('totalCountries').textContent = totalCountries;
         document.getElementById('totalUSStates').textContent = totalUSStates;
         document.getElementById('totalCAProvinces').textContent = totalCAProvinces;
@@ -1470,7 +1510,7 @@
     }
     
     function updateSubRegionsDisplay() {
-        const sdrNames = ['Lina', 'James', 'Tyrese'];
+        const sdrNames = ['Lina', 'James', 'Tyrese', 'Ricky'];
         
         sdrNames.forEach(sdrName => {
             // Get all countries assigned to this SDR
@@ -1738,7 +1778,7 @@
     }
     
     function addSDRHoverEvents() {
-        const sdrNames = ['Lina', 'James', 'Tyrese'];
+        const sdrNames = ['Lina', 'James', 'Tyrese', 'Ricky'];
         
         sdrNames.forEach(sdrName => {
             // Find the summary title element for this SDR
