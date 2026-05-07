@@ -309,37 +309,6 @@
         
         <div class="summary-card">
             <div class="summary-title">
-                <div class="sdr-color" style="background-color: #f1ab6b; width: 20px; height: 20px; border-radius: 4px; border: 2px solid #333; margin-right: 10px; display: inline-block;"></div>
-                Lina
-            </div>
-            <div class="summary-content">
-                <div class="summary-row">
-                    <span class="summary-label">Countries:</span>
-                    <span class="summary-value" id="linaCountries">0</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">US States:</span>
-                    <span class="summary-value" id="linaUSStates">0</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">Canada Provinces:</span>
-                    <span class="summary-value" id="linaCAProvinces">0</span>
-                </div>
-                <div class="summary-row" id="linaSubRegions" style="display: none;">
-                    <span class="summary-label">Complete Sub-Regions:</span>
-                    <span class="summary-value" id="linaSubRegionsList"></span>
-                </div>
-            </div>
-            <div class="copy-buttons">
-                <button onclick="copyPersonSubRegions('Lina', event)" class="copy-btn">Copy Sub-Regions</button>
-                <button onclick="copyPersonCountries('Lina', event)" class="copy-btn">Copy Countries</button>
-                <button onclick="copyPersonExcludes('Lina', event)" class="copy-btn">Copy Excludes</button>
-                <button onclick="copyPersonStates('Lina', event)" class="copy-btn">Copy US/CA States</button>
-            </div>
-        </div>
-        
-        <div class="summary-card">
-            <div class="summary-title">
                 <div class="sdr-color" style="background-color: #45B7D1; width: 20px; height: 20px; border-radius: 4px; border: 2px solid #333; margin-right: 10px; display: inline-block;"></div>
                 James
             </div>
@@ -525,7 +494,6 @@
             <label for="bulkSdr">Assign to SDR:</label>
             <select id="bulkSdr">
                 <option value="">Select SDR...</option>
-                <option value="Lina">Lina</option>
                 <option value="James">James</option>
                 <option value="Tyrese">Tyrese</option>
                 <option value="Ricky">Ricky</option>
@@ -539,7 +507,6 @@
                 <input type="text" id="searchLocation" class="search-input" placeholder="Search countries/states..." onkeyup="filterLocations()">
                 <select id="filterSdr" class="filter-select" onchange="filterLocations()">
                     <option value="">All SDRs</option>
-                    <option value="Lina">Lina</option>
                     <option value="James">James</option>
                     <option value="Tyrese">Tyrese</option>
                     <option value="Ricky">Ricky</option>
@@ -580,7 +547,7 @@
         'country-specific': '#A8A8A8'
     };
 
-    const SDRS = ['Lina', 'James', 'Tyrese', 'Ricky'];
+    const SDRS = ['James', 'Tyrese', 'Ricky'];
     
     async function loadTimezoneData() {
         try {
@@ -1420,7 +1387,6 @@
     
     function updateStats() {
         const stats = {
-            'Lina': { countries: 0, usStates: 0, caProvinces: 0 },
             'James': { countries: 0, usStates: 0, caProvinces: 0 },
             'Tyrese': { countries: 0, usStates: 0, caProvinces: 0 },
             'Ricky': { countries: 0, usStates: 0, caProvinces: 0 },
@@ -1429,7 +1395,6 @@
 
         // Track unique countries per SDR to avoid duplicates
         const sdrCountries = {
-            'Lina': new Set(),
             'James': new Set(),
             'Tyrese': new Set(),
             'Ricky': new Set(),
@@ -1471,10 +1436,6 @@
         
         // Update display with detailed breakdown
         
-        document.getElementById('linaCountries').textContent = stats.Lina.countries;
-        document.getElementById('linaUSStates').textContent = stats.Lina.usStates;
-        document.getElementById('linaCAProvinces').textContent = stats.Lina.caProvinces;
-        
         document.getElementById('jamesCountries').textContent = stats.James.countries;
         document.getElementById('jamesUSStates').textContent = stats.James.usStates;
         document.getElementById('jamesCAProvinces').textContent = stats.James.caProvinces;
@@ -1492,9 +1453,9 @@
         document.getElementById('unassignedCAProvinces').textContent = stats.unassigned.caProvinces;
         
         // Update summary totals
-        const totalCountries = stats.Lina.countries + stats.James.countries + stats.Tyrese.countries + stats.Ricky.countries + stats.unassigned.countries;
-        const totalUSStates = stats.Lina.usStates + stats.James.usStates + stats.Tyrese.usStates + stats.Ricky.usStates + stats.unassigned.usStates;
-        const totalCAProvinces = stats.Lina.caProvinces + stats.James.caProvinces + stats.Tyrese.caProvinces + stats.Ricky.caProvinces + stats.unassigned.caProvinces;
+        const totalCountries = stats.James.countries + stats.Tyrese.countries + stats.Ricky.countries + stats.unassigned.countries;
+        const totalUSStates = stats.James.usStates + stats.Tyrese.usStates + stats.Ricky.usStates + stats.unassigned.usStates;
+        const totalCAProvinces = stats.James.caProvinces + stats.Tyrese.caProvinces + stats.Ricky.caProvinces + stats.unassigned.caProvinces;
         document.getElementById('totalCountries').textContent = totalCountries;
         document.getElementById('totalUSStates').textContent = totalUSStates;
         document.getElementById('totalCAProvinces').textContent = totalCAProvinces;
@@ -1510,7 +1471,7 @@
     }
     
     function updateSubRegionsDisplay() {
-        const sdrNames = ['Lina', 'James', 'Tyrese', 'Ricky'];
+        const sdrNames = ['James', 'Tyrese', 'Ricky'];
         
         sdrNames.forEach(sdrName => {
             // Get all countries assigned to this SDR
@@ -1778,7 +1739,7 @@
     }
     
     function addSDRHoverEvents() {
-        const sdrNames = ['Lina', 'James', 'Tyrese', 'Ricky'];
+        const sdrNames = ['James', 'Tyrese', 'Ricky'];
         
         sdrNames.forEach(sdrName => {
             // Find the summary title element for this SDR
