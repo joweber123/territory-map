@@ -615,14 +615,14 @@
                         const location = allLocations.find(loc => {
                             // Handle US states
                             if (loc.country_code === 'US' && loc.state_code) {
-                                const stateFormat = `${loc.state_code} - ${loc.state}`;
+                                const stateFormat = `${loc.country_code}-${loc.state_code} - ${loc.state}`;
                                 if (stateFormat === humanReadableKey) {
                                     return true;
                                 }
                             }
                             // Handle Canadian provinces
                             if (loc.country_code === 'CA' && loc.province_code) {
-                                const provinceFormat = `${loc.province_code} - ${loc.province}`;
+                                const provinceFormat = `${loc.country_code}-${loc.province_code} - ${loc.province}`;
                                 if (provinceFormat === humanReadableKey) {
                                     return true;
                                 }
@@ -2086,11 +2086,11 @@
                 let humanReadableKey;
                 
                 if (location.country_code === 'US' && location.state_code) {
-                    // US state format: "CA - California"
-                    humanReadableKey = `${location.state_code} - ${location.state}`;
+                    // US state format: "US-CA - California"
+                    humanReadableKey = `${location.country_code}-${location.state_code} - ${location.state}`;
                 } else if (location.country_code === 'CA' && location.province_code) {
-                    // Canadian province format: "ON - Ontario"
-                    humanReadableKey = `${location.province_code} - ${location.province}`;
+                    // Canadian province format: "CA-ON - Ontario"
+                    humanReadableKey = `${location.country_code}-${location.province_code} - ${location.province}`;
                 } else if (location.country_code) {
                     // Country format: "AL - Albania"
                     const hubspotFormat = hubspotCountryMapping[location.country_code];
@@ -2520,9 +2520,9 @@
                     
                     let stateCode;
                     if (location.country_code === 'US') {
-                        stateCode = location.state_code;
+                        stateCode = `${location.state_code} - ${location.state}`;
                     } else if (location.country_code === 'CA') {
-                        stateCode = location.province_code;
+                        stateCode = `${location.province_code} - ${location.province}`;
                     }
                     
                     if (stateCode && !states.includes(stateCode)) {
